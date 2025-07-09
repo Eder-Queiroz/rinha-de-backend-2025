@@ -1,0 +1,26 @@
+# Rust specific
+/target/
+**/*.rs.bk
+Cargo.lock
+*.pdb
+*.o
+*.so
+*.dylib
+*.dll
+*.exe
+
+# IDE specific
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Debugging files
+*.log
+debug/
+profile/
+
+# Temporary files
+tmp/
+temp/
