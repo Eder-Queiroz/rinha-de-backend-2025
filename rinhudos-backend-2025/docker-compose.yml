@@ -1,0 +1,22 @@
+version: '3.9'
+
+services:
+  redis:
+    image: redis:7.2-alpine
+    container_name: rinhudos-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    command: redis-server --appendonly yes
+    restart: unless-stopped
+    networks:
+      - rinhudos-network
+
+volumes:
+  redis-data:
+    driver: local
+
+networks:
+  rinhudos-network:
+    driver: bridge

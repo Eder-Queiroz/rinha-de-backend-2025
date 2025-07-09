@@ -3,6 +3,18 @@ name = "rinhudos-backend-2025"
 version = "0.1.0"
 edition = "2024"
 
+[[bin]]
+name = "api"
+path = "src/bin/api.rs"
+
+[[bin]]
+name = "orchestrator"
+path = "src/bin/orchestrator.rs"
+
 [dependencies]
 actix-web = "4"
 serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+redis = "0.32.3"
+tokio = { version = "1.46.1", features = ["full"] }
+reqwest = "0.12.22"
