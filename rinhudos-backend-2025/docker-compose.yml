@@ -1,17 +1,97 @@
 version: '3.9'
 
 services:
+
+  nginx:
+    image: nginx:1.25-alpine
+    container_name: rinha-nginx
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - api1
+      - api2
+    ports:
+      - "9999:9999"
+    networks:
+      - rinhudos-network
+    deploy:
+      resources:
+        limits:
+          cpus: "0.15"
+          memory: "15MB"
+
+  api1:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    container_name: rinhudos-api1
+    networks:
+      - rinhudos-network
+      - payment-processor
+    environment:
+      - REDIS_URL=redis://redis:6379
+    deploy:
+      resources:
+        limits:
+          cpus: "0.55"
+          memory: "30MB"
+    depends_on:
+      - redis
+      - orchestrator
+
+  api2:
+    build:
+      context: .
+      dockerfile: api/Dockerfile
+    container_name: rinhudos-api2
+    networks:
+      - rinhudos-network
+      - payment-processor
+    environment:
+      - REDIS_URL=redis://redis:6379
+    deploy:
+      resources:
+        limits:
+          cpus: "0.55"
+          memory: "30MB"
+    depends_on:
+      - redis
+      - orchestrator
+
+  orchestrator:
+    build:
+      context: .
+      dockerfile: orchestrator/Dockerfile
+    container_name: rinhudos-orchestrator
+    networks:
+      - rinhudos-network
+      - payment-processor
+    environment:
+      - REDIS_URL=redis://redis:6379
+      - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
+      - PAYMENT_PROCESSOR_URL_FALLBACK=http://payment-processor-fallback:8080
+    deploy:
+      resources:
+        limits:
+          cpus: "0.55"
+          memory: "30MB"
+    depends_on:
+      - redis
+
   redis:
     image: redis:7.2-alpine
     container_name: rinhudos-redis
-    ports:
-      - "6379:6379"
     volumes:
       - redis-data:/data
     command: redis-server --appendonly yes
     restart: unless-stopped
     networks:
       - rinhudos-network
+    deploy:
+      resources:
+        limits:
+          cpus: "0.2"
+          memory: "275MB"
 
 volumes:
   redis-data:
@@ -20,3 +100,6 @@ volumes:
 networks:
   rinhudos-network:
     driver: bridge
+  payment-processor:
+    name: payment-processor
+    external: true
