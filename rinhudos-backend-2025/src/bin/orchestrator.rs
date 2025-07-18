@@ -1,5 +1,5 @@
 use anyhow::Result;
-use redis::AsyncCommands;
+use redis::{AsyncCommands, RedisError};
 use serde::{Deserialize, Serialize};
 use std::{env, sync::Arc};
 
@@ -146,8 +146,22 @@ async fn process_payment(
     health_check_cache: Arc<RwLock<HealthCheckCache>>,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let payment = conn
-        .brpop::<_, (String, String)>("payment_queue", 0.0)
-        .await?;
+        .brpop::<_, (String, String)>("payment_queue", 1.0)
+        .await;
+
+    let (queue_name, payment_data) = match payment {
+        Ok((queue_name, payment_data)) => {
+            println!(
+                "🔄 Processing payment from queue '{}': {}",
+                queue_name, payment_data
+            );
+
+            (queue_name, payment_data)
+        }
+        Err(_) => {
+            return Ok(());
+        }
+    };
 
     update_health_status(Arc::clone(&health_check_cache)).await?;
 
@@ -158,11 +172,10 @@ async fn process_payment(
 
     let queue_size = conn.llen("payment_queue").await.unwrap_or(0);
 
-    println!("Queue size: {}, Thread ID: {:?}", queue_size, thread_id);
+    println!("🧻Queue size: {}, Thread ID: {:?}", queue_size, thread_id);
 
     let processor = choose_payment_processor(Arc::clone(&health_check_cache), queue_size).await;
 
-    let (queue_name, payment_data) = payment;
     let payment_request: PaymentRequest = serde_json::from_str(&payment_data)?;
     println!(
         "[Thread - {:?}] Processing payment from queue '{}': {}",
@@ -173,19 +186,16 @@ async fn process_payment(
         Ok(_) => {
             reset_failure_count(Arc::clone(&health_check_cache), &processor).await;
 
+            let redis_key = format!("payments_summary-{:?}", processor);
+
             conn.hset::<_, _, _, ()>(
-                format!("payment_summary:{:?}", processor),
+                redis_key.clone(),
                 payment_request.correlation_id.clone(),
                 serde_json::to_string(&payment_request)?,
             )
             .await?;
 
-            println!("💾 Payment summary saved to Redis");
-
-            println!(
-                "✅ Payment {} processed successfully by {:#?}",
-                payment_request.correlation_id, processor
-            );
+            println!("💾 Payment summary saved to Redis - {:#?}", redis_key);
         }
         Err(e) => {
             println!("❌ Failed to process payment {:#?}: {}", processor, e);
@@ -214,14 +224,16 @@ async fn process_payment(
                         reset_failure_count(Arc::clone(&health_check_cache), &fallback_processor)
                             .await;
 
+                        let redis_key = format!("payments_summary-{:?}", processor);
+
                         conn.hset::<_, _, _, ()>(
-                            format!("payment_summary:{:?}", processor),
+                            redis_key.clone(),
                             payment_request.correlation_id.clone(),
                             serde_json::to_string(&payment_request)?,
                         )
                         .await?;
 
-                        println!("💾 Payment summary saved to Redis");
+                        println!("💾 Payment summary saved to Redis - {:#?}", redis_key);
 
                         println!(
                             "✅ Payment {} processed successfully by {:#?}",
@@ -371,13 +383,13 @@ async fn choose_payment_processor(
 
 async fn send_payment_to_processor(payment: &PaymentRequest, processor: &Processor) -> Result<()> {
     let default_base_url =
-        env::var("PROCESSOR_DEFAULT_URL").unwrap_or_else(|_| DEFAULT_BASE_URL.to_string());
-    let fallback_base_url =
-        env::var("PROCESSOR_FALLBACK_URL").unwrap_or_else(|_| FALLBACK_BASE_URL.to_string());
+        env::var("PAYMENT_PROCESSOR_URL_DEFAULT").unwrap_or_else(|_| DEFAULT_BASE_URL.to_string());
+    let fallback_base_url = env::var("PAYMENT_PROCESSOR_URL_FALLBACK")
+        .unwrap_or_else(|_| FALLBACK_BASE_URL.to_string());
 
     let url = match processor {
-        Processor::Default => format!("{}/payments/process", default_base_url),
-        Processor::Fallback => format!("{}/payments/process", fallback_base_url),
+        Processor::Default => format!("{}/payments", default_base_url),
+        Processor::Fallback => format!("{}/payments", fallback_base_url),
     };
 
     let client = reqwest::Client::new();
@@ -393,9 +405,14 @@ async fn send_payment_to_processor(payment: &PaymentRequest, processor: &Process
         payment.correlation_id, processor
     );
 
+    let payload_str = serde_json::to_string(&payload)?;
+
+    println!("📬 Request payload: {:?}", payload_str);
+
     let response = client
         .post(url)
-        .json(&payload)
+        .header("Content-Type", "application/json")
+        .body(payload_str)
         .timeout(std::time::Duration::from_secs(2))
         .send()
         .await?;
@@ -408,6 +425,7 @@ async fn send_payment_to_processor(payment: &PaymentRequest, processor: &Process
         Ok(())
     } else {
         let status = response.status();
+        println!("Response {:?}", response);
         println!(
             "❌ Failed to process payment {}: {}",
             payment.correlation_id, status

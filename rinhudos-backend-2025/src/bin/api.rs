@@ -97,10 +97,14 @@ async fn payments_summary(
         }
     };
 
-    let summary: redis::RedisResult<std::collections::HashMap<String, String>> =
-        conn.hgetall("payments_summary");
+    let summary_default: redis::RedisResult<std::collections::HashMap<String, String>> =
+        conn.hgetall("payments_summary-Default");
 
-    println!("Summary query: {:?}", summary);
+    let summary_fallback: redis::RedisResult<std::collections::HashMap<String, String>> =
+        conn.hgetall("payments_summary-Fallback");
+
+    println!("Summary payments default: {:?}", summary_default);
+    println!("Summary payments fallback: {:?}", summary_fallback);
 
     HttpResponse::Ok().json(serde_json::json!("Payments-summary-teste"))
 }

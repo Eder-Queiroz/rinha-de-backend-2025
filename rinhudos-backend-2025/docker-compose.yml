@@ -27,7 +27,6 @@ services:
     container_name: rinhudos-api1
     networks:
       - rinhudos-network
-      - payment-processor
     environment:
       - REDIS_URL=redis://redis:6379
     deploy:
@@ -46,7 +45,6 @@ services:
     container_name: rinhudos-api2
     networks:
       - rinhudos-network
-      - payment-processor
     environment:
       - REDIS_URL=redis://redis:6379
     deploy:
@@ -65,7 +63,7 @@ services:
     container_name: rinhudos-orchestrator
     networks:
       - rinhudos-network
-      - payment-processor
+      - payment-processor-network
     environment:
       - REDIS_URL=redis://redis:6379
       - PAYMENT_PROCESSOR_URL_DEFAULT=http://payment-processor-default:8080
@@ -106,6 +104,6 @@ volumes:
 networks:
   rinhudos-network:
     driver: bridge
-  payment-processor:
+  payment-processor-network:
     name: payment-processor
     external: true
