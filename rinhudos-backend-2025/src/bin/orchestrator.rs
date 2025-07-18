@@ -8,8 +8,8 @@ use tokio::{
     sync::{Mutex, RwLock},
 };
 
-const DEFAULT_BASE_URL: &str = "http://localhost:8001";
-const FALLBACK_BASE_URL: &str = "http://localhost:8002";
+const DEFAULT_BASE_URL: &str = "http://payment-processor-default:8080";
+const FALLBACK_BASE_URL: &str = "http://payment-processor-fallback:8080";
 const RESPONSE_TIME_THRESHOLD_MS: u64 = 1000;
 const QUEUE_SIZE_THRESHOLD: usize = 30;
 const CONSECUTIVE_FAILURES_THRESHOLD: u16 = 3;
@@ -94,41 +94,6 @@ struct Summary {
     pub total_amount: f64,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
-#[serde(rename_all = "camelCase")]
-struct PaymentSummary {
-    pub default: Summary,
-    pub fallback: Summary,
-}
-
-impl PaymentSummary {
-    fn new() -> Self {
-        Self {
-            default: Summary {
-                total_payments: 0,
-                total_amount: 0.0,
-            },
-            fallback: Summary {
-                total_payments: 0,
-                total_amount: 0.0,
-            },
-        }
-    }
-
-    fn add_payment(&mut self, processor: &Processor, amount: f64) {
-        match processor {
-            Processor::Default => {
-                self.default.total_payments += 1;
-                self.default.total_amount += amount;
-            }
-            Processor::Fallback => {
-                self.fallback.total_payments += 1;
-                self.fallback.total_amount += amount;
-            }
-        }
-    }
-}
-
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn std::error::Error>> {
     let redis_url = env::var("REDIS_URL").unwrap_or_else(|_| "redis://localhost:6379".to_string());
@@ -145,19 +110,16 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let health_check_cache = Arc::new(RwLock::new(HealthCheckCache::new()));
 
-    let payment_summary = Arc::new(Mutex::new(PaymentSummary::new()));
-
     let mut handles = vec![];
 
     for task_id in 0..4 {
         let health_check_cache_clone = Arc::clone(&health_check_cache);
         let mut conn_clone = conn.clone();
-        let payment_summary_clone = Arc::clone(&payment_summary);
 
         let handle = tokio::spawn(async move {
             loop {
                 if let Err(e) =
-                    process_payment(task_id, &mut conn_clone, health_check_cache_clone.clone(), payment_summary_clone.clone())
+                    process_payment(task_id, &mut conn_clone, health_check_cache_clone.clone())
                         .await
                 {
                     eprintln!("Error processing payment: {}", e);
@@ -182,7 +144,6 @@ async fn process_payment(
     thread_id: usize,
     conn: &mut redis::aio::MultiplexedConnection,
     health_check_cache: Arc<RwLock<HealthCheckCache>>,
-    payment_summary: Arc<Mutex<PaymentSummary>>,
 ) -> Result<(), Box<dyn std::error::Error>> {
     let payment = conn
         .brpop::<_, (String, String)>("payment_queue", 0.0)
@@ -212,11 +173,12 @@ async fn process_payment(
         Ok(_) => {
             reset_failure_count(Arc::clone(&health_check_cache), &processor).await;
 
-            let mut summary = payment_summary.lock().await;
-            summary.add_payment(&processor, payment_request.amount);
-
-            conn.set::<_, _, ()>("payment_summary", serde_json::to_string(&*summary)?)
-                .await?;
+            conn.hset::<_, _, _, ()>(
+                format!("payment_summary:{:?}", processor),
+                payment_request.correlation_id.clone(),
+                serde_json::to_string(&payment_request)?,
+            )
+            .await?;
 
             println!("💾 Payment summary saved to Redis");
 
@@ -252,11 +214,12 @@ async fn process_payment(
                         reset_failure_count(Arc::clone(&health_check_cache), &fallback_processor)
                             .await;
 
-                        let mut summary = payment_summary.lock().await;
-                        summary.add_payment(&fallback_processor, payment_request.amount);
-
-                        conn.set::<_, _, ()>("payment_summary", serde_json::to_string(&*summary)?)
-                            .await?;
+                        conn.hset::<_, _, _, ()>(
+                            format!("payment_summary:{:?}", processor),
+                            payment_request.correlation_id.clone(),
+                            serde_json::to_string(&payment_request)?,
+                        )
+                        .await?;
 
                         println!("💾 Payment summary saved to Redis");
 
@@ -297,8 +260,10 @@ async fn process_payment(
 async fn update_health_status(
     health_check_cache: Arc<RwLock<HealthCheckCache>>,
 ) -> Result<(), Box<dyn std::error::Error>> {
-    let default_base_url = env::var("PROCESSOR_DEFAULT_URL").unwrap_or_else(|_| DEFAULT_BASE_URL.to_string());
-    let fallback_base_url = env::var("PROCESSOR_FALLBACK_URL").unwrap_or_else(|_| FALLBACK_BASE_URL.to_string());
+    let default_base_url =
+        env::var("PROCESSOR_DEFAULT_URL").unwrap_or_else(|_| DEFAULT_BASE_URL.to_string());
+    let fallback_base_url =
+        env::var("PROCESSOR_FALLBACK_URL").unwrap_or_else(|_| FALLBACK_BASE_URL.to_string());
 
     let now = chrono::Utc::now().timestamp();
 
@@ -405,8 +370,10 @@ async fn choose_payment_processor(
 }
 
 async fn send_payment_to_processor(payment: &PaymentRequest, processor: &Processor) -> Result<()> {
-    let default_base_url = env::var("PROCESSOR_DEFAULT_URL").unwrap_or_else(|_| DEFAULT_BASE_URL.to_string());
-    let fallback_base_url = env::var("PROCESSOR_FALLBACK_URL").unwrap_or_else(|_| FALLBACK_BASE_URL.to_string());
+    let default_base_url =
+        env::var("PROCESSOR_DEFAULT_URL").unwrap_or_else(|_| DEFAULT_BASE_URL.to_string());
+    let fallback_base_url =
+        env::var("PROCESSOR_FALLBACK_URL").unwrap_or_else(|_| FALLBACK_BASE_URL.to_string());
 
     let url = match processor {
         Processor::Default => format!("{}/payments/process", default_base_url),

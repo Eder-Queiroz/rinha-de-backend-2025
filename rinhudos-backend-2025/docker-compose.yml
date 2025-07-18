@@ -92,6 +92,12 @@ services:
         limits:
           cpus: "0.2"
           memory: "275MB"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 30s
 
 volumes:
   redis-data:

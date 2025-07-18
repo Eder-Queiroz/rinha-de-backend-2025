@@ -1,10 +1,10 @@
 use actix_web::{get, post, web, App, HttpResponse, HttpServer, Responder};
+use chrono::{DateTime, Utc};
+use redis::{Client, Commands};
 use serde::{Deserialize, Serialize};
+use serde_json;
 use std::env;
 use std::sync::Arc;
-use redis::{Client, Commands};
-use serde_json;
-use chrono::{DateTime, Utc};
 
 struct AppState {
     redis_client: Arc<Client>,
@@ -20,7 +20,7 @@ struct PaymentRequest {
 #[post("/payments")]
 async fn enqueue_payment(
     payment: web::Json<PaymentRequest>,
-    state: web::Data<AppState>
+    state: web::Data<AppState>,
 ) -> impl Responder {
     let payment_data = payment.into_inner();
 
@@ -46,12 +46,15 @@ async fn enqueue_payment(
 
     match conn.lpush::<_, _, ()>("payment_queue", payment_json) {
         Ok(_) => {
-            println!("Payment with ID {} queued successfully", payment_data.correlation_id);
+            println!(
+                "Payment with ID {} queued successfully",
+                payment_data.correlation_id
+            );
             HttpResponse::Accepted().json(serde_json::json!({
                 "status": "queued",
                 "id": payment_data.correlation_id
             }))
-        },
+        }
         Err(e) => {
             eprintln!("Redis error: {}", e);
             HttpResponse::InternalServerError().json(serde_json::json!({
@@ -94,7 +97,10 @@ async fn payments_summary(
         }
     };
 
+    let summary: redis::RedisResult<std::collections::HashMap<String, String>> =
+        conn.hgetall("payments_summary");
 
+    println!("Summary query: {:?}", summary);
 
     HttpResponse::Ok().json(serde_json::json!("Payments-summary-teste"))
 }
@@ -102,13 +108,10 @@ async fn payments_summary(
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
     let redis_url = env::var("REDIS_URL").unwrap_or_else(|_| "redis://localhost:6379".to_string());
-    let redis_client = Arc::new(
-        redis::Client::open(redis_url).expect("Failed to create Redis client")
-    );
+    let redis_client =
+        Arc::new(redis::Client::open(redis_url).expect("Failed to create Redis client"));
 
-    let state = web::Data::new(AppState {
-        redis_client,
-    });
+    let state = web::Data::new(AppState { redis_client });
 
     println!("Starting payment server with Redis queue");
 
@@ -118,7 +121,7 @@ async fn main() -> std::io::Result<()> {
             .service(enqueue_payment)
             .service(payments_summary)
     })
-    .bind(("127.0.0.1", 8080))?
+    .bind(("0.0.0.0", 8080))?
     .run()
     .await
 }
