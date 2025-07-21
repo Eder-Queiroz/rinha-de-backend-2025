@@ -22,6 +22,13 @@ struct PaymentRequest {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+struct PaymentRequested {
+    correlation_id: String,
+    amount: f64,
+    requested_at: String,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
 #[serde(rename_all = "camelCase")]
 struct HealthCheckResponse {
     failing: bool,
@@ -183,15 +190,15 @@ async fn process_payment(
     );
 
     match send_payment_to_processor(&payment_request, &processor).await {
-        Ok(_) => {
+        Ok(payment_requested) => {
             reset_failure_count(Arc::clone(&health_check_cache), &processor).await;
 
             let redis_key = format!("payments_summary-{:?}", processor);
 
             conn.hset::<_, _, _, ()>(
                 redis_key.clone(),
-                payment_request.correlation_id.clone(),
-                serde_json::to_string(&payment_request)?,
+                payment_requested.correlation_id.clone(),
+                serde_json::to_string(&payment_requested)?,
             )
             .await?;
 
@@ -220,7 +227,7 @@ async fn process_payment(
                     fallback_processor
                 );
                 match send_payment_to_processor(&payment_request, &fallback_processor).await {
-                    Ok(_) => {
+                    Ok(payment_requested) => {
                         reset_failure_count(Arc::clone(&health_check_cache), &fallback_processor)
                             .await;
 
@@ -228,8 +235,8 @@ async fn process_payment(
 
                         conn.hset::<_, _, _, ()>(
                             redis_key.clone(),
-                            payment_request.correlation_id.clone(),
-                            serde_json::to_string(&payment_request)?,
+                            payment_requested.correlation_id.clone(),
+                            serde_json::to_string(&payment_requested)?,
                         )
                         .await?;
 
@@ -381,7 +388,10 @@ async fn choose_payment_processor(
     Processor::Default
 }
 
-async fn send_payment_to_processor(payment: &PaymentRequest, processor: &Processor) -> Result<()> {
+async fn send_payment_to_processor(
+    payment: &PaymentRequest,
+    processor: &Processor,
+) -> Result<PaymentRequested> {
     let default_base_url =
         env::var("PAYMENT_PROCESSOR_URL_DEFAULT").unwrap_or_else(|_| DEFAULT_BASE_URL.to_string());
     let fallback_base_url = env::var("PAYMENT_PROCESSOR_URL_FALLBACK")
@@ -394,10 +404,12 @@ async fn send_payment_to_processor(payment: &PaymentRequest, processor: &Process
 
     let client = reqwest::Client::new();
 
+    let requested_at = chrono::Utc::now().to_rfc3339();
+
     let payload = serde_json::json!({
         "correlationId": payment.correlation_id,
         "amount": payment.amount,
-        "requestedAt": chrono::Utc::now().to_rfc3339(),
+        "requestedAt": requested_at,
     });
 
     println!(
@@ -422,7 +434,11 @@ async fn send_payment_to_processor(payment: &PaymentRequest, processor: &Process
             "✅ Payment {} processed successfully by {:#?}",
             payment.correlation_id, processor
         );
-        Ok(())
+        Ok(PaymentRequested {
+            correlation_id: payment.correlation_id.clone(),
+            amount: payment.amount,
+            requested_at,
+        })
     } else {
         let status = response.status();
         println!("Response {:?}", response);
