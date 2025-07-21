@@ -1,0 +1,261 @@
+
+time="2025-07-20T19:50:20-03:00" level=warning msg="/home/rinha-user/rinha-de-backend-2025/participantes/luucaspole-crystal/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ Network luucaspole-crystal_backend  Creating
+ Network luucaspole-crystal_backend  Created
+ Container lavinmq  Creating
+ Container lavinmq  Created
+ Container luucaspole-crystal-consumer2-1  Creating
+ Container luucaspole-crystal-consumer4-1  Creating
+ Container luucaspole-crystal-consumer5-1  Creating
+ Container luucaspole-crystal-consumer-1  Creating
+ Container luucaspole-crystal-consumer3-1  Creating
+ Container luucaspole-crystal-app3-1  Creating
+ Container luucaspole-crystal-app2-1  Creating
+ Container luucaspole-crystal-app1-1  Creating
+ Container luucaspole-crystal-app1-1  Created
+ Container luucaspole-crystal-consumer-1  Created
+ Container luucaspole-crystal-consumer4-1  Created
+ Container luucaspole-crystal-consumer3-1  Created
+ Container luucaspole-crystal-consumer5-1  Created
+ Container luucaspole-crystal-app3-1  Created
+ Container luucaspole-crystal-consumer2-1  Created
+ Container luucaspole-crystal-app2-1  Created
+ Container luucaspole-crystal-nginx-1  Creating
+ Container luucaspole-crystal-nginx-1  Created
+Attaching to lavinmq, app1-1, app2-1, app3-1, consumer-1, consumer2-1, consumer3-1, consumer4-1, consumer5-1, nginx-1
+lavinmq      | WARNING: 'guest_only_loopback' is deprecated, use '--default-user-only-loopback' instead
+lavinmq      | WARNING: 'guest_only_loopback' is deprecated, use '--default-user-only-loopback' instead
+lavinmq      | 2025-07-20T22:50:31.783721Z  INFO lmq[level: "Info", target: "stdout"] Logger settings
+lavinmq      | 2025-07-20T22:50:31.882351Z  INFO lmq.launcher LavinMQ 2.4.0
+lavinmq      | 2025-07-20T22:50:31.882353Z  INFO lmq.launcher Crystal 1.16.3 (2025-05-12)
+lavinmq      | 2025-07-20T22:50:31.882353Z  INFO lmq.launcher LLVM: 18.1.3
+lavinmq      | 2025-07-20T22:50:31.882353Z  INFO lmq.launcher Default target: x86_64-pc-linux-gnu
+lavinmq      | 2025-07-20T22:50:31.882354Z  INFO lmq.launcher Build flags: --release --debug
+lavinmq      | 2025-07-20T22:50:31.882355Z  INFO lmq.launcher Multithreading: 4 threads
+lavinmq      | 2025-07-20T22:50:31.882363Z  INFO lmq.launcher Pid: 1
+lavinmq      | 2025-07-20T22:50:31.882363Z  INFO lmq.launcher Data directory: /var/lib/lavinmq
+lavinmq      | 2025-07-20T22:50:31.882422Z  INFO lmq.launcher Max mmap count: 65530
+lavinmq      | 2025-07-20T22:50:31.882423Z  WARN lmq.launcher The max mmap count limit is very low, consider raising it.
+lavinmq      | 2025-07-20T22:50:31.882423Z  WARN lmq.launcher The limits should be higher than the maximum of # connections * 2 + # consumer * 2 + # queues * 4
+lavinmq      | 2025-07-20T22:50:31.882423Z  WARN lmq.launcher sysctl -w vm.max_map_count=1000000
+lavinmq      | 2025-07-20T22:50:31.882428Z  INFO lmq.launcher FD limit: 1048576
+lavinmq      | 2025-07-20T22:50:31.914586Z  INFO lmq.vhost[vhost: "/"] Loading default definitions
+lavinmq      | 2025-07-20T22:50:31.914607Z  INFO lmq.vhost[vhost: "/"] Compacting definitions
+lavinmq      | 2025-07-20T22:50:31.989763Z  INFO lmq.vhost_store Created vhost /
+lavinmq      | 2025-07-20T22:50:32.001387Z  INFO lmq.http.server Bound to 0.0.0.0:15672
+lavinmq      | 2025-07-20T22:50:32.001489Z  INFO lmq.http.server Bound to /tmp/lavinmqctl.sock
+lavinmq      | 2025-07-20T22:50:32.001665Z  INFO lmq.server Listening for AMQP on 0.0.0.0:5672
+lavinmq      | 2025-07-20T22:50:32.001716Z  INFO lmq.server Listening for MQTT on 0.0.0.0:1883
+lavinmq      | 2025-07-20T22:50:32.001753Z  INFO lmq.launcher Finished startup in 0.119257318s
+lavinmq      | 2025-07-20T22:50:39.378345Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.3:38234", name: "consumer"] Connection established for user=guest
+lavinmq      | 2025-07-20T22:50:39.379423Z  INFO lmq.message_store[queue: "default", vhost: "/"] Loaded 1 segments, 0 messages
+lavinmq      | 2025-07-20T22:50:39.386636Z  INFO lmq.message_store[queue: "fallback", vhost: "/"] Loaded 1 segments, 0 messages
+lavinmq      | 2025-07-20T22:50:39.455761Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.4:38494", name: "consumer"] Connection established for user=guest
+consumer-1   | 2025-07-20T22:50:39.498451Z   INFO - Starting 10 runners out of 4 CPU
+consumer-1   | 2025-07-20T22:50:39.498566Z   INFO - Listening for messages on AMQP queue: processor:queue:1
+lavinmq      | 2025-07-20T22:50:39.504664Z  INFO lmq.message_store[queue: "processor:queue:1", vhost: "/"] Loaded 1 segments, 0 messages
+consumer2-1  | 2025-07-20T22:50:39.518263Z   INFO - Starting 10 runners out of 4 CPU
+consumer2-1  | 2025-07-20T22:50:39.518427Z   INFO - Listening for messages on AMQP queue: processor:queue:2
+lavinmq      | 2025-07-20T22:50:39.519693Z  INFO lmq.message_store[queue: "processor:queue:2", vhost: "/"] Loaded 1 segments, 0 messages
+lavinmq      | 2025-07-20T22:50:39.546391Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.5:41754", name: "consumer"] Connection established for user=guest
+consumer3-1  | 2025-07-20T22:50:39.550707Z   INFO - Starting 10 runners out of 4 CPU
+consumer3-1  | 2025-07-20T22:50:39.550833Z   INFO - Listening for messages on AMQP queue: processor:queue:3
+lavinmq      | 2025-07-20T22:50:39.554461Z  INFO lmq.message_store[queue: "processor:queue:3", vhost: "/"] Loaded 1 segments, 0 messages
+app1-1       | 2025-07-20T22:50:39.651560Z   INFO - HTTP Server running on port 3000
+app1-1       | 2025-07-20T22:50:39.651565Z   INFO - GET /payment-summary - Get payment summary
+app1-1       | 2025-07-20T22:50:39.651566Z   INFO - POST /payments - Create a new payment
+app1-1       | 2025-07-20T22:50:39.651932Z   INFO - kemal: [development] Kemal is ready to lead at http://0.0.0.0:3000
+lavinmq      | 2025-07-20T22:50:39.651126Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.6:43836", name: "server"] Connection established for user=guest
+lavinmq      | 2025-07-20T22:50:39.769532Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.9:32978", name: "consumer"] Connection established for user=guest
+lavinmq      | 2025-07-20T22:50:39.773009Z  INFO lmq.message_store[queue: "processor:queue:5", vhost: "/"] Loaded 1 segments, 0 messages
+consumer5-1  | 2025-07-20T22:50:39.772397Z   INFO - Starting 10 runners out of 4 CPU
+consumer5-1  | 2025-07-20T22:50:39.772537Z   INFO - Listening for messages on AMQP queue: processor:queue:5
+lavinmq      | 2025-07-20T22:50:39.826176Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.7:43264", name: "server"] Connection established for user=guest
+app2-1       | 2025-07-20T22:50:39.826466Z   INFO - HTTP Server running on port 3000
+app2-1       | 2025-07-20T22:50:39.826467Z   INFO - GET /payment-summary - Get payment summary
+app2-1       | 2025-07-20T22:50:39.826467Z   INFO - POST /payments - Create a new payment
+app2-1       | 2025-07-20T22:50:39.826734Z   INFO - kemal: [development] Kemal is ready to lead at http://0.0.0.0:3000
+lavinmq      | 2025-07-20T22:50:39.854581Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.8:33252", name: "consumer"] Connection established for user=guest
+consumer4-1  | 2025-07-20T22:50:39.858073Z   INFO - Starting 10 runners out of 4 CPU
+consumer4-1  | 2025-07-20T22:50:39.858155Z   INFO - Listening for messages on AMQP queue: processor:queue:4
+lavinmq      | 2025-07-20T22:50:39.862112Z  INFO lmq.message_store[queue: "processor:queue:4", vhost: "/"] Loaded 1 segments, 0 messages
+app3-1       | 2025-07-20T22:50:39.905282Z   INFO - HTTP Server running on port 3000
+app3-1       | 2025-07-20T22:50:39.905282Z   INFO - GET /payment-summary - Get payment summary
+app3-1       | 2025-07-20T22:50:39.905283Z   INFO - POST /payments - Create a new payment
+app3-1       | 2025-07-20T22:50:39.905460Z   INFO - kemal: [development] Kemal is ready to lead at http://0.0.0.0:3000
+lavinmq      | 2025-07-20T22:50:39.904953Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.10:36860", name: "server"] Connection established for user=guest
+nginx-1      | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+nginx-1      | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+nginx-1      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+nginx-1      | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+nginx-1      | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+nginx-1      | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+nginx-1      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+nginx-1      | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+nginx-1      | /docker-entrypoint.sh: Configuration complete; ready for start up
+app1-1       | 2025-07-20T22:50:45.217713Z  ERROR - Error getting payment summary
+app1-1       | In SQLite3::ResultSet#read the column totalAmount returned a Float64 but a Int64 was expected. (DB::ColumnTypeMismatchError)
+app1-1       |   from app/lib/db/src/db/result_set.cr:89:9 in 'read'
+app1-1       |   from app/src/server.cr:72:24 in '->'
+app1-1       |   from app/lib/kemal/src/kemal/route_handler.cr:52:39 in 'call'
+app1-1       |   from app/lib/kemal/src/kemal/filter_handler.cr:28:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/request_processor.cr:51:11 in 'process'
+app1-1       |   from usr/share/crystal/src/http/server.cr:506:5 in '->'
+app1-1       |   from usr/share/crystal/src/fiber.cr:170:11 in 'run'
+app1-1       |   from ???
+app1-1       | 
+app1-1       | 2025-07-20T22:50:50.234736Z  ERROR - Error getting payment summary
+app1-1       | In SQLite3::ResultSet#read the column totalAmount returned a Float64 but a Int64 was expected. (DB::ColumnTypeMismatchError)
+app1-1       |   from app/lib/db/src/db/result_set.cr:89:9 in 'read'
+app1-1       |   from app/src/server.cr:72:24 in '->'
+app1-1       |   from app/lib/kemal/src/kemal/route_handler.cr:52:39 in 'call'
+app1-1       |   from app/lib/kemal/src/kemal/filter_handler.cr:28:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/request_processor.cr:51:11 in 'process'
+app1-1       |   from usr/share/crystal/src/http/server.cr:506:5 in '->'
+app1-1       |   from usr/share/crystal/src/fiber.cr:170:11 in 'run'
+app1-1       |   from ???
+app1-1       | 
+app1-1       | 2025-07-20T22:50:55.251606Z  ERROR - Error getting payment summary
+app1-1       | In SQLite3::ResultSet#read the column totalAmount returned a Float64 but a Int64 was expected. (DB::ColumnTypeMismatchError)
+app1-1       |   from app/lib/db/src/db/result_set.cr:89:9 in 'read'
+app1-1       |   from app/src/server.cr:72:24 in '->'
+app1-1       |   from app/lib/kemal/src/kemal/route_handler.cr:52:39 in 'call'
+app1-1       |   from app/lib/kemal/src/kemal/filter_handler.cr:28:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/request_processor.cr:51:11 in 'process'
+app1-1       |   from usr/share/crystal/src/http/server.cr:506:5 in '->'
+app1-1       |   from usr/share/crystal/src/fiber.cr:170:11 in 'run'
+app1-1       |   from ???
+app1-1       | 
+app1-1       | 2025-07-20T22:51:00.275460Z  ERROR - Error getting payment summary
+app1-1       | In SQLite3::ResultSet#read the column totalAmount returned a Float64 but a Int64 was expected. (DB::ColumnTypeMismatchError)
+app1-1       |   from app/lib/db/src/db/result_set.cr:89:9 in 'read'
+app1-1       |   from app/src/server.cr:72:24 in '->'
+app1-1       |   from app/lib/kemal/src/kemal/route_handler.cr:52:39 in 'call'
+app1-1       |   from app/lib/kemal/src/kemal/filter_handler.cr:28:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/request_processor.cr:51:11 in 'process'
+app1-1       |   from usr/share/crystal/src/http/server.cr:506:5 in '->'
+app1-1       |   from usr/share/crystal/src/fiber.cr:170:11 in 'run'
+app1-1       |   from ???
+app1-1       | 
+app2-1       | 2025-07-20T22:51:05.388537Z  ERROR - Error getting payment summary
+app2-1       | In SQLite3::ResultSet#read the column totalAmount returned a Float64 but a Int64 was expected. (DB::ColumnTypeMismatchError)
+app2-1       |   from app/lib/db/src/db/result_set.cr:89:9 in 'read'
+app2-1       |   from app/src/server.cr:72:24 in '->'
+app2-1       |   from app/lib/kemal/src/kemal/route_handler.cr:52:39 in 'call'
+app2-1       |   from app/lib/kemal/src/kemal/filter_handler.cr:28:7 in 'call'
+app2-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app2-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app2-1       |   from usr/share/crystal/src/http/server/request_processor.cr:51:11 in 'process'
+app2-1       |   from usr/share/crystal/src/http/server.cr:506:5 in '->'
+app2-1       |   from usr/share/crystal/src/fiber.cr:170:11 in 'run'
+app2-1       |   from ???
+app2-1       | 
+app3-1       | 2025-07-20T22:51:10.485179Z  ERROR - Error getting payment summary
+app3-1       | In SQLite3::ResultSet#read the column totalAmount returned a Float64 but a Int64 was expected. (DB::ColumnTypeMismatchError)
+app3-1       |   from app/lib/db/src/db/result_set.cr:89:9 in 'read'
+app3-1       |   from app/src/server.cr:72:24 in '->'
+app3-1       |   from app/lib/kemal/src/kemal/route_handler.cr:52:39 in 'call'
+app3-1       |   from app/lib/kemal/src/kemal/filter_handler.cr:28:7 in 'call'
+app3-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app3-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app3-1       |   from usr/share/crystal/src/http/server/request_processor.cr:51:11 in 'process'
+app3-1       |   from usr/share/crystal/src/http/server.cr:506:5 in '->'
+app3-1       |   from usr/share/crystal/src/fiber.cr:170:11 in 'run'
+app3-1       |   from ???
+app3-1       | 
+app1-1       | 2025-07-20T22:51:15.583596Z  ERROR - Error getting payment summary
+app1-1       | In SQLite3::ResultSet#read the column totalAmount returned a Float64 but a Int64 was expected. (DB::ColumnTypeMismatchError)
+app1-1       |   from app/lib/db/src/db/result_set.cr:89:9 in 'read'
+app1-1       |   from app/src/server.cr:72:24 in '->'
+app1-1       |   from app/lib/kemal/src/kemal/route_handler.cr:52:39 in 'call'
+app1-1       |   from app/lib/kemal/src/kemal/filter_handler.cr:28:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/request_processor.cr:51:11 in 'process'
+app1-1       |   from usr/share/crystal/src/http/server.cr:506:5 in '->'
+app1-1       |   from usr/share/crystal/src/fiber.cr:170:11 in 'run'
+app1-1       |   from ???
+app1-1       | 
+app2-1       | 2025-07-20T22:51:20.600116Z  ERROR - Error getting payment summary
+app2-1       | In SQLite3::ResultSet#read the column totalAmount returned a Float64 but a Int64 was expected. (DB::ColumnTypeMismatchError)
+app2-1       |   from app/lib/db/src/db/result_set.cr:89:9 in 'read'
+app2-1       |   from app/src/server.cr:72:24 in '->'
+app2-1       |   from app/lib/kemal/src/kemal/route_handler.cr:52:39 in 'call'
+app2-1       |   from app/lib/kemal/src/kemal/filter_handler.cr:28:7 in 'call'
+app2-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app2-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app2-1       |   from usr/share/crystal/src/http/server/request_processor.cr:51:11 in 'process'
+app2-1       |   from usr/share/crystal/src/http/server.cr:506:5 in '->'
+app2-1       |   from usr/share/crystal/src/fiber.cr:170:11 in 'run'
+app2-1       |   from ???
+app2-1       | 
+app3-1       | 2025-07-20T22:51:25.620026Z  ERROR - Error getting payment summary
+app3-1       | In SQLite3::ResultSet#read the column totalAmount returned a Float64 but a Int64 was expected. (DB::ColumnTypeMismatchError)
+app3-1       |   from app/lib/db/src/db/result_set.cr:89:9 in 'read'
+app3-1       |   from app/src/server.cr:72:24 in '->'
+app3-1       |   from app/lib/kemal/src/kemal/route_handler.cr:52:39 in 'call'
+app3-1       |   from app/lib/kemal/src/kemal/filter_handler.cr:28:7 in 'call'
+app3-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app3-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app3-1       |   from usr/share/crystal/src/http/server/request_processor.cr:51:11 in 'process'
+app3-1       |   from usr/share/crystal/src/http/server.cr:506:5 in '->'
+app3-1       |   from usr/share/crystal/src/fiber.cr:170:11 in 'run'
+app3-1       |   from ???
+app3-1       | 
+app1-1       | 2025-07-20T22:51:30.637117Z  ERROR - Error getting payment summary
+app1-1       | In SQLite3::ResultSet#read the column totalAmount returned a Float64 but a Int64 was expected. (DB::ColumnTypeMismatchError)
+app1-1       |   from app/lib/db/src/db/result_set.cr:89:9 in 'read'
+app1-1       |   from app/src/server.cr:72:24 in '->'
+app1-1       |   from app/lib/kemal/src/kemal/route_handler.cr:52:39 in 'call'
+app1-1       |   from app/lib/kemal/src/kemal/filter_handler.cr:28:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/handler.cr:30:7 in 'call'
+app1-1       |   from usr/share/crystal/src/http/server/request_processor.cr:51:11 in 'process'
+app1-1       |   from usr/share/crystal/src/http/server.cr:506:5 in '->'
+app1-1       |   from usr/share/crystal/src/fiber.cr:170:11 in 'run'
+app1-1       |   from ???
+app1-1       | 
+[Knginx-1 exited with code 0
+app1-1       | 2025-07-20T22:51:36.357179Z   INFO - kemal: Kemal is going to take a rest!
+lavinmq      | 2025-07-20T22:51:36.359190Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.6:43836", name: "server"] Connection disconnected for user=guest
+app2-1       | 2025-07-20T22:51:36.358012Z   INFO - kemal: Kemal is going to take a rest!
+lavinmq      | 2025-07-20T22:51:36.359640Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.7:43264", name: "server"] Connection disconnected for user=guest
+app3-1       | 2025-07-20T22:51:36.362648Z   INFO - kemal: Kemal is going to take a rest!
+lavinmq      | 2025-07-20T22:51:36.364093Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.10:36860", name: "server"] Connection disconnected for user=guest
+[Kapp3-1 exited with code 0
+lavinmq      | 2025-07-20T22:51:46.383113Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.9:32978", name: "consumer"] Connection disconnected for user=guest
+lavinmq      | 2025-07-20T22:51:46.481925Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.4:38494", name: "consumer"] Connection disconnected for user=guest
+lavinmq      | 2025-07-20T22:51:46.481992Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.5:41754", name: "consumer"] Connection disconnected for user=guest
+lavinmq      | 2025-07-20T22:51:46.482040Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.3:38234", name: "consumer"] Connection disconnected for user=guest
+lavinmq      | 2025-07-20T22:51:46.482072Z  INFO lmq.amqp.client[vhost: "/", address: "172.21.0.8:33252", name: "consumer"] Connection disconnected for user=guest
+[Kconsumer4-1 exited with code 137
+lavinmq      | 2025-07-20T22:51:47.436452Z  WARN lmq.launcher Stopping
+lavinmq      | 2025-07-20T22:51:47.436567Z  INFO lmq.vhost[vhost: "/"] Closing connections
+lavinmq      | 2025-07-20T22:51:47.436588Z  INFO lmq.vhost[vhost: "/"] All connections closed gracefully
+lavinmq      | 2025-07-20T22:51:47.437031Z  INFO lmq.queue[queue: "default", vhost: "/"] (messages=0) Deleted
+lavinmq      | 2025-07-20T22:51:47.437396Z  INFO lmq.queue[queue: "fallback", vhost: "/"] (messages=0) Deleted
+lavinmq      | 2025-07-20T22:51:47.437655Z  INFO lmq.queue[queue: "processor:queue:1", vhost: "/"] (messages=0) Deleted
+lavinmq      | 2025-07-20T22:51:47.437908Z  INFO lmq.queue[queue: "processor:queue:2", vhost: "/"] (messages=0) Deleted
+lavinmq      | 2025-07-20T22:51:47.438121Z  INFO lmq.queue[queue: "processor:queue:3", vhost: "/"] (messages=0) Deleted
+lavinmq      | 2025-07-20T22:51:47.438333Z  INFO lmq.queue[queue: "processor:queue:5", vhost: "/"] (messages=0) Deleted
+lavinmq      | 2025-07-20T22:51:47.438554Z  INFO lmq.queue[queue: "processor:queue:4", vhost: "/"] (messages=0) Deleted
+lavinmq      | 2025-07-20T22:51:47.438701Z  INFO lmq.launcher Fibers: 
+lavinmq      | 2025-07-20T22:51:47.438702Z  INFO lmq.launcher #<Fiber:0x7fb8946e3f00: main>
+lavinmq      | 2025-07-20T22:51:47.438703Z  INFO lmq.launcher #<Fiber:0x7fb8946e3c00: DEFAULT:loop>
+lavinmq      | 2025-07-20T22:51:47.438704Z  INFO lmq.launcher #<Fiber:0x7fb8946e3b40: main>
+lavinmq      | 2025-07-20T22:51:47.438704Z  INFO lmq.launcher #<Fiber:0x7fb8946e39c0: signal-loop>
+lavinmq      | 2025-07-20T22:51:47.438705Z  INFO lmq.launcher #<Fiber:0x7fb8946e3540>
+lavinmq      | 2025-07-20T22:51:47.438705Z  INFO lmq.launcher #<Fiber:0x7fb8946e3480>
+lavinmq      | 2025-07-20T22:51:47.438706Z  INFO lmq.launcher #<Fiber:0x7fb8946e33c0: RoughTime>
+lavinmq      | 2025-07-20T22:51:47.438706Z  INFO lmq.launcher #<Fiber:0x7fb891d80c00: Consumer timeouts loop>
+lavinmq      | 2025-07-20T22:51:47.438706Z  INFO lmq.launcher #<Fiber:0x7fb891d80840: Server#stats_loop>
+lavinmq      | 2025-07-20T22:51:47.438711Z  INFO lmq.launcher #<Fiber:0x7fb891d809c0>
+[Klavinmq exited with code 0

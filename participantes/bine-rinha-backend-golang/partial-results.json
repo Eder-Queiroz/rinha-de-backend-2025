@@ -1,0 +1,44 @@
+{
+  "participante": "bine-rinha-backend-golang",
+  "total_liquido": 232080.3068409402,
+  "total_bruto": 333145.89999994764,
+  "total_taxas": 33148.424999994815,
+  "descricao": "'total_liquido' é sua pontuação final. Equivale ao seu lucro. Fórmula: total_liquido + (total_liquido * p99.bonus) - (total_liquido * multa.porcentagem)",
+  "p99": {
+    "valor": "4.8196232999999955ms",
+    "bonus": 0.12360753400000009,
+    "max_requests": "550",
+    "descricao": "Fórmula para o bônus: max((11 - p99.valor) * 0.02, 0)"
+  },
+  "multa": {
+    "porcentagem": 0.35,
+    "total": 104999.11624998349,
+    "composicao": {
+      "total_inconsistencias": 179.10000001043193,
+      "descricao": "Se 'total_inconsistencias' > 0, há multa de 35%."
+    }
+  },
+  "lag": {
+    "num_pagamentos_total": 16741,
+    "num_pagamentos_solicitados": 16741,
+    "lag": 0,
+    "descricao": "Lag é a diferença entre a quantidade de solicitações de pagamentos vs o que foi realmente computado pelo backend. Mostra a perda de pagamentos possivelmente por estarem enfileirados."
+  },
+  "pagamentos_solicitados": {
+    "qtd_sucesso": 16741,
+    "qtd_falha": 0,
+    "descricao": "'qtd_sucesso' foram requests bem sucedidos para 'POST /payments' e 'qtd_falha' os requests com erro."
+  },
+  "pagamentos_realizados_default": {
+    "total_bruto": 168234.59999997335,
+    "num_pagamentos": 8454,
+    "total_taxas": 8411.729999998668,
+    "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Default."
+  },
+  "pagamentos_realizados_fallback": {
+    "total_bruto": 164911.29999997432,
+    "num_pagamentos": 8287,
+    "total_taxas": 24736.694999996147,
+    "descricao": "Informações do backend sobre solicitações de pagamento para o Payment Processor Fallback."
+  }
+}

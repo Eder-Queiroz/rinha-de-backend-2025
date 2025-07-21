@@ -1,0 +1,9 @@
+
+time="2025-07-20T19:54:54-03:00" level=warning msg="/home/rinha-user/rinha-de-backend-2025/participantes/matheusdojava/docker-compose.yaml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+ api2 Pulling 
+ mongodb Pulling 
+ api1 Pulling 
+ api2 Error manifest for matheuspieropan/rinhabackend2025:graalvm not found: manifest unknown: manifest unknown
+ mongodb  Interrupted
+ api1  Interrupted
+Error response from daemon: manifest for matheuspieropan/rinhabackend2025:graalvm not found: manifest unknown: manifest unknown

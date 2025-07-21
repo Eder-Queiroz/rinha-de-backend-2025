@@ -1,0 +1,197 @@
+
+ processor-api-2 Pulling 
+ load-balancer Pulling 
+ messaging Pulling 
+ processor-api-1 Pulling 
+ fe07684b16b8 Already exists 
+ 4f4fb700ef54 Pulling fs layer 
+ 070c867103ef Pulling fs layer 
+ fe07684b16b8 Already exists 
+ 4f4fb700ef54 Pulling fs layer 
+ 070c867103ef Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 4f4fb700ef54 Already exists 
+ 4f4fb700ef54 Verifying Checksum 
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Verifying Checksum 
+ 4f4fb700ef54 Download complete 
+ 4f4fb700ef54 Download complete 
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 6fd20c87e103 Pulling fs layer 
+ ec99f8b99825 Pulling fs layer 
+ 8168e2be9d20 Pulling fs layer 
+ 4c4266770910 Pulling fs layer 
+ 67e108beaf7a Pulling fs layer 
+ 8168e2be9d20 Waiting 
+ 4c4266770910 Waiting 
+ 67e108beaf7a Waiting 
+ 4f4fb700ef54 Pull complete 
+ 4f4fb700ef54 Pull complete 
+ ec99f8b99825 Downloading [>                                                  ]  36.88kB/3.624MB
+ ec99f8b99825 Verifying Checksum 
+ ec99f8b99825 Download complete 
+ ec99f8b99825 Extracting [>                                                  ]  65.54kB/3.624MB
+ ec99f8b99825 Extracting [==================================================>]  3.624MB/3.624MB
+ ec99f8b99825 Pull complete 
+ 8168e2be9d20 Downloading [>                                                  ]  4.898kB/463.1kB
+ 8168e2be9d20 Verifying Checksum 
+ 8168e2be9d20 Download complete 
+ 8168e2be9d20 Extracting [===>                                               ]  32.77kB/463.1kB
+ 8168e2be9d20 Extracting [==================================================>]  463.1kB/463.1kB
+ 8168e2be9d20 Pull complete 
+ 6fd20c87e103 Downloading [>                                                  ]  63.13kB/5.921MB
+ 6fd20c87e103 Verifying Checksum 
+ 6fd20c87e103 Download complete 
+ 6fd20c87e103 Extracting [>                                                  ]  65.54kB/5.921MB
+ 6fd20c87e103 Extracting [==================================================>]  5.921MB/5.921MB
+ 070c867103ef Downloading [>                                                  ]  53.26kB/5.295MB
+ 070c867103ef Downloading [>                                                  ]  53.26kB/5.295MB
+ 6fd20c87e103 Pull complete 
+ messaging Pulled 
+ 070c867103ef Downloading [==>                                                ]  213.4kB/5.295MB
+ 070c867103ef Downloading [==>                                                ]  213.4kB/5.295MB
+ 4c4266770910 Downloading [>                                                  ]  434.2kB/43.38MB
+ 070c867103ef Downloading [====>                                              ]  454.7kB/5.295MB
+ 070c867103ef Downloading [====>                                              ]  454.7kB/5.295MB
+ 4c4266770910 Downloading [=============>                                     ]   11.4MB/43.38MB
+ 070c867103ef Downloading [==========>                                        ]  1.118MB/5.295MB
+ 070c867103ef Downloading [==========>                                        ]  1.118MB/5.295MB
+ 4c4266770910 Downloading [=======================>                           ]  20.65MB/43.38MB
+ 070c867103ef Downloading [====================>                              ]   2.15MB/5.295MB
+ 070c867103ef Downloading [====================>                              ]   2.15MB/5.295MB
+ 67e108beaf7a Downloading [==================================================>]     369B/369B
+ 67e108beaf7a Verifying Checksum 
+ 67e108beaf7a Download complete 
+ 4c4266770910 Downloading [====================================>              ]  32.08MB/43.38MB
+ 070c867103ef Downloading [===============================>                   ]  3.318MB/5.295MB
+ 070c867103ef Downloading [===============================>                   ]  3.318MB/5.295MB
+ 4c4266770910 Downloading [==============================================>    ]  39.97MB/43.38MB
+ 4c4266770910 Verifying Checksum 
+ 4c4266770910 Download complete 
+ 4c4266770910 Extracting [>                                                  ]  458.8kB/43.38MB
+ 070c867103ef Verifying Checksum 
+ 070c867103ef Download complete 
+ 070c867103ef Verifying Checksum 
+ 070c867103ef Download complete 
+ 070c867103ef Extracting [>                                                  ]  65.54kB/5.295MB
+ 070c867103ef Extracting [>                                                  ]  65.54kB/5.295MB
+ 4c4266770910 Extracting [======>                                            ]  5.964MB/43.38MB
+ 070c867103ef Extracting [==================================================>]  5.295MB/5.295MB
+ 070c867103ef Extracting [==================================================>]  5.295MB/5.295MB
+ 070c867103ef Pull complete 
+ 070c867103ef Pull complete 
+ processor-api-2 Pulled 
+ processor-api-1 Pulled 
+ 4c4266770910 Extracting [===========>                                       ]  10.09MB/43.38MB
+ 4c4266770910 Extracting [=================>                                 ]  15.14MB/43.38MB
+ 4c4266770910 Extracting [=======================>                           ]  20.64MB/43.38MB
+ 4c4266770910 Extracting [============================>                      ]  24.31MB/43.38MB
+ 4c4266770910 Extracting [=================================>                 ]  29.36MB/43.38MB
+ 4c4266770910 Extracting [===================================>               ]  30.74MB/43.38MB
+ 4c4266770910 Extracting [============================================>      ]  38.99MB/43.38MB
+ 4c4266770910 Extracting [==================================================>]  43.38MB/43.38MB
+ 4c4266770910 Pull complete 
+ 67e108beaf7a Extracting [==================================================>]     369B/369B
+ 67e108beaf7a Extracting [==================================================>]     369B/369B
+ 67e108beaf7a Pull complete 
+ load-balancer Pulled 
+time="2025-07-20T19:26:38-03:00" level=warning msg="a network with name backend exists but was not created for project \"jccl\".\nSet `external: true` to use an existing network"
+ Volume "jccl_pgdata"  Creating
+ Volume "jccl_pgdata"  Created
+ Container payment-db  Creating
+ Container jccl-traefik  Creating
+ Container payment-db  Created
+ Container jccl-traefik  Created
+ Container messaging  Creating
+ Container messaging  Created
+ Container processor-api-2  Creating
+ Container processor-api-1  Creating
+ Container processor-api-1  Created
+ Container processor-api-2  Created
+Attaching to jccl-traefik, messaging, payment-db, processor-api-1, processor-api-2
+payment-db       | The files belonging to this database system will be owned by user "postgres".
+payment-db       | This user must also own the server process.
+payment-db       | 
+payment-db       | The database cluster will be initialized with locale "en_US.utf8".
+payment-db       | The default database encoding has accordingly been set to "UTF8".
+payment-db       | The default text search configuration will be set to "english".
+payment-db       | 
+payment-db       | Data page checksums are disabled.
+payment-db       | 
+payment-db       | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+payment-db       | creating subdirectories ... ok
+payment-db       | selecting dynamic shared memory implementation ... posix
+payment-db       | selecting default "max_connections" ... 100
+payment-db       | selecting default "shared_buffers" ... 128MB
+payment-db       | selecting default time zone ... UTC
+payment-db       | creating configuration files ... ok
+payment-db       | running bootstrap script ... ok
+payment-db       | sh: locale: not found
+payment-db       | 2025-07-20 22:26:42.981 UTC [35] WARNING:  no usable system locales were found
+payment-db       | performing post-bootstrap initialization ... ok
+payment-db       | syncing data to disk ... ok
+payment-db       | 
+payment-db       | 
+payment-db       | Success. You can now start the database server using:
+payment-db       | 
+payment-db       |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+payment-db       | 
+payment-db       | initdb: warning: enabling "trust" authentication for local connections
+payment-db       | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+payment-db       | waiting for server to start....2025-07-20 22:26:44.883 UTC [41] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+payment-db       | 2025-07-20 22:26:44.890 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+payment-db       | 2025-07-20 22:26:44.907 UTC [44] LOG:  database system was shut down at 2025-07-20 22:26:44 UTC
+payment-db       | 2025-07-20 22:26:44.919 UTC [41] LOG:  database system is ready to accept connections
+payment-db       |  done
+payment-db       | server started
+payment-db       | 
+payment-db       | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+payment-db       | 
+payment-db       | waiting for server to shut down....2025-07-20 22:26:45.014 UTC [41] LOG:  received fast shutdown request
+payment-db       | 2025-07-20 22:26:45.019 UTC [41] LOG:  aborting any active transactions
+payment-db       | 2025-07-20 22:26:45.081 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+payment-db       | 2025-07-20 22:26:45.083 UTC [42] LOG:  shutting down
+payment-db       | 2025-07-20 22:26:45.087 UTC [42] LOG:  checkpoint starting: shutdown immediate
+payment-db       | 2025-07-20 22:26:45.155 UTC [42] LOG:  checkpoint complete: wrote 3 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.028 s, sync=0.007 s, total=0.073 s; sync files=2, longest=0.004 s, average=0.004 s; distance=0 kB, estimate=0 kB; lsn=0/14ED278, redo lsn=0/14ED278
+payment-db       | 2025-07-20 22:26:45.161 UTC [41] LOG:  database system is shut down
+payment-db       |  done
+payment-db       | server stopped
+payment-db       | 
+payment-db       | PostgreSQL init process complete; ready for start up.
+payment-db       | 
+payment-db       | 2025-07-20 22:26:45.244 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+payment-db       | 2025-07-20 22:26:45.245 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+payment-db       | 2025-07-20 22:26:45.245 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+payment-db       | 2025-07-20 22:26:45.258 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+payment-db       | 2025-07-20 22:26:45.274 UTC [55] LOG:  database system was shut down at 2025-07-20 22:26:45 UTC
+payment-db       | 2025-07-20 22:26:45.282 UTC [1] LOG:  database system is ready to accept connections
+messaging        | started
+messaging        | Messaging on :4555
+messaging        | starting http server addr :5000
+processor-api-1  | starting server addr :4000
+processor-api-2  | starting server addr :4000
+payment-db       | 2025-07-20 22:26:52.750 UTC [66] ERROR:  invalid input syntax for type timestamp: ""
+payment-db       | 2025-07-20 22:26:52.750 UTC [66] CONTEXT:  unnamed portal parameter $1 = ''
+payment-db       | 2025-07-20 22:26:52.750 UTC [66] STATEMENT:  SELECT amount, origin FROM payments WHERE requested_at BETWEEN $1 AND $2 
+messaging        | 2025/07/20 22:26:52 Erro ao executar a query: pq: invalid input syntax for type timestamp: ""
+[Kprocessor-api-2 exited with code 2
+jccl-traefik     | [90m2025-07-20T22:28:00Z[0m [1m[31mERR[0m[0m [36merror=[0m[31m"accept tcp [::]:8080: use of closed network connection"[0m [36mentryPointName=[0mtraefik
+jccl-traefik     | [90m2025-07-20T22:28:00Z[0m [1m[31mERR[0m[0m Error while starting server [36merror=[0m[31m"accept tcp [::]:8080: use of closed network connection"[0m [36mentryPointName=[0mtraefik
+jccl-traefik     | [90m2025-07-20T22:28:00Z[0m [1m[31mERR[0m[0m [36merror=[0m[31m"accept tcp [::]:9999: use of closed network connection"[0m [36mentryPointName=[0mprocessor-api
+jccl-traefik     | [90m2025-07-20T22:28:00Z[0m [1m[31mERR[0m[0m Error while starting server [36merror=[0m[31m"accept tcp [::]:9999: use of closed network connection"[0m [36mentryPointName=[0mprocessor-api
+jccl-traefik     | [90m2025-07-20T22:28:00Z[0m [1m[31mERR[0m[0m [36merror=[0m[31m"accept tcp [::]:80: use of closed network connection"[0m [36mentryPointName=[0mweb
+jccl-traefik     | [90m2025-07-20T22:28:00Z[0m [1m[31mERR[0m[0m [36merror=[0m[31m"close tcp [::]:80: use of closed network connection"[0m [36mentryPointName=[0mweb
+[Kmessaging exited with code 2
+payment-db       | 2025-07-20 22:28:01.510 UTC [1] LOG:  received fast shutdown request
+payment-db       | 2025-07-20 22:28:01.520 UTC [1] LOG:  aborting any active transactions
+payment-db       | 2025-07-20 22:28:01.523 UTC [1] LOG:  background worker "logical replication launcher" (PID 58) exited with exit code 1
+payment-db       | 2025-07-20 22:28:01.523 UTC [53] LOG:  shutting down
+payment-db       | 2025-07-20 22:28:01.530 UTC [53] LOG:  checkpoint starting: shutdown immediate
+payment-db       | 2025-07-20 22:28:01.603 UTC [53] LOG:  checkpoint complete: wrote 170 buffers (1.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.014 s, sync=0.037 s, total=0.080 s; sync files=52, longest=0.028 s, average=0.001 s; distance=1589 kB, estimate=1589 kB; lsn=0/167A978, redo lsn=0/167A978
+payment-db       | 2025-07-20 22:28:01.610 UTC [1] LOG:  database system is shut down
+[Kpayment-db exited with code 0
+[Kjccl-traefik exited with code 0
+log truncated at line 1000

@@ -1,0 +1,462 @@
+
+ worker2 Pulling 
+ app1 Pulling 
+ app2 Pulling 
+ worker1 Pulling 
+ c19952135643 Already exists 
+ 9676d0544d24 Pulling fs layer 
+ 3e24afcbb1e1 Pulling fs layer 
+ c8d0843e3946 Pulling fs layer 
+ 8e321fa3b5ae Pulling fs layer 
+ e6709adf585e Pulling fs layer 
+ 7552cecc5dcd Pulling fs layer 
+ d94dcb13ab6d Pulling fs layer 
+ dc13f280104d Pulling fs layer 
+ 7552cecc5dcd Waiting 
+ 8e321fa3b5ae Waiting 
+ e6709adf585e Waiting 
+ d94dcb13ab6d Waiting 
+ dc13f280104d Waiting 
+ c8d0843e3946 Downloading [==================================================>]     184B/184B
+ c8d0843e3946 Verifying Checksum 
+ c8d0843e3946 Download complete 
+ 3e24afcbb1e1 Downloading [>                                                  ]  400.8kB/39.38MB
+ 9676d0544d24 Download complete 
+ 9676d0544d24 Extracting [==================================================>]     296B/296B
+ 9676d0544d24 Extracting [==================================================>]     296B/296B
+ 3e24afcbb1e1 Downloading [===========>                                       ]   9.35MB/39.38MB
+ 9676d0544d24 Pull complete 
+ 3e24afcbb1e1 Downloading [========================>                          ]  19.12MB/39.38MB
+ c19952135643 Already exists 
+ 9676d0544d24 Already exists 
+ 3e24afcbb1e1 Pulling fs layer 
+ c8d0843e3946 Pulling fs layer 
+ 8e321fa3b5ae Pulling fs layer 
+ e6709adf585e Pulling fs layer 
+ 7552cecc5dcd Pulling fs layer 
+ d94dcb13ab6d Pulling fs layer 
+ dc13f280104d Pulling fs layer 
+ dc13f280104d Waiting 
+ 8e321fa3b5ae Waiting 
+ 3e24afcbb1e1 Downloading [========================>                          ]  19.12MB/39.38MB
+ c8d0843e3946 Download complete 
+ 7552cecc5dcd Waiting 
+ e6709adf585e Waiting 
+ d94dcb13ab6d Waiting 
+ 3e24afcbb1e1 Downloading [=====================================>             ]  29.74MB/39.38MB
+ 3e24afcbb1e1 Downloading [=====================================>             ]  29.74MB/39.38MB
+ 8e321fa3b5ae Downloading [=============>                                     ]     933B/3.398kB
+ 8e321fa3b5ae Download complete 
+ 8e321fa3b5ae Downloading [=============>                                     ]     933B/3.398kB
+ 8e321fa3b5ae Download complete 
+ 3e24afcbb1e1 Download complete 
+ 3e24afcbb1e1 Download complete 
+ 3e24afcbb1e1 Extracting [>                                                  ]    426kB/39.38MB
+ 3e24afcbb1e1 Extracting [>                                                  ]    426kB/39.38MB
+ e6709adf585e Downloading [==================================================>]     137B/137B
+ e6709adf585e Verifying Checksum 
+ e6709adf585e Download complete 
+ e6709adf585e Verifying Checksum 
+ e6709adf585e Download complete 
+ 3e24afcbb1e1 Extracting [==========>                                        ]  8.094MB/39.38MB
+ 3e24afcbb1e1 Extracting [==========>                                        ]  8.094MB/39.38MB
+ 3e24afcbb1e1 Extracting [==================>                                ]  14.48MB/39.38MB
+ 3e24afcbb1e1 Extracting [==================>                                ]  14.48MB/39.38MB
+ c19952135643 Already exists 
+ 9676d0544d24 Already exists 
+ 3e24afcbb1e1 Pulling fs layer 
+ c8d0843e3946 Pulling fs layer 
+ 8e321fa3b5ae Pulling fs layer 
+ e6709adf585e Pulling fs layer 
+ 7552cecc5dcd Pulling fs layer 
+ d94dcb13ab6d Pulling fs layer 
+ dc13f280104d Pulling fs layer 
+ dc13f280104d Waiting 
+ 8e321fa3b5ae Download complete 
+ 3e24afcbb1e1 Extracting [==================>                                ]  14.48MB/39.38MB
+ c8d0843e3946 Download complete 
+ 7552cecc5dcd Waiting 
+ e6709adf585e Download complete 
+ d94dcb13ab6d Waiting 
+ 3e24afcbb1e1 Extracting [===========================>                       ]  21.73MB/39.38MB
+ 3e24afcbb1e1 Extracting [===========================>                       ]  21.73MB/39.38MB
+ 3e24afcbb1e1 Extracting [===========================>                       ]  21.73MB/39.38MB
+ dc13f280104d Download complete 
+ dc13f280104d Downloading [==============>                                    ]     934B/3.171kB
+ dc13f280104d Downloading [==================================================>]  3.171kB/3.171kB
+ dc13f280104d Verifying Checksum 
+ dc13f280104d Download complete 
+ dc13f280104d Download complete 
+ 3e24afcbb1e1 Extracting [====================================>              ]  28.97MB/39.38MB
+ 3e24afcbb1e1 Extracting [====================================>              ]  28.97MB/39.38MB
+ 3e24afcbb1e1 Extracting [====================================>              ]  28.97MB/39.38MB
+ 3e24afcbb1e1 Extracting [=============================================>     ]  35.78MB/39.38MB
+ 3e24afcbb1e1 Extracting [=============================================>     ]  35.78MB/39.38MB
+ 3e24afcbb1e1 Extracting [=============================================>     ]  35.78MB/39.38MB
+ 3e24afcbb1e1 Extracting [==================================================>]  39.38MB/39.38MB
+ 3e24afcbb1e1 Extracting [==================================================>]  39.38MB/39.38MB
+ 3e24afcbb1e1 Extracting [==================================================>]  39.38MB/39.38MB
+ c19952135643 Already exists 
+ 9676d0544d24 Already exists 
+ 3e24afcbb1e1 Pulling fs layer 
+ c8d0843e3946 Pulling fs layer 
+ 8e321fa3b5ae Pulling fs layer 
+ e6709adf585e Pulling fs layer 
+ 7552cecc5dcd Pulling fs layer 
+ d94dcb13ab6d Pulling fs layer 
+ 3e24afcbb1e1 Extracting [==================================================>]  39.38MB/39.38MB
+ dc13f280104d Pulling fs layer 
+ dc13f280104d Download complete 
+ c8d0843e3946 Download complete 
+ 8e321fa3b5ae Download complete 
+ e6709adf585e Download complete 
+ 7552cecc5dcd Waiting 
+ d94dcb13ab6d Waiting 
+ 3e24afcbb1e1 Pull complete 
+ 3e24afcbb1e1 Pull complete 
+ 3e24afcbb1e1 Pull complete 
+ 3e24afcbb1e1 Pull complete 
+ c8d0843e3946 Extracting [==================================================>]     184B/184B
+ c8d0843e3946 Extracting [==================================================>]     184B/184B
+ c8d0843e3946 Extracting [==================================================>]     184B/184B
+ c8d0843e3946 Extracting [==================================================>]     184B/184B
+ c8d0843e3946 Extracting [==================================================>]     184B/184B
+ c8d0843e3946 Extracting [==================================================>]     184B/184B
+ c8d0843e3946 Extracting [==================================================>]     184B/184B
+ c8d0843e3946 Extracting [==================================================>]     184B/184B
+ c8d0843e3946 Pull complete 
+ c8d0843e3946 Pull complete 
+ c8d0843e3946 Pull complete 
+ c8d0843e3946 Pull complete 
+ 8e321fa3b5ae Extracting [==================================================>]  3.398kB/3.398kB
+ 8e321fa3b5ae Extracting [==================================================>]  3.398kB/3.398kB
+ 8e321fa3b5ae Extracting [==================================================>]  3.398kB/3.398kB
+ 8e321fa3b5ae Extracting [==================================================>]  3.398kB/3.398kB
+ 8e321fa3b5ae Extracting [==================================================>]  3.398kB/3.398kB
+ 8e321fa3b5ae Extracting [==================================================>]  3.398kB/3.398kB
+ 8e321fa3b5ae Extracting [==================================================>]  3.398kB/3.398kB
+ 8e321fa3b5ae Extracting [==================================================>]  3.398kB/3.398kB
+ 8e321fa3b5ae Pull complete 
+ 8e321fa3b5ae Pull complete 
+ 8e321fa3b5ae Pull complete 
+ 8e321fa3b5ae Pull complete 
+ e6709adf585e Extracting [==================================================>]     137B/137B
+ e6709adf585e Extracting [==================================================>]     137B/137B
+ e6709adf585e Extracting [==================================================>]     137B/137B
+ e6709adf585e Extracting [==================================================>]     137B/137B
+ e6709adf585e Extracting [==================================================>]     137B/137B
+ e6709adf585e Extracting [==================================================>]     137B/137B
+ e6709adf585e Extracting [==================================================>]     137B/137B
+ e6709adf585e Extracting [==================================================>]     137B/137B
+ e6709adf585e Pull complete 
+ e6709adf585e Pull complete 
+ e6709adf585e Pull complete 
+ e6709adf585e Pull complete 
+ d94dcb13ab6d Downloading [>                                                  ]  73.99kB/7.057MB
+ d94dcb13ab6d Downloading [>                                                  ]  73.99kB/7.057MB
+ d94dcb13ab6d Downloading [>                                                  ]  73.99kB/7.057MB
+ d94dcb13ab6d Downloading [>                                                  ]  73.99kB/7.057MB
+ d94dcb13ab6d Downloading [========================>                          ]  3.486MB/7.057MB
+ d94dcb13ab6d Downloading [========================>                          ]  3.486MB/7.057MB
+ d94dcb13ab6d Downloading [========================>                          ]  3.486MB/7.057MB
+ d94dcb13ab6d Downloading [========================>                          ]  3.486MB/7.057MB
+ d94dcb13ab6d Verifying Checksum 
+ d94dcb13ab6d Download complete 
+ d94dcb13ab6d Download complete 
+ d94dcb13ab6d Verifying Checksum 
+ d94dcb13ab6d Verifying Checksum 
+ d94dcb13ab6d Download complete 
+ d94dcb13ab6d Download complete 
+ 7552cecc5dcd Verifying Checksum 
+ 7552cecc5dcd Downloading [==================================================>]      93B/93B
+ 7552cecc5dcd Downloading [==================================================>]      93B/93B
+ 7552cecc5dcd Verifying Checksum 
+ 7552cecc5dcd Download complete 
+ 7552cecc5dcd Download complete 
+ 7552cecc5dcd Download complete 
+ 7552cecc5dcd Extracting [==================================================>]      93B/93B
+ 7552cecc5dcd Extracting [==================================================>]      93B/93B
+ 7552cecc5dcd Verifying Checksum 
+ 7552cecc5dcd Download complete 
+ 7552cecc5dcd Extracting [==================================================>]      93B/93B
+ 7552cecc5dcd Extracting [==================================================>]      93B/93B
+ 7552cecc5dcd Extracting [==================================================>]      93B/93B
+ 7552cecc5dcd Extracting [==================================================>]      93B/93B
+ 7552cecc5dcd Extracting [==================================================>]      93B/93B
+ 7552cecc5dcd Extracting [==================================================>]      93B/93B
+ 7552cecc5dcd Pull complete 
+ 7552cecc5dcd Pull complete 
+ 7552cecc5dcd Pull complete 
+ 7552cecc5dcd Pull complete 
+ d94dcb13ab6d Extracting [>                                                  ]   98.3kB/7.057MB
+ d94dcb13ab6d Extracting [>                                                  ]   98.3kB/7.057MB
+ d94dcb13ab6d Extracting [>                                                  ]   98.3kB/7.057MB
+ d94dcb13ab6d Extracting [>                                                  ]   98.3kB/7.057MB
+ d94dcb13ab6d Extracting [==>                                                ]  294.9kB/7.057MB
+ d94dcb13ab6d Extracting [==>                                                ]  294.9kB/7.057MB
+ d94dcb13ab6d Extracting [==>                                                ]  294.9kB/7.057MB
+ d94dcb13ab6d Extracting [==>                                                ]  294.9kB/7.057MB
+ d94dcb13ab6d Extracting [===>                                               ]  491.5kB/7.057MB
+ d94dcb13ab6d Extracting [===>                                               ]  491.5kB/7.057MB
+ d94dcb13ab6d Extracting [===>                                               ]  491.5kB/7.057MB
+ d94dcb13ab6d Extracting [===>                                               ]  491.5kB/7.057MB
+ d94dcb13ab6d Extracting [==========>                                        ]  1.475MB/7.057MB
+ d94dcb13ab6d Extracting [==========>                                        ]  1.475MB/7.057MB
+ d94dcb13ab6d Extracting [==========>                                        ]  1.475MB/7.057MB
+ d94dcb13ab6d Extracting [==========>                                        ]  1.475MB/7.057MB
+ d94dcb13ab6d Extracting [====================>                              ]  2.851MB/7.057MB
+ d94dcb13ab6d Extracting [====================>                              ]  2.851MB/7.057MB
+ d94dcb13ab6d Extracting [====================>                              ]  2.851MB/7.057MB
+ d94dcb13ab6d Extracting [====================>                              ]  2.851MB/7.057MB
+ d94dcb13ab6d Extracting [==================================>                ]  4.915MB/7.057MB
+ d94dcb13ab6d Extracting [==================================>                ]  4.915MB/7.057MB
+ d94dcb13ab6d Extracting [==================================>                ]  4.915MB/7.057MB
+ d94dcb13ab6d Extracting [==================================>                ]  4.915MB/7.057MB
+ d94dcb13ab6d Extracting [==================================================>]  7.057MB/7.057MB
+ d94dcb13ab6d Extracting [==================================================>]  7.057MB/7.057MB
+ d94dcb13ab6d Extracting [==================================================>]  7.057MB/7.057MB
+ d94dcb13ab6d Extracting [==================================================>]  7.057MB/7.057MB
+ d94dcb13ab6d Extracting [==================================================>]  7.057MB/7.057MB
+ d94dcb13ab6d Extracting [==================================================>]  7.057MB/7.057MB
+ d94dcb13ab6d Extracting [==================================================>]  7.057MB/7.057MB
+ d94dcb13ab6d Extracting [==================================================>]  7.057MB/7.057MB
+ d94dcb13ab6d Pull complete 
+ d94dcb13ab6d Pull complete 
+ d94dcb13ab6d Pull complete 
+ d94dcb13ab6d Pull complete 
+ dc13f280104d Extracting [==================================================>]  3.171kB/3.171kB
+ dc13f280104d Extracting [==================================================>]  3.171kB/3.171kB
+ dc13f280104d Extracting [==================================================>]  3.171kB/3.171kB
+ dc13f280104d Extracting [==================================================>]  3.171kB/3.171kB
+ dc13f280104d Extracting [==================================================>]  3.171kB/3.171kB
+ dc13f280104d Extracting [==================================================>]  3.171kB/3.171kB
+ dc13f280104d Extracting [==================================================>]  3.171kB/3.171kB
+ dc13f280104d Extracting [==================================================>]  3.171kB/3.171kB
+ dc13f280104d Pull complete 
+ dc13f280104d Pull complete 
+ dc13f280104d Pull complete 
+ dc13f280104d Pull complete 
+ app1 Pulled 
+ app2 Pulled 
+ worker1 Pulled 
+ worker2 Pulled 
+ Network willzada-bunrinha_backend  Creating
+ Network willzada-bunrinha_backend  Created
+ Container willzada-bunrinha-redis-1  Creating
+ Container willzada-bunrinha-worker1-1  Creating
+ Container willzada-bunrinha-worker2-1  Creating
+ Container willzada-bunrinha-app1-1  Creating
+ Container willzada-bunrinha-app2-1  Creating
+ Container willzada-bunrinha-worker1-1  Created
+ Container willzada-bunrinha-app1-1  Created
+ Container willzada-bunrinha-worker2-1  Created
+ Container willzada-bunrinha-app2-1  Created
+ Container willzada-bunrinha-redis-1  Created
+Attaching to app1-1, app2-1, redis-1, worker1-1, worker2-1
+redis-1    | 1:C 20 Jul 2025 23:24:55.571 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1    | 1:C 20 Jul 2025 23:24:55.571 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1    | 1:C 20 Jul 2025 23:24:55.571 * Redis version=7.4.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1    | 1:C 20 Jul 2025 23:24:55.571 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis-1    | 1:M 20 Jul 2025 23:24:55.572 * monotonic clock: POSIX clock_gettime
+redis-1    | 1:M 20 Jul 2025 23:24:55.573 * Running mode=standalone, port=6379.
+redis-1    | 1:M 20 Jul 2025 23:24:55.573 * Server initialized
+redis-1    | 1:M 20 Jul 2025 23:24:55.573 * Ready to accept connections tcp
+worker1-1  | 🧵 Worker started...
+app1-1     | 🚀 Server is running at http://localhost:9999
+worker2-1  | 🧵 Worker started...
+app2-1     | 🚀 Server is running at http://localhost:9999
+worker1-1  | ✅ Processed: ea9a7dad-3f70-4349-a516-99418e4dd447 via default
+worker1-1  | ✅ Processed: 45a17add-683c-4502-a247-2ab006aab5d1 via default
+worker1-1  | ✅ Processed: d1f5823e-02b8-4a64-883d-037730f50711 via default
+worker1-1  | ✅ Processed: ea5577cd-0684-4609-8add-673610378b0a via default
+worker1-1  | ✅ Processed: 207bca19-105d-43fd-88fa-e523d841dabd via default
+worker1-1  | ✅ Processed: 7fca9a2f-377d-4abb-ac36-ee0cd36f7b51 via default
+worker1-1  | ✅ Processed: ab1de9f6-af5c-4ec7-a117-42149a50999f via default
+worker1-1  | ✅ Processed: f87adfca-3c6c-4df2-9b8c-27afa241c718 via default
+worker1-1  | ✅ Processed: b6768031-598e-4a58-afc9-f30798c80c41 via default
+worker1-1  | ✅ Processed: 0c5984e5-c7b7-4d4f-99e4-ec2e3b7caeb5 via default
+worker1-1  | ✅ Processed: 80d1591f-5671-4cca-9920-18096e25e7e1 via default
+worker1-1  | ✅ Processed: 2f4baed9-e8cf-498b-b45c-b57af4237a64 via default
+worker1-1  | ✅ Processed: 2b3a01af-4bf0-43e9-a7eb-58e836fb0297 via default
+worker1-1  | ✅ Processed: cf0c7e6d-2083-48fe-9417-5b3085178825 via default
+worker1-1  | ✅ Processed: fa9b0b1e-1306-4fde-bdf8-2cb8204b86ea via default
+worker1-1  | ✅ Processed: 4132b610-0fcd-4cc3-b47e-1e0c6f052db5 via default
+worker1-1  | ✅ Processed: 24695bef-184f-4722-b9db-5dc696c4c9e5 via default
+worker1-1  | ✅ Processed: 535e3673-c070-462b-8ce1-96bdfa8a4aad via default
+worker1-1  | ✅ Processed: e0d20a3b-ad84-4610-95f0-610ea3726570 via default
+worker1-1  | ✅ Processed: ff4168a1-7145-407f-90f1-5f3a8a1a001a via default
+worker1-1  | ✅ Processed: 1ad759f4-fb88-4877-9a6e-d30b9a2466e5 via default
+worker1-1  | ✅ Processed: fe611241-256c-4b7d-834e-78a2df71a2a0 via default
+worker1-1  | ✅ Processed: d8aab69d-b1ed-4a77-9068-c79545afa227 via default
+worker1-1  | ✅ Processed: 56625c0c-6d8f-4765-8d28-8acd7db520e3 via default
+worker1-1  | ✅ Processed: 041870f2-9b4a-44e4-ba42-dee2215d4c2f via default
+worker1-1  | ✅ Processed: 11e5714c-1d13-445c-acbd-b06f15d417b1 via default
+worker1-1  | ✅ Processed: c3fbb829-bfcc-48a4-9f77-f932c5b13406 via default
+worker1-1  | ✅ Processed: 977b8562-4bf6-487f-88f6-053c0fadde39 via default
+worker1-1  | ✅ Processed: 710ae0f5-c0bc-4381-8f74-878a7d6ca3fa via default
+worker1-1  | ✅ Processed: bb13c926-55e2-4498-9d4b-fca388a1d5aa via default
+worker1-1  | ✅ Processed: 8872e390-7450-4a9f-8ec6-06b183348b4d via default
+worker1-1  | ✅ Processed: 2effe482-4f2b-43cc-bd99-5315bb58e063 via default
+worker1-1  | ✅ Processed: 2a82d1d5-cf74-4de0-8a30-9b633b1c166b via default
+worker1-1  | ✅ Processed: 1f7d1d71-f9c6-4d20-82f5-479e3a7f59e9 via default
+worker1-1  | ✅ Processed: 5edbbee4-aabb-4976-97c2-866df7e5ed38 via default
+worker1-1  | ✅ Processed: 2985c040-1e9c-4576-8f8d-3d966938f607 via default
+worker1-1  | ✅ Processed: 85be2e40-abc6-4102-be99-7d7b8eccaf1a via default
+worker1-1  | ✅ Processed: 4c21c56c-ae1f-43a1-98af-d780bfbc7335 via default
+worker1-1  | ✅ Processed: 2e81d9f8-42b0-4b3a-acfe-b4c1a3bf5c04 via default
+worker1-1  | ✅ Processed: dab9cf56-1c61-4f97-a608-3b53b9e7dd44 via default
+worker1-1  | ✅ Processed: 57a587cf-8aa8-415c-8101-751f72e69ef5 via default
+worker1-1  | ✅ Processed: 54a37d8f-ed05-40f8-90fb-8108d13677db via default
+worker1-1  | ✅ Processed: 6443b264-d876-4552-87e8-2d7f5078ad87 via default
+worker1-1  | ✅ Processed: 84be372d-c068-4cdb-a9bb-f2008430d906 via default
+worker1-1  | ✅ Processed: 3e6d2323-7b9c-4782-be1f-0d77453472c2 via default
+worker1-1  | ✅ Processed: cf74ba1b-c7ac-44c7-a6d0-f7f1ae88e5ee via default
+worker1-1  | ✅ Processed: 119720f3-32d8-4fb1-a805-10aa992e4d9c via default
+worker1-1  | ✅ Processed: 77737dde-c0ac-4445-b380-ff0c11ed8af5 via default
+worker1-1  | ✅ Processed: caa13d74-589f-4a6e-b2f1-984b0654a85f via default
+worker1-1  | ✅ Processed: 3ae4f329-a458-4c0d-b1c0-3ddfb36ba209 via default
+worker1-1  | ✅ Processed: 6615263b-b873-4efd-b683-8ca170be58fb via default
+worker1-1  | ✅ Processed: 5773d53e-5cc7-4734-928d-63270ae1ad34 via default
+worker1-1  | ✅ Processed: ce2516b7-56d8-4c63-9762-e4be322336ff via default
+worker1-1  | ✅ Processed: 8c021806-74d7-49cf-9e5f-0829e1c84d51 via default
+worker1-1  | ✅ Processed: 8d44578d-4417-4379-949e-35fc189dc0a0 via default
+worker1-1  | ✅ Processed: dd393ef9-2ecb-48a6-a7c6-105e7873fa38 via default
+worker1-1  | ✅ Processed: 8fdf09ce-c4ab-42ff-b5b1-8a00f7a867bc via default
+worker1-1  | ✅ Processed: 6da2cb78-ad03-4fd9-bd0b-f17b7e600a26 via default
+worker1-1  | ✅ Processed: 4161ece5-2c92-4d76-b454-bdc483ebfdde via default
+worker1-1  | ✅ Processed: 5afed173-f6c3-489a-aee8-11fa2cd66441 via default
+worker1-1  | ✅ Processed: 1da5a5e8-0a4b-4b25-83e2-b0f46f59b894 via default
+worker1-1  | ✅ Processed: f38131b6-da4d-4afc-8b5c-cc57915b6ec8 via default
+worker1-1  | ✅ Processed: 8509230f-a74a-420d-b299-4700d81af7d4 via default
+worker1-1  | ✅ Processed: dede3d97-ece5-451e-a70f-35187902b06b via default
+worker1-1  | ✅ Processed: 5095abf4-f604-4899-867e-56008378227e via default
+worker1-1  | ✅ Processed: e7be2171-f401-41eb-ad4b-1d70b8853225 via default
+worker1-1  | ✅ Processed: f6541a28-1ec6-4da0-8dec-fe131b515194 via default
+worker1-1  | ✅ Processed: 55444947-5c81-41f6-8ad5-37d247dee54a via default
+worker1-1  | ✅ Processed: 7aad21cf-978a-40ee-abb6-0c96962ed51a via default
+worker1-1  | ✅ Processed: 33ffdf3f-2711-403c-9346-16bfec35d822 via default
+worker1-1  | ✅ Processed: 377a47b9-2a65-4e2f-8fca-6d9387531e0f via default
+worker1-1  | ✅ Processed: 6523290f-f6ff-4b4a-802e-0923b9f8e4d0 via default
+worker1-1  | ✅ Processed: 295fba7b-b487-430d-8c3c-75058903a35e via default
+worker1-1  | ✅ Processed: 74eada6c-8bb9-4290-8e0e-30b66fc29b53 via default
+worker1-1  | ✅ Processed: 81157a30-7ff3-49b7-a2e9-9a0de8a17285 via default
+worker1-1  | ✅ Processed: 679e7ca6-7cf6-49a0-bafa-5330f4799ba5 via default
+worker1-1  | ✅ Processed: 78d17fe4-5c29-47ed-8019-4584e3aa8843 via default
+worker1-1  | ✅ Processed: 56cbee34-3423-4d8c-87ea-62f5d12836e3 via default
+worker1-1  | ✅ Processed: 20a10e9f-b56d-43a4-8eb5-a70494d2fb37 via default
+worker1-1  | ✅ Processed: 2d6fae5e-030b-46f1-ae30-6e1ebfc68852 via default
+worker1-1  | ✅ Processed: 9df6e207-4edf-4c50-8ee0-673381dc9198 via default
+worker1-1  | ✅ Processed: cf7d9b6e-fbc8-4b27-addd-c45ccc91843a via default
+worker1-1  | ✅ Processed: 196668df-b00e-4d4f-9d20-c800ef9408d1 via default
+worker1-1  | ✅ Processed: cf6a29ac-ffea-46ee-a491-1443eef3447d via default
+worker1-1  | ✅ Processed: d0a8a82f-ef87-46bd-9a15-095cb2713c64 via default
+worker1-1  | ✅ Processed: 2197a1ac-836f-446b-9b90-e152ef41e997 via default
+worker1-1  | ✅ Processed: 5d39a82c-5ae8-43dd-af4f-db360c5b23ef via default
+worker1-1  | ✅ Processed: 875f6377-2558-4966-8122-cb386bec5156 via default
+worker1-1  | ✅ Processed: f433beb3-f879-410a-91fc-6ac86423eec4 via default
+worker1-1  | ✅ Processed: b6e0e1ac-80be-4d4d-9c4c-217de87316f0 via default
+worker1-1  | ✅ Processed: b3e26b03-b604-4c59-8555-3f67c5fbb8bf via default
+worker1-1  | ✅ Processed: cc58e277-9345-45d5-b3f9-bcbe74f84106 via default
+worker1-1  | ✅ Processed: 447dfecd-9e55-44d2-a98e-46c5d3e5cb83 via default
+worker1-1  | ✅ Processed: bd73e102-bc68-4ec7-828b-3eacae77e7bf via default
+worker1-1  | ✅ Processed: 7627f880-934a-41d3-a94e-40f4352c3c28 via default
+worker1-1  | ✅ Processed: aabf30b7-50be-417d-832b-e0d9cd385f9f via default
+worker1-1  | ✅ Processed: f33ae58a-e328-49fd-af25-aed6fb6b2104 via default
+worker1-1  | ✅ Processed: f18a7cb3-0a3e-4b62-a7ed-9e0c4f1738b9 via default
+worker1-1  | ✅ Processed: c3a78e18-e0f7-420d-bd1a-b85681854b01 via default
+worker1-1  | ✅ Processed: c9387a75-9020-447f-af53-a40f9152c1a6 via default
+worker1-1  | ✅ Processed: 4f18b3d6-59de-48e2-8db4-2b8d0af4a1e2 via default
+worker1-1  | ✅ Processed: dcb0629f-6c8c-4986-8b4f-c016745175c9 via default
+worker1-1  | ✅ Processed: 986c170e-3671-456b-8a0d-f7b81d57cc57 via default
+worker1-1  | ✅ Processed: b030adb4-0cf4-4674-9b5e-2be0abb47eee via default
+worker1-1  | ✅ Processed: 88abaa3f-b16a-4dce-ad5e-94323a99bc57 via default
+worker1-1  | ✅ Processed: a339d680-b20e-48da-bcef-191e1aa0502d via default
+worker1-1  | ✅ Processed: 714ca4e2-6223-44f2-8867-cb1b9e09ca7d via default
+worker1-1  | ✅ Processed: 69d3ecaf-7f3d-4c5c-a05d-7ac98e222ca3 via default
+worker1-1  | ✅ Processed: 96f136de-5337-404a-8e1c-3524a1f3e49a via default
+worker1-1  | ✅ Processed: 3e49c393-cdad-4ae9-875c-640aacd2618b via default
+worker1-1  | ✅ Processed: ef816b82-b765-4a77-8836-0067ea9c1089 via default
+worker1-1  | ✅ Processed: 3a7858cf-0497-41f1-b2de-6c8e491b79b6 via default
+worker1-1  | ✅ Processed: 4c99ab79-3210-4130-a206-37764ea58ff3 via default
+worker1-1  | ✅ Processed: f47a1b2b-9d16-41c1-98e4-66d90f366e00 via default
+worker1-1  | ✅ Processed: bf0f0b69-cada-48fe-a177-e5c8e8aab9ec via default
+worker1-1  | ✅ Processed: db3e3e2b-29ab-421c-92d8-6099bde549cf via default
+worker1-1  | ✅ Processed: 6dd8931d-3442-4a4c-8997-19144fec9c87 via default
+worker1-1  | ✅ Processed: 8422d41c-64db-44f6-9451-3e96b0a1514a via default
+worker1-1  | ✅ Processed: c6120f62-7a4b-4382-a001-df1e6766d28e via default
+worker1-1  | ✅ Processed: a7c5b473-709e-4cbe-875f-ec001df00e77 via default
+worker1-1  | ✅ Processed: c29d5b85-ab02-48ee-acff-8ef2137cd471 via default
+worker1-1  | ✅ Processed: 9d983cb1-571f-4e4d-a739-f79a27b4ae25 via default
+worker1-1  | ✅ Processed: 2558658a-4bfd-41ca-a41d-84db94abcc7e via default
+worker1-1  | ✅ Processed: ef78df50-0565-40b5-8bb8-46cb818a0c0c via default
+worker1-1  | ✅ Processed: c4491add-0b61-477e-9ac2-47e2c138d634 via default
+worker1-1  | ✅ Processed: 5a6dceda-06e0-4f50-b7b1-f282b557b2f1 via default
+worker1-1  | ✅ Processed: 5f247579-7890-4e0a-8c6f-2d22abd16f86 via default
+worker1-1  | ✅ Processed: 9ffdb22d-8c40-4eab-b3c7-0869ea0e0296 via default
+worker1-1  | ✅ Processed: a6dc01e1-3f0c-43be-b279-f931b86dfab5 via default
+worker1-1  | ✅ Processed: fb7c647f-ab55-454c-8c97-a6020ab8b388 via default
+worker1-1  | ✅ Processed: 31f0b7c6-1122-4e1a-bdbb-94f0b205fc39 via default
+worker1-1  | ✅ Processed: 6e9fc5b9-4ae5-4cad-b86e-e2935aab7c99 via default
+worker1-1  | ✅ Processed: 50575f8d-0e99-4e70-a475-a1e2729a58a3 via default
+worker1-1  | ✅ Processed: 782b719b-b29f-440c-827b-f431acf744cb via default
+worker1-1  | ✅ Processed: ce8847b2-0960-48d3-a62c-cc9e874f0c12 via default
+worker1-1  | ✅ Processed: 976ae9e3-24f3-4ba1-8d9e-744e6ab1ef0c via default
+worker1-1  | ✅ Processed: 98d9bcf8-3a6c-43db-a8f4-71993e8a0aa1 via default
+worker1-1  | ✅ Processed: bef2ffa0-1a29-4f20-8f17-a1ca82c36a49 via default
+worker1-1  | ✅ Processed: eafb10b3-a113-4a27-abee-8660a849cb17 via default
+worker2-1  | ✅ Processed: 87f96f88-faaf-4816-a3ba-1a28ce48f0c7 via default
+worker2-1  | ✅ Processed: 52b78397-4483-45af-ab26-7b0d45439abf via default
+worker2-1  | ✅ Processed: 1b7bf358-9a31-4388-bb0d-581f1d6e1c04 via default
+worker2-1  | ✅ Processed: b8d5c761-8080-4d84-8752-af2d8768e3a0 via default
+worker2-1  | ✅ Processed: 09fe57ff-c9ba-493d-9ab8-ee8ac0121896 via default
+worker1-1  | ✅ Processed: d608a5a0-8606-4b12-9f95-6fc7202c4e9c via fallback
+worker2-1  | ✅ Processed: 8da858e6-b994-4dcf-a7a2-029a7b3f93b0 via fallback
+worker1-1  | ✅ Processed: 6a2197c5-4b14-46f0-92e3-723434904ec2 via fallback
+worker2-1  | ✅ Processed: 97d7c61e-d2a4-4b2d-a4f0-a51a7bff6e43 via fallback
+worker1-1  | Worker error: Both processors failed
+worker2-1  | Worker error: Both processors failed
+worker1-1  | ✅ Processed: bfba4c23-3902-4f5e-9be8-4b25030774e2 via default
+worker2-1  | ✅ Processed: 5cb649c1-c8e4-4b95-99c9-06954e510715 via default
+redis-1    | 1:M 20 Jul 2025 23:25:56.024 * 10000 changes in 60 seconds. Saving...
+redis-1    | 1:M 20 Jul 2025 23:25:56.025 * Background saving started by pid 20
+redis-1    | 20:C 20 Jul 2025 23:25:56.051 * DB saved on disk
+redis-1    | 20:C 20 Jul 2025 23:25:56.052 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+redis-1    | 1:M 20 Jul 2025 23:25:56.126 * Background saving terminated with success
+worker1-1  | ✅ Processed: 28bab2b7-d750-464e-8c1a-96de91dc05c9 via default
+worker2-1  | ✅ Processed: 4a140bc4-2689-414f-96f5-94bc48b47f20 via default
+worker1-1  | ✅ Processed: 68559da2-17d8-4bc8-b41d-288d2aa2d492 via default
+redis-1    | 1:signal-handler (1753053968) Received SIGTERM scheduling shutdown...
+redis-1    | 1:M 20 Jul 2025 23:26:08.238 * User requested shutdown...
+redis-1    | 1:M 20 Jul 2025 23:26:08.238 * Saving the final RDB snapshot before exiting.
+redis-1    | 1:M 20 Jul 2025 23:26:08.365 * DB saved on disk
+redis-1    | 1:M 20 Jul 2025 23:26:08.365 # Redis is now ready to exit, bye bye...
+worker2-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.3:6379
+worker2-1  |     at new ExceptionWithHostPort (internal:shared:42:10)
+worker2-1  |     at afterConnect (node:net:1167:39)
+worker2-1  |     at connectError (node:net:364:48)
+app1-1     | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.3:6379
+app1-1     |     at new ExceptionWithHostPort (internal:shared:42:10)
+app1-1     |     at afterConnect (node:net:1167:39)
+app1-1     |     at connectError (node:net:364:48)
+worker1-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.3:6379
+worker1-1  |     at new ExceptionWithHostPort (internal:shared:42:10)
+worker1-1  |     at afterConnect (node:net:1167:39)
+worker1-1  |     at connectError (node:net:364:48)
+worker1-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.3:6379
+worker1-1  |     at new ExceptionWithHostPort (internal:shared:42:10)
+worker1-1  |     at afterConnect (node:net:1167:39)
+worker1-1  |     at connectError (node:net:364:48)
+worker2-1  | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.3:6379
+worker2-1  |     at new ExceptionWithHostPort (internal:shared:42:10)
+worker2-1  |     at afterConnect (node:net:1167:39)
+worker2-1  |     at connectError (node:net:364:48)
+app2-1     | [ioredis] Unhandled error event: Error: connect ECONNREFUSED 172.20.0.3:6379
+app2-1     |     at new ExceptionWithHostPort (internal:shared:42:10)
+app2-1     |     at afterConnect (node:net:1167:39)
+app2-1     |     at connectError (node:net:364:48)
+[Kredis-1 exited with code 0
+[Kworker1-1 exited with code 137
+[Kworker2-1 exited with code 137
+[Kapp1-1 exited with code 137
+[Kapp2-1 exited with code 137
+log truncated at line 1000

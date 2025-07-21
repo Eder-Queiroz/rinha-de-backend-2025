@@ -1,0 +1,12 @@
+{
+  "name": "João Victor Reis",
+  "social": [
+    "https://x.com/Bibitovr",
+    "https://www.linkedin.com/in/joaoreisdev/"
+  ],
+  "source-code-repo": "https://github.com/JoaoReisA/rinha-de-backend-2025-go",
+  "langs": ["go"],
+  "storages": ["redis"],
+  "load-balancers": ["nginx"],
+  "other-technologies": ["fiber"]
+}

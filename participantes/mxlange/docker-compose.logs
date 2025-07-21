@@ -1,0 +1,1001 @@
+
+time="2025-07-20T19:56:14-03:00" level=warning msg="a network with name payment-processor exists but was not created for project \"mxlange\".\nSet `external: true` to use an existing network"
+ Container mxlange-db-1  Creating
+ Container mxlange-db-1  Created
+ Container mxlange-api2-1  Creating
+ Container mxlange-api1-1  Creating
+ Container mxlange-api2-1  Created
+ Container mxlange-api1-1  Created
+ Container rinha-nginx  Creating
+ Container rinha-nginx  Created
+Attaching to api1-1, api2-1, db-1, rinha-nginx
+db-1         | The files belonging to this database system will be owned by user "postgres".
+db-1         | This user must also own the server process.
+db-1         | 
+db-1         | The database cluster will be initialized with locale "en_US.utf8".
+db-1         | The default database encoding has accordingly been set to "UTF8".
+db-1         | The default text search configuration will be set to "english".
+db-1         | 
+db-1         | Data page checksums are disabled.
+db-1         | 
+db-1         | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db-1         | creating subdirectories ... ok
+db-1         | selecting dynamic shared memory implementation ... posix
+db-1         | selecting default "max_connections" ... 100
+db-1         | selecting default "shared_buffers" ... 128MB
+db-1         | selecting default time zone ... UTC
+db-1         | creating configuration files ... ok
+db-1         | running bootstrap script ... ok
+db-1         | sh: locale: not found
+db-1         | 2025-07-20 22:56:17.415 UTC [35] WARNING:  no usable system locales were found
+db-1         | performing post-bootstrap initialization ... ok
+db-1         | syncing data to disk ... ok
+db-1         | 
+db-1         | 
+db-1         | Success. You can now start the database server using:
+db-1         | 
+db-1         |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+db-1         | 
+db-1         | initdb: warning: enabling "trust" authentication for local connections
+db-1         | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+db-1         | waiting for server to start....2025-07-20 22:56:18.598 UTC [41] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+db-1         | 2025-07-20 22:56:18.598 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1         | 2025-07-20 22:56:18.600 UTC [44] LOG:  database system was shut down at 2025-07-20 22:56:18 UTC
+db-1         | 2025-07-20 22:56:18.605 UTC [41] LOG:  database system is ready to accept connections
+db-1         |  done
+db-1         | server started
+db-1         | 
+db-1         | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+db-1         | 
+db-1         | waiting for server to shut down....2025-07-20 22:56:18.697 UTC [41] LOG:  received fast shutdown request
+db-1         | 2025-07-20 22:56:18.697 UTC [41] LOG:  aborting any active transactions
+db-1         | 2025-07-20 22:56:18.699 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+db-1         | 2025-07-20 22:56:18.701 UTC [42] LOG:  shutting down
+db-1         | 2025-07-20 22:56:18.701 UTC [42] LOG:  checkpoint starting: shutdown immediate
+db-1         | 2025-07-20 22:56:18.702 UTC [42] LOG:  checkpoint complete: wrote 3 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/14ED2B8, redo lsn=0/14ED2B8
+db-1         | 2025-07-20 22:56:18.707 UTC [41] LOG:  database system is shut down
+db-1         |  done
+db-1         | server stopped
+db-1         | 
+db-1         | PostgreSQL init process complete; ready for start up.
+db-1         | 
+db-1         | 2025-07-20 22:56:18.824 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+db-1         | 2025-07-20 22:56:18.825 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-1         | 2025-07-20 22:56:18.825 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-1         | 2025-07-20 22:56:18.825 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1         | 2025-07-20 22:56:18.827 UTC [55] LOG:  database system was shut down at 2025-07-20 22:56:18 UTC
+db-1         | 2025-07-20 22:56:18.831 UTC [1] LOG:  database system is ready to accept connections
+api2-1       | Connecting to database with connection string: postgresql://postgres:postgres@db:5432/postgres?sslmode=disable
+api2-1       | Running with concurrency: 20
+api2-1       | 
+api2-1       |  ┌───────────────────────────────────────────────────┐ 
+api2-1       |  │                   My Rinha API                    │ 
+api2-1       |  │                   Fiber v2.52.8                   │ 
+api2-1       |  │               http://127.0.0.1:8080               │ 
+api2-1       |  │       (bound on host 0.0.0.0 and port 8080)       │ 
+api2-1       |  │                                                   │ 
+api2-1       |  │ Handlers ............. 3  Processes ........... 1 │ 
+api2-1       |  │ Prefork ....... Disabled  PID ................. 1 │ 
+api2-1       |  └───────────────────────────────────────────────────┘ 
+api2-1       | 
+api1-1       | Connecting to database with connection string: postgresql://postgres:postgres@db:5432/postgres?sslmode=disable
+api1-1       | Running with concurrency: 20
+api1-1       | 
+api1-1       |  ┌───────────────────────────────────────────────────┐ 
+api1-1       |  │                   My Rinha API                    │ 
+api1-1       |  │                   Fiber v2.52.8                   │ 
+api1-1       |  │               http://127.0.0.1:8080               │ 
+api1-1       |  │       (bound on host 0.0.0.0 and port 8080)       │ 
+api1-1       |  │                                                   │ 
+api1-1       |  │ Handlers ............. 3  Processes ........... 1 │ 
+api1-1       |  │ Prefork ....... Disabled  PID ................. 1 │ 
+api1-1       |  └───────────────────────────────────────────────────┘ 
+api1-1       | 
+rinha-nginx  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+rinha-nginx  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+rinha-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+rinha-nginx  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+rinha-nginx  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+rinha-nginx  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+rinha-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+rinha-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+rinha-nginx  | /docker-entrypoint.sh: Configuration complete; ready for start up
+api1-1       | Processing payment: &{ false 0xc000382140 0xc0003846f0}
+api1-1       | Sending payment to principal service: {"correlationId":"e53a0b07-0ee9-46f3-8d3d-590c19d6fe93","amount":19.9,"requestedAt":"2025-07-20T22:56:30.349Z"}
+api2-1       | Processing payment: &{ false 0xc000032430 0xc000010730}
+api2-1       | Sending payment to principal service: {"correlationId":"4968d493-ddea-42ff-9c39-2ce085bbdfa2","amount":19.9,"requestedAt":"2025-07-20T22:56:30.456Z"}
+api1-1       | Processing payment: &{ false 0xc000382380 0xc0003848c0}
+api1-1       | Sending payment to principal service: {"correlationId":"3ae73aaf-249e-4da8-9d99-91a5792a1a6f","amount":19.9,"requestedAt":"2025-07-20T22:56:30.565Z"}
+api2-1       | Processing payment: &{ false 0xc0000325d0 0xc000010918}
+api2-1       | Sending payment to principal service: {"correlationId":"9286fd8b-e540-4c4c-a513-80edf475c097","amount":19.9,"requestedAt":"2025-07-20T22:56:30.676Z"}
+api1-1       | Processing payment: &{ false 0xc00030e4d0 0xc000310628}
+api1-1       | Sending payment to principal service: {"correlationId":"c19d2f91-f221-40ae-bc96-965a1d3b2ba8","amount":19.9,"requestedAt":"2025-07-20T22:56:30.784Z"}
+api2-1       | Processing payment: &{ false 0xc00019a710 0xc0001949b8}
+api2-1       | Sending payment to principal service: {"correlationId":"6d354a81-efe6-4fc7-aae7-caf0aaca8c20","amount":19.9,"requestedAt":"2025-07-20T22:56:30.894Z"}
+api1-1       | Processing payment: &{ false 0xc0000320d0 0xc0000100c0}
+api1-1       | Sending payment to principal service: {"correlationId":"c853b7c3-7733-4817-a48b-7ca81e420c8a","amount":19.9,"requestedAt":"2025-07-20T22:56:31.003Z"}
+api2-1       | Processing payment: &{ false 0xc00019a770 0xc000194a28}
+api2-1       | Sending payment to principal service: {"correlationId":"b19285a9-f51c-4d3f-a0df-08418260cd41","amount":19.9,"requestedAt":"2025-07-20T22:56:31.113Z"}
+api1-1       | Processing payment: &{ false 0xc00030e6d0 0xc000310670}
+api1-1       | Sending payment to principal service: {"correlationId":"71119b87-1cc5-4816-b536-96f4a26389f5","amount":19.9,"requestedAt":"2025-07-20T22:56:31.222Z"}
+api2-1       | Processing payment: &{ false 0xc00011a280 0xc000116110}
+api2-1       | Sending payment to principal service: {"correlationId":"296b4be9-1171-42c6-b70b-b5c7bc204897","amount":19.9,"requestedAt":"2025-07-20T22:56:31.331Z"}
+api2-1       | Processing payment: &{ false 0xc0000329e0 0xc000010a98}
+api2-1       | Sending payment to principal service: {"correlationId":"e39fbd3a-7996-4ef1-a6de-99fdb1372f25","amount":19.9,"requestedAt":"2025-07-20T22:56:31.352Z"}
+api1-1       | Processing payment: &{ false 0xc000032250 0xc000010198}
+api1-1       | Sending payment to principal service: {"correlationId":"d1f52792-f35f-46c3-8518-3bb200eb9343","amount":19.9,"requestedAt":"2025-07-20T22:56:31.440Z"}
+api2-1       | Processing payment: &{ false 0xc00011a560 0xc0001161e0}
+api2-1       | Sending payment to principal service: {"correlationId":"984c3b08-9e34-4f03-8f7b-44a492f5199f","amount":19.9,"requestedAt":"2025-07-20T22:56:31.458Z"}
+api1-1       | Processing payment: &{ false 0xc0000322d0 0xc000010208}
+api1-1       | Sending payment to principal service: {"correlationId":"20c02be4-b435-4177-ae61-6a1a9e41196c","amount":19.9,"requestedAt":"2025-07-20T22:56:31.549Z"}
+api2-1       | Processing payment: &{ false 0xc000032b00 0xc000010b18}
+api2-1       | Sending payment to principal service: {"correlationId":"5413bb95-a9c5-4041-b226-c4c991491d2f","amount":19.9,"requestedAt":"2025-07-20T22:56:31.567Z"}
+api1-1       | Processing payment: &{ false 0xc000382760 0xc0003849a8}
+api1-1       | Sending payment to principal service: {"correlationId":"40c3ea2c-cd1d-40e2-b287-542ac0fa01a3","amount":19.9,"requestedAt":"2025-07-20T22:56:31.658Z"}
+api2-1       | Processing payment: &{ false 0xc00011a680 0xc000116250}
+api2-1       | Sending payment to principal service: {"correlationId":"be56e3cf-ad48-4cde-82c9-f18eee057b78","amount":19.9,"requestedAt":"2025-07-20T22:56:31.677Z"}
+api1-1       | Processing payment: &{ false 0xc0000323b0 0xc000010290}
+api1-1       | Sending payment to principal service: {"correlationId":"e89abda4-0dc8-46d0-bbe7-709cffb50c18","amount":19.9,"requestedAt":"2025-07-20T22:56:31.768Z"}
+api2-1       | Processing payment: &{ false 0xc000032ce0 0xc000010b78}
+api2-1       | Sending payment to principal service: {"correlationId":"6dd29e99-b555-4f7b-899e-76f2a34de157","amount":19.9,"requestedAt":"2025-07-20T22:56:31.786Z"}
+api1-1       | Processing payment: &{ false 0xc0003827a0 0xc000384a08}
+api1-1       | Sending payment to principal service: {"correlationId":"55851eb9-ac01-4c0d-8d4c-18c083c79d62","amount":19.9,"requestedAt":"2025-07-20T22:56:31.877Z"}
+api2-1       | Processing payment: &{ false 0xc00011a840 0xc000116300}
+api2-1       | Sending payment to principal service: {"correlationId":"dc277c74-36fa-4c24-b854-1be8d92352e0","amount":19.9,"requestedAt":"2025-07-20T22:56:31.896Z"}
+api1-1       | Processing payment: &{ false 0xc00012eab0 0xc0001289f0}
+api1-1       | Sending payment to principal service: {"correlationId":"12308dce-573a-41fe-82c9-160edaddc2b9","amount":19.9,"requestedAt":"2025-07-20T22:56:31.986Z"}
+api2-1       | Processing payment: &{ false 0xc00011a880 0xc000116358}
+api2-1       | Sending payment to principal service: {"correlationId":"a9250be1-729b-47ad-8370-a00fcfec8da9","amount":19.9,"requestedAt":"2025-07-20T22:56:32.005Z"}
+api1-1       | Processing payment: &{ false 0xc00012eaf0 0xc000128a48}
+api1-1       | Sending payment to principal service: {"correlationId":"e9a81def-6867-4090-83f9-5d41d69e3fbd","amount":19.9,"requestedAt":"2025-07-20T22:56:32.096Z"}
+api2-1       | Processing payment: &{ false 0xc00011a940 0xc000116398}
+api2-1       | Sending payment to principal service: {"correlationId":"3c32b15b-b1fd-4aaa-8a0a-80f0fe78b460","amount":19.9,"requestedAt":"2025-07-20T22:56:32.114Z"}
+api2-1       | Processing payment: &{ false 0xc00011a990 0xc000116488}
+api2-1       | Sending payment to principal service: {"correlationId":"52aab47f-fd51-488f-8085-05679d499680","amount":19.9,"requestedAt":"2025-07-20T22:56:32.205Z"}
+api1-1       | Processing payment: &{ false 0xc000382a60 0xc000384ad0}
+api1-1       | Sending payment to principal service: {"correlationId":"0bd42c7a-f28c-4775-a903-09aec42649d8","amount":19.9,"requestedAt":"2025-07-20T22:56:32.223Z"}
+api1-1       | Processing payment: &{ false 0xc00012ebb0 0xc000128a88}
+api1-1       | Sending payment to principal service: {"correlationId":"46c33282-b44a-4be0-9b79-2593a6c7c05d","amount":19.9,"requestedAt":"2025-07-20T22:56:32.326Z"}
+api2-1       | Processing payment: &{ false 0xc00011a9f0 0xc000116520}
+api2-1       | Sending payment to principal service: {"correlationId":"ce48ff71-4ae9-4bb5-9e06-97f38efcd4e0","amount":19.9,"requestedAt":"2025-07-20T22:56:32.333Z"}
+api1-1       | Processing payment: &{ false 0xc000032810 0xc0000103d8}
+api1-1       | Sending payment to principal service: {"correlationId":"bca29832-a691-41c8-a907-2c43518e96e8","amount":19.9,"requestedAt":"2025-07-20T22:56:32.354Z"}
+api2-1       | Processing payment: &{ false 0xc0000333a0 0xc000010cc8}
+api2-1       | Sending payment to principal service: {"correlationId":"d19b1e33-172d-45dd-acff-05d9df3dec4d","amount":19.9,"requestedAt":"2025-07-20T22:56:32.424Z"}
+api1-1       | Processing payment: &{ false 0xc00012ec10 0xc000128af8}
+api1-1       | Sending payment to principal service: {"correlationId":"a601df09-40ec-4af8-a097-d2ecdd320e71","amount":19.9,"requestedAt":"2025-07-20T22:56:32.442Z"}
+api2-1       | Processing payment: &{ false 0xc00011abd0 0xc000116590}
+api2-1       | Sending payment to principal service: {"correlationId":"1c952d03-3fb3-4ab5-a411-32f9fe643f1a","amount":19.9,"requestedAt":"2025-07-20T22:56:32.460Z"}
+api1-1       | Processing payment: &{ false 0xc000382c60 0xc000384b68}
+api1-1       | Sending payment to principal service: {"correlationId":"972b6daf-b345-4ba5-bc2d-eb861b5fe393","amount":19.9,"requestedAt":"2025-07-20T22:56:32.533Z"}
+api1-1       | Processing payment: &{ false 0xc00030e830 0xc0003106e8}
+api1-1       | Sending payment to principal service: {"correlationId":"940edd4d-9a56-48b8-980a-2912e2165c85","amount":19.9,"requestedAt":"2025-07-20T22:56:32.551Z"}
+api2-1       | Processing payment: &{ false 0xc0000333e0 0xc000010d20}
+api2-1       | Sending payment to principal service: {"correlationId":"237289ee-fb83-4796-ab51-6135205a84d1","amount":19.9,"requestedAt":"2025-07-20T22:56:32.569Z"}
+api2-1       | Processing payment: &{ false 0xc00011ae30 0xc000116628}
+api2-1       | Sending payment to principal service: {"correlationId":"6fc4c9f4-c261-4479-a245-546a53515bd7","amount":19.9,"requestedAt":"2025-07-20T22:56:32.643Z"}
+api1-1       | Processing payment: &{ false 0xc000032b50 0xc000010488}
+api1-1       | Sending payment to principal service: {"correlationId":"3f89d6cf-d1ac-4607-abb8-1abf5ff7961a","amount":19.9,"requestedAt":"2025-07-20T22:56:32.660Z"}
+api2-1       | Processing payment: &{ false 0xc0000335a0 0xc000010db0}
+api2-1       | Sending payment to principal service: {"correlationId":"df954c6a-09e0-48d7-8406-65e720802358","amount":19.9,"requestedAt":"2025-07-20T22:56:32.679Z"}
+api1-1       | Processing payment: &{ false 0xc000382ec0 0xc000384c10}
+api1-1       | Sending payment to principal service: {"correlationId":"3236ec56-c85e-4adb-a84a-169705cc6f23","amount":19.9,"requestedAt":"2025-07-20T22:56:32.752Z"}
+api1-1       | Processing payment: &{ false 0xc00030ebb0 0xc0003107b0}
+api1-1       | Sending payment to principal service: {"correlationId":"8f2cf9f7-513f-4d76-b378-1dac708a70e8","amount":19.9,"requestedAt":"2025-07-20T22:56:32.769Z"}
+api2-1       | Processing payment: &{ false 0xc000033600 0xc000010e20}
+api2-1       | Sending payment to principal service: {"correlationId":"28858b6b-4b06-45b7-b7b1-50048b60bbd9","amount":19.9,"requestedAt":"2025-07-20T22:56:32.788Z"}
+api2-1       | Processing payment: &{ false 0xc000033720 0xc000010e90}
+api2-1       | Sending payment to principal service: {"correlationId":"fc05bcba-65a4-4bf6-829e-3d5ad503294e","amount":19.9,"requestedAt":"2025-07-20T22:56:32.861Z"}
+api1-1       | Processing payment: &{ false 0xc000032b90 0xc0000104e0}
+api1-1       | Sending payment to principal service: {"correlationId":"12418c95-87b5-43e0-85ee-6e5093c07099","amount":19.9,"requestedAt":"2025-07-20T22:56:32.879Z"}
+api2-1       | Processing payment: &{ false 0xc0000337a0 0xc000010f00}
+api2-1       | Sending payment to principal service: {"correlationId":"edae7721-3d40-4310-9d3e-dbbc01dbb855","amount":19.9,"requestedAt":"2025-07-20T22:56:32.897Z"}
+api1-1       | Processing payment: &{ false 0xc00030ec70 0xc000310820}
+api1-1       | Sending payment to principal service: {"correlationId":"74270916-fe29-41d8-bb7f-262bdfb33ffa","amount":19.9,"requestedAt":"2025-07-20T22:56:32.970Z"}
+api1-1       | Processing payment: &{ false 0xc000032d90 0xc000010578}
+api1-1       | Sending payment to principal service: {"correlationId":"7751482c-5e5e-4dc8-9870-8573cda98802","amount":19.9,"requestedAt":"2025-07-20T22:56:32.988Z"}
+api2-1       | Processing payment: &{ false 0xc000033800 0xc000010f70}
+api2-1       | Sending payment to principal service: {"correlationId":"355e1e8d-5613-4b77-a902-cfc3a8244079","amount":19.9,"requestedAt":"2025-07-20T22:56:33.006Z"}
+api2-1       | Processing payment: &{ false 0xc000033840 0xc000010fc8}
+api2-1       | Sending payment to principal service: {"correlationId":"09674e29-6268-4c2a-9ec2-bf62aff4365d","amount":19.9,"requestedAt":"2025-07-20T22:56:33.080Z"}
+api1-1       | Processing payment: &{ false 0xc00030ee30 0xc0003108b0}
+api1-1       | Sending payment to principal service: {"correlationId":"aac99c14-47c0-4178-b787-ead6f407cd28","amount":19.9,"requestedAt":"2025-07-20T22:56:33.098Z"}
+api2-1       | Processing payment: &{ false 0xc00011b010 0xc0001166d0}
+api2-1       | Sending payment to principal service: {"correlationId":"44ba8515-eb43-44de-aeae-0909208202f0","amount":19.9,"requestedAt":"2025-07-20T22:56:33.116Z"}
+api1-1       | Processing payment: &{ false 0xc00030eeb0 0xc0003108f0}
+api1-1       | Sending payment to principal service: {"correlationId":"a17b7e3b-d9ed-489d-9608-1f6b0281989c","amount":19.9,"requestedAt":"2025-07-20T22:56:33.189Z"}
+api2-1       | Processing payment: &{ false 0xc00011b050 0xc000116730}
+api2-1       | Sending payment to principal service: {"correlationId":"a1403902-f478-4428-b1d7-a4bcf22dde38","amount":19.9,"requestedAt":"2025-07-20T22:56:33.207Z"}
+api1-1       | Processing payment: &{ false 0xc00030ef10 0xc000310960}
+api1-1       | Sending payment to principal service: {"correlationId":"729a4dc4-95fb-4d3d-9b33-ac5766bce78c","amount":19.9,"requestedAt":"2025-07-20T22:56:33.225Z"}
+api1-1       | Processing payment: &{ false 0xc00030ef70 0xc0003109c0}
+api1-1       | Sending payment to principal service: {"correlationId":"eb3b8b3c-f9c5-4860-8f9c-dc95e6b78854","amount":19.9,"requestedAt":"2025-07-20T22:56:33.298Z"}
+api2-1       | Processing payment: &{ false 0xc00011b130 0xc000116780}
+api2-1       | Sending payment to principal service: {"correlationId":"980909f5-26d3-4875-82d5-91a158e7ac95","amount":19.9,"requestedAt":"2025-07-20T22:56:33.328Z"}
+api2-1       | Processing payment: &{ false 0xc00011b1b0 0xc0001167c8}
+api2-1       | Sending payment to principal service: {"correlationId":"ceea3ad1-cba2-48d0-8c44-969653b65142","amount":19.9,"requestedAt":"2025-07-20T22:56:33.334Z"}
+api2-1       | Processing payment: &{ false 0xc000033aa0 0xc000011048}
+api2-1       | Sending payment to principal service: {"correlationId":"fd624e08-6bf7-47c8-acad-2edc1c42cac0","amount":19.9,"requestedAt":"2025-07-20T22:56:33.356Z"}
+api1-1       | Processing payment: &{ false 0xc00030eff0 0xc000310a08}
+api1-1       | Sending payment to principal service: {"correlationId":"70fbf32d-5064-4a1b-baaa-19b035688428","amount":19.9,"requestedAt":"2025-07-20T22:56:33.407Z"}
+api2-1       | Processing payment: &{ false 0xc000284280 0xc0002900d0}
+api2-1       | Sending payment to principal service: {"correlationId":"ddf98086-5e5b-46e0-8559-7b76c488905a","amount":19.9,"requestedAt":"2025-07-20T22:56:33.425Z"}
+api1-1       | Processing payment: &{ false 0xc00012edd0 0xc000128bd0}
+api1-1       | Sending payment to principal service: {"correlationId":"d7f28511-882f-4cb1-8deb-2a64bc29478c","amount":19.9,"requestedAt":"2025-07-20T22:56:33.443Z"}
+api2-1       | Processing payment: &{ false 0xc00019b730 0xc000194cd0}
+api2-1       | Sending payment to principal service: {"correlationId":"7c5c95a2-9a24-4030-b0cc-749772c875f6","amount":19.9,"requestedAt":"2025-07-20T22:56:33.461Z"}
+api1-1       | Processing payment: &{ false 0xc00030e060 0xc000310060}
+api1-1       | Sending payment to principal service: {"correlationId":"dc402b21-3c9b-4554-a1f2-8fe916a8ac98","amount":19.9,"requestedAt":"2025-07-20T22:56:33.517Z"}
+api2-1       | Processing payment: &{ false 0xc00019b770 0xc000194d28}
+api2-1       | Sending payment to principal service: {"correlationId":"d00ccc85-fabe-42bd-b7ed-19e61efc7119","amount":19.9,"requestedAt":"2025-07-20T22:56:33.535Z"}
+api1-1       | Processing payment: &{ false 0xc00030e100 0xc000310190}
+api1-1       | Sending payment to principal service: {"correlationId":"1f82a53c-5135-44a1-92e1-f22774abbf8a","amount":19.9,"requestedAt":"2025-07-20T22:56:33.552Z"}
+api2-1       | Processing payment: &{ false 0xc00011a030 0xc000116060}
+api2-1       | Sending payment to principal service: {"correlationId":"026d7dcc-8c60-4297-b5c1-4c3576a2162f","amount":19.9,"requestedAt":"2025-07-20T22:56:33.571Z"}
+api1-1       | Processing payment: &{ false 0xc00012e6d0 0xc0001284b8}
+api1-1       | Sending payment to principal service: {"correlationId":"da5d0ee6-f594-4d0d-97f0-612ea37a5072","amount":19.9,"requestedAt":"2025-07-20T22:56:33.627Z"}
+api2-1       | Processing payment: &{ false 0xc0002842a0 0xc000290058}
+api2-1       | Sending payment to principal service: {"correlationId":"2177322f-8e1c-40b7-a13a-681256120f9a","amount":19.9,"requestedAt":"2025-07-20T22:56:33.645Z"}
+api1-1       | Processing payment: &{ false 0xc000032300 0xc000010150}
+api1-1       | Sending payment to principal service: {"correlationId":"6aec47b7-4cd4-4d4d-bfb8-8dacd4c14cf2","amount":19.9,"requestedAt":"2025-07-20T22:56:33.661Z"}
+api2-1       | Processing payment: &{ false 0xc0002842e0 0xc0002900d0}
+api2-1       | Sending payment to principal service: {"correlationId":"341eb1c0-6e66-444b-8ca0-1e285a668274","amount":19.9,"requestedAt":"2025-07-20T22:56:33.680Z"}
+api1-1       | Processing payment: &{ false 0xc00012e710 0xc0001285a0}
+api1-1       | Sending payment to principal service: {"correlationId":"f30eac06-0ba4-44f3-8bed-2cba31b8859a","amount":19.9,"requestedAt":"2025-07-20T22:56:33.735Z"}
+api2-1       | Processing payment: &{ false 0xc00019a700 0xc000010218}
+api2-1       | Sending payment to principal service: {"correlationId":"e1a151dc-f9e4-4552-8de5-7e2cc1b75fc7","amount":19.9,"requestedAt":"2025-07-20T22:56:33.754Z"}
+api1-1       | Processing payment: &{ false 0xc00030e2e0 0xc000310310}
+api1-1       | Sending payment to principal service: {"correlationId":"1dad23e9-ccde-44dd-93f4-43771d8bef05","amount":19.9,"requestedAt":"2025-07-20T22:56:33.771Z"}
+api2-1       | Processing payment: &{ false 0xc0000322c0 0xc000194570}
+api2-1       | Sending payment to principal service: {"correlationId":"b1025a8d-ae9f-4bcf-85ec-99c82a284a20","amount":19.9,"requestedAt":"2025-07-20T22:56:33.789Z"}
+api1-1       | Processing payment: &{ false 0xc0000325f0 0xc0000101f0}
+api1-1       | Sending payment to principal service: {"correlationId":"be5bc807-e99d-4c20-88f1-9137a16e5720","amount":19.9,"requestedAt":"2025-07-20T22:56:33.845Z"}
+api2-1       | Processing payment: &{ false 0xc000284320 0xc000290138}
+api2-1       | Sending payment to principal service: {"correlationId":"827006d5-b1b3-4668-b8d9-61d875c83619","amount":19.9,"requestedAt":"2025-07-20T22:56:33.862Z"}
+api1-1       | Processing payment: &{ false 0xc00030e3d0 0xc000310380}
+api1-1       | Sending payment to principal service: {"correlationId":"c8762169-4e72-4888-8c26-c53ffdc2715b","amount":19.9,"requestedAt":"2025-07-20T22:56:33.881Z"}
+api2-1       | Processing payment: &{ false 0xc000284380 0xc0002901a8}
+api2-1       | Sending payment to principal service: {"correlationId":"4c648b88-dec5-46e5-9101-0e261c0ddb53","amount":19.9,"requestedAt":"2025-07-20T22:56:33.898Z"}
+api2-1       | Processing payment: &{ false 0xc000032350 0xc0001949b8}
+api2-1       | Sending payment to principal service: {"correlationId":"a7ff85a3-91bb-4f74-a370-3ca51e540520","amount":19.9,"requestedAt":"2025-07-20T22:56:33.954Z"}
+api1-1       | Processing payment: &{ false 0xc00012ebd0 0xc000128988}
+api1-1       | Sending payment to principal service: {"correlationId":"2d9580c6-1bd4-4b1e-a91f-07a5383ead57","amount":19.9,"requestedAt":"2025-07-20T22:56:33.973Z"}
+api1-1       | Processing payment: &{ false 0xc0000326b0 0xc000010270}
+api1-1       | Sending payment to principal service: {"correlationId":"56e437b6-f0bf-4fd6-bd5c-5e8649c5daa9","amount":19.9,"requestedAt":"2025-07-20T22:56:33.990Z"}
+api2-1       | Processing payment: &{ false 0xc00019ae80 0xc0000103d8}
+api2-1       | Sending payment to principal service: {"correlationId":"2bcf10c1-8790-4f4e-88f4-ad24f4dc564a","amount":19.9,"requestedAt":"2025-07-20T22:56:34.007Z"}
+api1-1       | Processing payment: &{ false 0xc000032710 0xc0000102e8}
+api1-1       | Sending payment to principal service: {"correlationId":"001c24b0-5692-4de2-bc9f-8b8e15c3ea84","amount":19.9,"requestedAt":"2025-07-20T22:56:34.063Z"}
+api2-1       | Processing payment: &{ false 0xc000032390 0xc000194a38}
+api2-1       | Sending payment to principal service: {"correlationId":"60d5569b-7850-4a43-82ee-c38ebaccc659","amount":19.9,"requestedAt":"2025-07-20T22:56:34.082Z"}
+api1-1       | Processing payment: &{ false 0xc00030e9e0 0xc000310458}
+api1-1       | Sending payment to principal service: {"correlationId":"e003d69d-7056-4980-b7b1-ec5b9e2b1d30","amount":19.9,"requestedAt":"2025-07-20T22:56:34.099Z"}
+api2-1       | Processing payment: &{ false 0xc000032510 0xc000194a70}
+api2-1       | Sending payment to principal service: {"correlationId":"11eba5f2-2ce3-42ef-8a28-887bbfa6b5bd","amount":19.9,"requestedAt":"2025-07-20T22:56:34.118Z"}
+api2-1       | Processing payment: &{ false 0xc000032560 0xc000194ab8}
+api2-1       | Sending payment to principal service: {"correlationId":"c61e65d3-8d4a-4b8f-89a2-17fdd1955ff8","amount":19.9,"requestedAt":"2025-07-20T22:56:34.173Z"}
+api1-1       | Processing payment: &{ false 0xc00030ea60 0xc0003104e0}
+api1-1       | Sending payment to principal service: {"correlationId":"160a6e14-8206-43a5-a345-a51bc19c20a9","amount":19.9,"requestedAt":"2025-07-20T22:56:34.191Z"}
+api2-1       | Processing payment: &{ false 0xc000284940 0xc000290290}
+api2-1       | Sending payment to principal service: {"correlationId":"05ba264c-ab10-4fc7-a975-2061cf36d5f9","amount":19.9,"requestedAt":"2025-07-20T22:56:34.208Z"}
+api1-1       | Processing payment: &{ false 0xc00012ed30 0xc000128a20}
+api1-1       | Sending payment to principal service: {"correlationId":"19e53e2f-beb2-43e1-9a37-5daf4865e96f","amount":19.9,"requestedAt":"2025-07-20T22:56:34.227Z"}
+api1-1       | Processing payment: &{ false 0xc0003824e0 0xc000384140}
+api1-1       | Sending payment to principal service: {"correlationId":"6ab1bda6-de37-4ee9-b8e7-3df1cfb20eb1","amount":19.9,"requestedAt":"2025-07-20T22:56:34.282Z"}
+api1-1       | Processing payment: &{ false 0xc00030edd0 0xc0003105e8}
+api1-1       | Sending payment to principal service: {"correlationId":"a4524d9f-cddd-476a-b75e-d5bee879d13a","amount":19.9,"requestedAt":"2025-07-20T22:56:34.300Z"}
+api2-1       | Processing payment: &{ false 0xc000284980 0xc0002902e8}
+api2-1       | Sending payment to principal service: {"correlationId":"904f7a3e-b8b7-4407-a4f1-eba9e22098a6","amount":19.9,"requestedAt":"2025-07-20T22:56:34.330Z"}
+api2-1       | Processing payment: &{ false 0xc0002849c0 0xc000290340}
+api2-1       | Sending payment to principal service: {"correlationId":"091b0a12-2d46-4e8f-a303-ff0cced25ed9","amount":19.9,"requestedAt":"2025-07-20T22:56:34.336Z"}
+api1-1       | Processing payment: &{ false 0xc0000327f0 0xc000010360}
+api1-1       | Sending payment to principal service: {"correlationId":"2af5d7eb-0397-425b-9140-8bc80e3b7c4e","amount":19.9,"requestedAt":"2025-07-20T22:56:34.357Z"}
+api2-1       | Processing payment: &{ false 0xc000032690 0xc000194b28}
+api2-1       | Sending payment to principal service: {"correlationId":"aec81487-7064-42a2-a056-08d3e53a0234","amount":19.9,"requestedAt":"2025-07-20T22:56:34.391Z"}
+api1-1       | Processing payment: &{ false 0xc00012ed80 0xc000128a78}
+api1-1       | Sending payment to principal service: {"correlationId":"3bd8f2af-66b0-4b0a-bd2b-9103baa47d2b","amount":19.9,"requestedAt":"2025-07-20T22:56:34.409Z"}
+api2-1       | Processing payment: &{ false 0xc00019b580 0xc0000106e0}
+api2-1       | Sending payment to principal service: {"correlationId":"18cec39a-4acd-4550-a094-cffd8e6faee8","amount":19.9,"requestedAt":"2025-07-20T22:56:34.426Z"}
+api1-1       | Processing payment: &{ false 0xc00012edc0 0xc000128ad0}
+api1-1       | Sending payment to principal service: {"correlationId":"98d211e5-b67b-4800-aee8-551e2d5a36c0","amount":19.9,"requestedAt":"2025-07-20T22:56:34.445Z"}
+api2-1       | Processing payment: &{ false 0xc00019b6a0 0xc000010770}
+api2-1       | Sending payment to principal service: {"correlationId":"7f270092-1b6c-492b-9c81-b7abfaaf8297","amount":19.9,"requestedAt":"2025-07-20T22:56:34.463Z"}
+api1-1       | Processing payment: &{ false 0xc00030f0b0 0xc0003106a8}
+api1-1       | Sending payment to principal service: {"correlationId":"8a679845-1622-4e9c-bcf9-0af86fe18756","amount":19.9,"requestedAt":"2025-07-20T22:56:34.501Z"}
+api1-1       | Processing payment: &{ false 0xc00030f0f0 0xc000310700}
+api1-1       | Sending payment to principal service: {"correlationId":"d4eab6f7-dd19-4004-b365-fab3e88fd3e8","amount":19.9,"requestedAt":"2025-07-20T22:56:34.519Z"}
+api2-1       | Processing payment: &{ false 0xc0000329a0 0xc000194c10}
+api2-1       | Sending payment to principal service: {"correlationId":"763c11bb-dd00-473a-90f7-d65728f31ad5","amount":19.9,"requestedAt":"2025-07-20T22:56:34.536Z"}
+api1-1       | Processing payment: &{ false 0xc000382c30 0xc0003846b8}
+api1-1       | Sending payment to principal service: {"correlationId":"4c631967-5df2-41aa-a1ff-70d4635d57c0","amount":19.9,"requestedAt":"2025-07-20T22:56:34.554Z"}
+api2-1       | Processing payment: &{ false 0xc0000329f0 0xc000194c68}
+api2-1       | Sending payment to principal service: {"correlationId":"7aed8864-2756-438d-9297-2c226968d3b1","amount":19.9,"requestedAt":"2025-07-20T22:56:34.572Z"}
+api2-1       | Processing payment: &{ false 0xc00011a140 0xc000116108}
+api2-1       | Sending payment to principal service: {"correlationId":"22d69605-a323-4c70-86e6-15cfd12fe5cb","amount":19.9,"requestedAt":"2025-07-20T22:56:34.626Z"}
+api1-1       | Processing payment: &{ false 0xc00012eeb0 0xc000128b68}
+api1-1       | Sending payment to principal service: {"correlationId":"ee10465a-e78d-4947-86ac-f937848349d4","amount":19.9,"requestedAt":"2025-07-20T22:56:34.628Z"}
+api2-1       | Processing payment: &{ false 0xc00011a180 0xc000116160}
+api2-1       | Sending payment to principal service: {"correlationId":"92f9accb-5f83-4eee-a960-bce9aa4b2d69","amount":19.9,"requestedAt":"2025-07-20T22:56:34.646Z"}
+api1-1       | Processing payment: &{ false 0xc000382e00 0xc000384880}
+api1-1       | Sending payment to principal service: {"correlationId":"ca976f04-35b0-4bb7-ad4b-36697772f010","amount":19.9,"requestedAt":"2025-07-20T22:56:34.662Z"}
+api2-1       | Processing payment: &{ false 0xc000284f40 0xc000290450}
+api2-1       | Sending payment to principal service: {"correlationId":"ad82d4ca-5d17-411c-96bc-3b603ce2c54e","amount":19.9,"requestedAt":"2025-07-20T22:56:34.682Z"}
+api1-1       | Processing payment: &{ false 0xc00012ef90 0xc000128bf0}
+api1-1       | Sending payment to principal service: {"correlationId":"aa7de320-91d4-4869-9577-18c8d9d4efa6","amount":19.9,"requestedAt":"2025-07-20T22:56:34.719Z"}
+api1-1       | Processing payment: &{ false 0xc00030f350 0xc0003107b0}
+api1-1       | Sending payment to principal service: {"correlationId":"c1848025-612f-4e34-95ec-592d8577b334","amount":19.9,"requestedAt":"2025-07-20T22:56:34.737Z"}
+api2-1       | Processing payment: &{ false 0xc00011a3a0 0xc0001161e0}
+api2-1       | Sending payment to principal service: {"correlationId":"33547bc1-785e-4bd8-b9d1-1811c3948c9b","amount":19.9,"requestedAt":"2025-07-20T22:56:34.756Z"}
+api1-1       | Processing payment: &{ false 0xc000383130 0xc000384958}
+api1-1       | Sending payment to principal service: {"correlationId":"ff003723-9c11-4460-b65b-162c777ba01b","amount":19.9,"requestedAt":"2025-07-20T22:56:34.773Z"}
+api2-1       | Processing payment: &{ false 0xc00011a3f0 0xc000116238}
+api2-1       | Sending payment to principal service: {"correlationId":"66cd1c6c-1b98-483f-954a-406fe4c02d18","amount":19.9,"requestedAt":"2025-07-20T22:56:34.791Z"}
+api2-1       | Processing payment: &{ false 0xc00011a430 0xc000116290}
+api2-1       | Sending payment to principal service: {"correlationId":"f77807f4-515b-493d-b2d3-29543f55dac5","amount":19.9,"requestedAt":"2025-07-20T22:56:34.829Z"}
+api1-1       | Processing payment: &{ false 0xc00012f170 0xc000128c80}
+api1-1       | Sending payment to principal service: {"correlationId":"f2d527ac-b1f3-46e8-90a0-91b25a850afd","amount":19.9,"requestedAt":"2025-07-20T22:56:34.846Z"}
+api2-1       | Processing payment: &{ false 0xc00019b8e0 0xc000010928}
+api2-1       | Sending payment to principal service: {"correlationId":"46c38c7e-34b1-4b8d-9c71-1289bd4e7b51","amount":19.9,"requestedAt":"2025-07-20T22:56:34.864Z"}
+api1-1       | Processing payment: &{ false 0xc00030f530 0xc000310840}
+api1-1       | Sending payment to principal service: {"correlationId":"50204b0e-a064-4332-a231-cac6b9af0ad9","amount":19.9,"requestedAt":"2025-07-20T22:56:34.882Z"}
+api2-1       | Processing payment: &{ false 0xc000033130 0xc000194d90}
+api2-1       | Sending payment to principal service: {"correlationId":"b0ebc443-d796-4277-adf1-a1d9a2877b94","amount":19.9,"requestedAt":"2025-07-20T22:56:34.900Z"}
+api1-1       | Processing payment: &{ false 0xc00012f330 0xc000128d00}
+api1-1       | Sending payment to principal service: {"correlationId":"5d9cadd4-f02f-4c48-bcf2-15c9a9216b35","amount":19.9,"requestedAt":"2025-07-20T22:56:34.937Z"}
+api2-1       | Processing payment: &{ false 0xc00019b940 0xc000010998}
+api2-1       | Sending payment to principal service: {"correlationId":"111d8648-aa28-44c4-9e12-7b072a19d5e2","amount":19.9,"requestedAt":"2025-07-20T22:56:34.956Z"}
+api1-1       | Processing payment: &{ false 0xc0003835d0 0xc000384a20}
+api1-1       | Sending payment to principal service: {"correlationId":"0859d792-d93d-4db0-8ba4-e336a0e35090","amount":19.9,"requestedAt":"2025-07-20T22:56:34.974Z"}
+api1-1       | Processing payment: &{ false 0xc00030f570 0xc000310898}
+api1-1       | Sending payment to principal service: {"correlationId":"65f2df5b-8ac6-4770-afb2-cb3c8091810a","amount":19.9,"requestedAt":"2025-07-20T22:56:34.991Z"}
+api2-1       | Processing payment: &{ false 0xc00011a9a0 0xc000116358}
+api2-1       | Sending payment to principal service: {"correlationId":"8e1fdb3e-339e-4a32-9fb1-57611ec37325","amount":19.9,"requestedAt":"2025-07-20T22:56:35.009Z"}
+api1-1       | Processing payment: &{ false 0xc000032850 0xc0000103d0}
+api1-1       | Sending payment to principal service: {"correlationId":"5cc98dcb-e698-49ab-b541-b0e2a8b17a64","amount":19.9,"requestedAt":"2025-07-20T22:56:35.047Z"}
+api2-1       | Processing payment: &{ false 0xc00011aa00 0xc0001163d8}
+api2-1       | Sending payment to principal service: {"correlationId":"58cf2dd0-b298-4495-b329-30d2c8ab83ed","amount":19.9,"requestedAt":"2025-07-20T22:56:35.065Z"}
+api2-1       | Processing payment: &{ false 0xc000033350 0xc000194e20}
+api2-1       | Sending payment to principal service: {"correlationId":"dd29abec-352b-4388-a567-9504f066063f","amount":19.9,"requestedAt":"2025-07-20T22:56:35.083Z"}
+api1-1       | Processing payment: &{ false 0xc000383710 0xc000384ac0}
+api1-1       | Sending payment to principal service: {"correlationId":"820b5bf7-1e39-492a-867b-175ed0858b8b","amount":19.9,"requestedAt":"2025-07-20T22:56:35.101Z"}
+api2-1       | Processing payment: &{ false 0xc000033390 0xc000194e78}
+api2-1       | Sending payment to principal service: {"correlationId":"76de9c9f-2398-4fdb-bd7a-589f5e5e1fc8","amount":19.9,"requestedAt":"2025-07-20T22:56:35.120Z"}
+api1-1       | Processing payment: &{ false 0xc00030f5f0 0xc0003108f0}
+api1-1       | Sending payment to principal service: {"correlationId":"c5fec8f8-1043-423d-8ecb-f722e4095608","amount":19.9,"requestedAt":"2025-07-20T22:56:35.157Z"}
+api2-1       | Processing payment: &{ false 0xc000284fa0 0xc0002904c0}
+api2-1       | Sending payment to principal service: {"correlationId":"c1f41e64-9b19-44ab-88c5-af67aa7f3cc1","amount":19.9,"requestedAt":"2025-07-20T22:56:35.175Z"}
+api1-1       | Processing payment: &{ false 0xc0003839d0 0xc000384b20}
+api1-1       | Sending payment to principal service: {"correlationId":"0eb3d3fa-a535-4a18-82f9-a1315fda2d4f","amount":19.9,"requestedAt":"2025-07-20T22:56:35.193Z"}
+api2-1       | Processing payment: &{ false 0xc00011ac70 0xc0001164f8}
+api2-1       | Sending payment to principal service: {"correlationId":"3f510023-4093-4675-bd4f-8d85f5bcd41b","amount":19.9,"requestedAt":"2025-07-20T22:56:35.209Z"}
+api1-1       | Processing payment: &{ false 0xc000383a10 0xc000384b78}
+api1-1       | Sending payment to principal service: {"correlationId":"233d8d35-0182-43d6-a7dd-f516aa2a10c0","amount":19.9,"requestedAt":"2025-07-20T22:56:35.228Z"}
+api1-1       | Processing payment: &{ false 0xc00012f8d0 0xc000128e48}
+api1-1       | Sending payment to principal service: {"correlationId":"9ad91d00-c25b-4d08-9d18-97600de7127a","amount":19.9,"requestedAt":"2025-07-20T22:56:35.265Z"}
+api2-1       | Processing payment: &{ false 0xc00011acd0 0xc000116568}
+api2-1       | Sending payment to principal service: {"correlationId":"2b8c0ea5-ac70-4e58-99df-6b8ee224fc71","amount":19.9,"requestedAt":"2025-07-20T22:56:35.284Z"}
+api1-1       | Processing payment: &{ false 0xc00030f6d0 0xc000310978}
+api1-1       | Sending payment to principal service: {"correlationId":"265c25c7-6bce-403e-a9a4-236ce4aef507","amount":19.9,"requestedAt":"2025-07-20T22:56:35.302Z"}
+api2-1       | Processing payment: &{ false 0xc000284fe0 0xc000290518}
+api2-1       | Sending payment to principal service: {"correlationId":"f5c94b51-bf35-4671-8b3c-32df454bb294","amount":19.9,"requestedAt":"2025-07-20T22:56:35.331Z"}
+api2-1       | Processing payment: &{ false 0xc000285100 0xc000290588}
+api2-1       | Sending payment to principal service: {"correlationId":"76189b44-60a6-4ac9-b8e6-75da053c2568","amount":19.9,"requestedAt":"2025-07-20T22:56:35.338Z"}
+api2-1       | Processing payment: &{ false 0xc0002851c0 0xc0002905f8}
+api2-1       | Sending payment to principal service: {"correlationId":"366cd97d-5c7d-4c6c-9bdc-eb8bd83c7572","amount":19.9,"requestedAt":"2025-07-20T22:56:35.359Z"}
+api1-1       | Processing payment: &{ false 0xc000383bf0 0xc000384c08}
+api1-1       | Sending payment to principal service: {"correlationId":"15ffacd7-3132-4d66-813b-a5c754d8a94e","amount":19.9,"requestedAt":"2025-07-20T22:56:35.375Z"}
+api2-1       | Processing payment: &{ false 0xc000033d20 0xc000194fd8}
+api2-1       | Sending payment to principal service: {"correlationId":"3942fb7e-e385-4987-88ca-2728aceb0543","amount":19.9,"requestedAt":"2025-07-20T22:56:35.392Z"}
+api1-1       | Processing payment: &{ false 0xc00012fab0 0xc000128ed8}
+api1-1       | Sending payment to principal service: {"correlationId":"df8a7110-77fb-41af-b32f-98055f918a16","amount":19.9,"requestedAt":"2025-07-20T22:56:35.410Z"}
+api2-1       | Processing payment: &{ false 0xc000033da0 0xc000195030}
+api2-1       | Sending payment to principal service: {"correlationId":"ec7b79f8-4cbe-4925-88d2-b0d160f94532","amount":19.9,"requestedAt":"2025-07-20T22:56:35.428Z"}
+api1-1       | Processing payment: &{ false 0xc00012fb10 0xc000128f48}
+api1-1       | Sending payment to principal service: {"correlationId":"5d5a628b-e9ec-4b96-be78-9c07d64481bf","amount":19.9,"requestedAt":"2025-07-20T22:56:35.446Z"}
+api2-1       | Processing payment: &{ false 0xc00011b1b0 0xc0001165f0}
+api2-1       | Sending payment to principal service: {"correlationId":"ae9e4081-4378-4eb7-bb4d-ebc919dc0386","amount":19.9,"requestedAt":"2025-07-20T22:56:35.465Z"}
+api1-1       | Processing payment: &{ false 0xc000383d90 0xc000384ca8}
+api1-1       | Sending payment to principal service: {"correlationId":"1f441683-0030-47dc-9afe-4219060445cf","amount":19.9,"requestedAt":"2025-07-20T22:56:35.484Z"}
+api2-1       | Processing payment: &{ false 0xc000285320 0xc000290698}
+api2-1       | Sending payment to principal service: {"correlationId":"7548562a-5183-42d9-9419-df0ae57341f9","amount":19.9,"requestedAt":"2025-07-20T22:56:35.502Z"}
+api1-1       | Processing payment: &{ false 0xc00012fcb0 0xc000128fe8}
+api1-1       | Sending payment to principal service: {"correlationId":"1312f20f-9471-4c1e-92fe-f1fde26bacc1","amount":19.9,"requestedAt":"2025-07-20T22:56:35.521Z"}
+api2-1       | Processing payment: &{ false 0xc000033f00 0xc000195108}
+api2-1       | Sending payment to principal service: {"correlationId":"1cd9802c-bd7f-46ed-a79f-50b9917355ee","amount":19.9,"requestedAt":"2025-07-20T22:56:35.538Z"}
+api1-1       | Processing payment: &{ false 0xc000383dd0 0xc000384d00}
+api1-1       | Sending payment to principal service: {"correlationId":"470fb45d-c4ad-42db-a628-e14fc161f883","amount":19.9,"requestedAt":"2025-07-20T22:56:35.556Z"}
+api2-1       | Processing payment: &{ false 0xc00011b3d0 0xc000116698}
+api2-1       | Sending payment to principal service: {"correlationId":"64206df2-a92e-483c-8e8e-1bb675e8229d","amount":19.9,"requestedAt":"2025-07-20T22:56:35.574Z"}
+api1-1       | Processing payment: &{ false 0xc000383e10 0xc000384d58}
+api1-1       | Sending payment to principal service: {"correlationId":"d702afcf-9932-4740-b2e7-4c1304fa62b0","amount":19.9,"requestedAt":"2025-07-20T22:56:35.610Z"}
+api2-1       | Processing payment: &{ false 0xc00019bc80 0xc000010b18}
+api2-1       | Sending payment to principal service: {"correlationId":"13bfc0b4-8b65-49de-8378-be7b8014a897","amount":19.9,"requestedAt":"2025-07-20T22:56:35.627Z"}
+api1-1       | Processing payment: &{ false 0xc000383e50 0xc000384db0}
+api1-1       | Sending payment to principal service: {"correlationId":"235091ca-1825-4391-9831-f9138d1917d2","amount":19.9,"requestedAt":"2025-07-20T22:56:35.629Z"}
+api2-1       | Processing payment: &{ false 0xc00011b590 0xc000116718}
+api2-1       | Sending payment to principal service: {"correlationId":"a630fa99-cf63-4a61-a83d-531a9151892e","amount":19.9,"requestedAt":"2025-07-20T22:56:35.647Z"}
+api1-1       | Processing payment: &{ false 0xc000383f30 0xc000384e18}
+api1-1       | Sending payment to principal service: {"correlationId":"115fd6af-3582-43df-b82e-1f54137271fe","amount":19.9,"requestedAt":"2025-07-20T22:56:35.664Z"}
+api2-1       | Processing payment: &{ false 0xc00019bd20 0xc000010b88}
+api2-1       | Sending payment to principal service: {"correlationId":"df0a4eba-5c58-4774-b504-fa15b1c9bfc9","amount":19.9,"requestedAt":"2025-07-20T22:56:35.684Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4030 0xc000129098}
+api1-1       | Sending payment to principal service: {"correlationId":"38384624-5a46-4e74-b122-a92e56abfcc4","amount":19.9,"requestedAt":"2025-07-20T22:56:35.703Z"}
+api1-1       | Processing payment: &{ false 0xc0004b40b0 0xc000129108}
+api1-1       | Sending payment to principal service: {"correlationId":"49156d1d-dc3b-461a-bd12-ee98bf6ba265","amount":19.9,"requestedAt":"2025-07-20T22:56:35.721Z"}
+api1-1       | Processing payment: &{ false 0xc000478170 0xc000310b20}
+api1-1       | Sending payment to principal service: {"correlationId":"3b835527-b18c-44ff-ba14-33f49f9b1bcd","amount":19.9,"requestedAt":"2025-07-20T22:56:35.739Z"}
+api2-1       | Processing payment: &{ false 0xc00019bd60 0xc000010be0}
+api2-1       | Sending payment to principal service: {"correlationId":"de088439-886b-41ab-86bb-3381a39d7d3a","amount":19.9,"requestedAt":"2025-07-20T22:56:35.758Z"}
+api1-1       | Processing payment: &{ false 0xc0004781b0 0xc000310b78}
+api1-1       | Sending payment to principal service: {"correlationId":"6ee1e028-a583-4821-9b9e-5c59df318625","amount":19.9,"requestedAt":"2025-07-20T22:56:35.775Z"}
+api2-1       | Processing payment: &{ false 0xc000285800 0xc000290798}
+api2-1       | Sending payment to principal service: {"correlationId":"12b2456b-b1f9-40d9-a97b-c66d042880da","amount":19.9,"requestedAt":"2025-07-20T22:56:35.793Z"}
+api2-1       | Processing payment: &{ false 0xc00011b990 0xc000116818}
+api2-1       | Sending payment to principal service: {"correlationId":"277fab85-ffba-4623-a225-fc9b6db3496d","amount":19.9,"requestedAt":"2025-07-20T22:56:35.812Z"}
+api2-1       | Processing payment: &{ false 0xc00019bda0 0xc000010c38}
+api2-1       | Sending payment to principal service: {"correlationId":"e442c37e-ed62-4edb-92a1-4e1a2fb23fb8","amount":19.9,"requestedAt":"2025-07-20T22:56:35.830Z"}
+api1-1       | Processing payment: &{ false 0xc0004b42d0 0xc000129190}
+api1-1       | Sending payment to principal service: {"correlationId":"205a72f2-be1f-44e4-8a14-fb1d5bf6786a","amount":19.9,"requestedAt":"2025-07-20T22:56:35.848Z"}
+api2-1       | Processing payment: &{ false 0xc0002859a0 0xc000290828}
+api2-1       | Sending payment to principal service: {"correlationId":"bba3938f-754c-42e1-8612-20d982492a44","amount":19.9,"requestedAt":"2025-07-20T22:56:35.866Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4330 0xc000129200}
+api1-1       | Sending payment to principal service: {"correlationId":"993cf93a-5986-468b-828c-89f7dd656a9d","amount":19.9,"requestedAt":"2025-07-20T22:56:35.884Z"}
+api2-1       | Processing payment: &{ false 0xc0004e8120 0xc000195180}
+api2-1       | Sending payment to principal service: {"correlationId":"56d0665c-0cad-4296-b547-0ef43269ee16","amount":19.9,"requestedAt":"2025-07-20T22:56:35.902Z"}
+api1-1       | Processing payment: &{ false 0xc0004b43d0 0xc000129260}
+api1-1       | Sending payment to principal service: {"correlationId":"e3bcd7cf-e83a-4d9b-9d93-437c02c28332","amount":19.9,"requestedAt":"2025-07-20T22:56:35.921Z"}
+api1-1       | Processing payment: &{ false 0xc000478590 0xc000310c40}
+api1-1       | Sending payment to principal service: {"correlationId":"2f3cf27f-d2fe-4747-b264-b9889c093926","amount":19.9,"requestedAt":"2025-07-20T22:56:35.939Z"}
+api2-1       | Processing payment: &{ false 0xc0002859e0 0xc000290888}
+api2-1       | Sending payment to principal service: {"correlationId":"2fafc997-fca5-4cbb-b24b-3ac68208c400","amount":19.9,"requestedAt":"2025-07-20T22:56:35.957Z"}
+api1-1       | Processing payment: &{ false 0xc0004786b0 0xc000310cb0}
+api1-1       | Sending payment to principal service: {"correlationId":"2e2dac71-69b9-425a-89ab-f1b75a8b6ae3","amount":19.9,"requestedAt":"2025-07-20T22:56:35.975Z"}
+api1-1       | Processing payment: &{ false 0xc0004786f0 0xc000310d08}
+api1-1       | Sending payment to principal service: {"correlationId":"9df7edaf-1913-4910-99fc-44fc6fb80981","amount":19.9,"requestedAt":"2025-07-20T22:56:35.994Z"}
+api2-1       | Processing payment: &{ false 0xc0004e8200 0xc000195208}
+api2-1       | Sending payment to principal service: {"correlationId":"ceee0922-3bd7-4722-bd41-a08d995d36a1","amount":19.9,"requestedAt":"2025-07-20T22:56:36.012Z"}
+api2-1       | Processing payment: &{ false 0xc0003ea2a0 0xc000010d08}
+api2-1       | Sending payment to principal service: {"correlationId":"7c54f19a-1abe-4b40-ae1c-1524403f9d51","amount":19.9,"requestedAt":"2025-07-20T22:56:36.031Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4570 0xc000129310}
+api1-1       | Sending payment to principal service: {"correlationId":"df9adc9a-86a7-4a5b-8d59-28f6d1b5c5d0","amount":19.9,"requestedAt":"2025-07-20T22:56:36.049Z"}
+api2-1       | Processing payment: &{ false 0xc0004e8280 0xc000195278}
+api2-1       | Sending payment to principal service: {"correlationId":"1789e66b-e316-4b3f-9974-976f3e66d814","amount":19.9,"requestedAt":"2025-07-20T22:56:36.067Z"}
+api2-1       | Processing payment: &{ false 0xc0004e82c0 0xc0001952d0}
+api2-1       | Sending payment to principal service: {"correlationId":"3472c53f-69b2-465d-b9a3-69117cdcf5e4","amount":19.9,"requestedAt":"2025-07-20T22:56:36.085Z"}
+api1-1       | Processing payment: &{ false 0xc0004b45d0 0xc000129380}
+api1-1       | Sending payment to principal service: {"correlationId":"00dc7bde-6549-4bdd-b7e8-6c33fbbe4019","amount":19.9,"requestedAt":"2025-07-20T22:56:36.102Z"}
+api2-1       | Processing payment: &{ false 0xc000285d40 0xc000290938}
+api2-1       | Sending payment to principal service: {"correlationId":"d227c7fe-405e-4c1e-9b76-5f6417da19db","amount":19.9,"requestedAt":"2025-07-20T22:56:36.121Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4630 0xc0001293f0}
+api1-1       | Sending payment to principal service: {"correlationId":"cd03c649-ad2c-4716-925f-26033fc23470","amount":19.9,"requestedAt":"2025-07-20T22:56:36.139Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4670 0xc000129448}
+api1-1       | Sending payment to principal service: {"correlationId":"3c9c5336-961e-4617-b100-bb28a79553bc","amount":19.9,"requestedAt":"2025-07-20T22:56:36.159Z"}
+api2-1       | Processing payment: &{ false 0xc0003ea4e0 0xc000010dd0}
+api2-1       | Sending payment to principal service: {"correlationId":"c2748009-12ce-4cd1-857e-fcfb5146ee1b","amount":19.9,"requestedAt":"2025-07-20T22:56:36.177Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4710 0xc000129470}
+api1-1       | Sending payment to principal service: {"correlationId":"3b6b53db-44b3-41b4-8363-3678e45b6425","amount":19.9,"requestedAt":"2025-07-20T22:56:36.194Z"}
+api2-1       | Processing payment: &{ false 0xc0003ea620 0xc000010e58}
+api2-1       | Sending payment to principal service: {"correlationId":"0ccf6b5f-8dce-4796-b15e-ab529c6615fe","amount":19.9,"requestedAt":"2025-07-20T22:56:36.211Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4770 0xc0001294d0}
+api1-1       | Sending payment to principal service: {"correlationId":"9be86019-1871-423e-afe5-0634003910c7","amount":19.9,"requestedAt":"2025-07-20T22:56:36.230Z"}
+api2-1       | Processing payment: &{ false 0xc00011bcd0 0xc0001168c8}
+api2-1       | Sending payment to principal service: {"correlationId":"8f7d039a-2da2-4a45-8ecf-a607006648c9","amount":19.9,"requestedAt":"2025-07-20T22:56:36.249Z"}
+api1-1       | Processing payment: &{ false 0xc000478990 0xc000310da0}
+api1-1       | Sending payment to principal service: {"correlationId":"fd6f454f-3c88-4ad5-a485-18bef386c500","amount":19.9,"requestedAt":"2025-07-20T22:56:36.267Z"}
+api2-1       | Processing payment: &{ false 0xc00011bd10 0xc000116920}
+api2-1       | Sending payment to principal service: {"correlationId":"45507ef1-ab60-464a-a71d-4e491e379913","amount":19.9,"requestedAt":"2025-07-20T22:56:36.285Z"}
+api1-1       | Processing payment: &{ false 0xc000364cf0 0xc000385078}
+api1-1       | Sending payment to principal service: {"correlationId":"11b4fbcf-c079-4a0b-a540-c1496ac99b90","amount":19.9,"requestedAt":"2025-07-20T22:56:36.304Z"}
+api2-1       | Processing payment: &{ false 0xc00011bd70 0xc000116990}
+api2-1       | Sending payment to principal service: {"correlationId":"4b3937af-5505-4a1a-acc8-2859eaeb346e","amount":19.9,"requestedAt":"2025-07-20T22:56:36.333Z"}
+api2-1       | Processing payment: &{ false 0xc00011bdb0 0xc0001169e8}
+api2-1       | Sending payment to principal service: {"correlationId":"7cd2ef0c-f1d7-4045-81ec-ea4ad8b54908","amount":19.9,"requestedAt":"2025-07-20T22:56:36.339Z"}
+api1-1       | Processing payment: &{ false 0xc000478a10 0xc000310e20}
+api1-1       | Sending payment to principal service: {"correlationId":"13fb6dda-c08b-48c4-94b6-5bd92f54a40e","amount":19.9,"requestedAt":"2025-07-20T22:56:36.358Z"}
+api2-1       | Processing payment: &{ false 0xc0003ea010 0xc000010088}
+api2-1       | Sending payment to principal service: {"correlationId":"13d62042-6f60-4935-a4e1-b0eed3226ef6","amount":19.9,"requestedAt":"2025-07-20T22:56:36.361Z"}
+api1-1       | Processing payment: &{ false 0xc000478a70 0xc000310e90}
+api1-1       | Sending payment to principal service: {"correlationId":"1c80096d-4574-49ec-b332-f05f75da4aee","amount":19.9,"requestedAt":"2025-07-20T22:56:36.376Z"}
+api2-1       | Processing payment: &{ false 0xc00011a030 0xc000116060}
+api2-1       | Sending payment to principal service: {"correlationId":"448c795a-2646-4495-8fb5-249a859f2f44","amount":19.9,"requestedAt":"2025-07-20T22:56:36.393Z"}
+api1-1       | Processing payment: &{ false 0xc000032030 0xc000384018}
+api1-1       | Sending payment to principal service: {"correlationId":"aae75f0f-1d69-4f98-94fd-534f4750ec09","amount":19.9,"requestedAt":"2025-07-20T22:56:36.413Z"}
+api2-1       | Processing payment: &{ false 0xc00011a090 0xc0001160b8}
+api2-1       | Sending payment to principal service: {"correlationId":"34821225-2bfb-494b-9bfc-2217c669ab74","amount":19.9,"requestedAt":"2025-07-20T22:56:36.429Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4050 0xc0001284b8}
+api1-1       | Sending payment to principal service: {"correlationId":"3e83755b-081e-4e1b-b3fa-4a77d89b64d6","amount":19.9,"requestedAt":"2025-07-20T22:56:36.447Z"}
+api2-1       | Processing payment: &{ false 0xc0003ea390 0xc000010280}
+api2-1       | Sending payment to principal service: {"correlationId":"1be2e8bf-d41f-467d-80a3-ac5b44ac7a98","amount":19.9,"requestedAt":"2025-07-20T22:56:36.466Z"}
+api1-1       | Processing payment: &{ false 0xc0000320a0 0xc000384138}
+api1-1       | Sending payment to principal service: {"correlationId":"744c23ea-c874-4640-9564-6cd64d6d0fee","amount":19.9,"requestedAt":"2025-07-20T22:56:36.467Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4200 0xc000128818}
+api1-1       | Sending payment to principal service: {"correlationId":"b29427cd-19b3-4090-850e-51860e8722b5","amount":19.9,"requestedAt":"2025-07-20T22:56:36.486Z"}
+api2-1       | Processing payment: &{ false 0xc00011a340 0xc000116128}
+api2-1       | Sending payment to principal service: {"correlationId":"33b6fdd4-947a-45db-9318-ac3c83af1afb","amount":19.9,"requestedAt":"2025-07-20T22:56:36.504Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4260 0xc000128958}
+api1-1       | Sending payment to principal service: {"correlationId":"6d35ca19-0183-4d42-90a9-9fbebf46b58e","amount":19.9,"requestedAt":"2025-07-20T22:56:36.522Z"}
+api2-1       | Processing payment: &{ false 0xc0004e82c0 0xc000194588}
+api2-1       | Sending payment to principal service: {"correlationId":"e35590b0-627a-45bd-977a-ba29ed1174ed","amount":19.9,"requestedAt":"2025-07-20T22:56:36.541Z"}
+api1-1       | Processing payment: &{ false 0xc0004b42c0 0xc0001289b8}
+api1-1       | Sending payment to principal service: {"correlationId":"c5abc39b-66dd-42f9-9983-e8b9e3b5b511","amount":19.9,"requestedAt":"2025-07-20T22:56:36.558Z"}
+api2-1       | Processing payment: &{ false 0xc0004e8330 0xc0001949e8}
+api2-1       | Sending payment to principal service: {"correlationId":"063b0f13-6f8a-4ef7-97eb-5cdf7e75322b","amount":19.9,"requestedAt":"2025-07-20T22:56:36.576Z"}
+api2-1       | Processing payment: &{ false 0xc0004e8380 0xc000194a20}
+api2-1       | Sending payment to principal service: {"correlationId":"a0e7aa5e-5f6a-4151-a2b9-051caa9c5caf","amount":19.9,"requestedAt":"2025-07-20T22:56:36.577Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4300 0xc000128a30}
+api1-1       | Sending payment to principal service: {"correlationId":"f5e6d7e3-9a2a-4cd2-9513-0bf25c919d7d","amount":19.9,"requestedAt":"2025-07-20T22:56:36.612Z"}
+api2-1       | Processing payment: &{ false 0xc0005bc1c0 0xc0002902e0}
+api2-1       | Sending payment to principal service: {"correlationId":"cf230437-94eb-4f0c-8207-ca118a5b06fb","amount":19.9,"requestedAt":"2025-07-20T22:56:36.629Z"}
+api1-1       | Processing payment: &{ false 0xc0000325d0 0xc000384330}
+api1-1       | Sending payment to principal service: {"correlationId":"2bd58e36-97bb-442c-a353-55b83b7e812d","amount":19.9,"requestedAt":"2025-07-20T22:56:36.631Z"}
+api2-1       | Processing payment: &{ false 0xc0003ea8f0 0xc0000104b0}
+api2-1       | Sending payment to principal service: {"correlationId":"2ddc2716-83cc-4de9-999d-492260d8b9c9","amount":19.9,"requestedAt":"2025-07-20T22:56:36.649Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4430 0xc000128aa0}
+api1-1       | Sending payment to principal service: {"correlationId":"323b3f6f-da84-4581-b15a-d1e522d395ba","amount":19.9,"requestedAt":"2025-07-20T22:56:36.666Z"}
+api2-1       | Processing payment: &{ false 0xc00011a910 0xc0001161e8}
+api2-1       | Sending payment to principal service: {"correlationId":"80ff7c78-06af-4b21-a91a-6b587b223ae9","amount":19.9,"requestedAt":"2025-07-20T22:56:36.686Z"}
+api1-1       | Processing payment: &{ false 0xc0003649b0 0xc0000101b0}
+api1-1       | Sending payment to principal service: {"correlationId":"8120ffd2-f686-411a-ace7-23cce5fa0593","amount":19.9,"requestedAt":"2025-07-20T22:56:36.686Z"}
+api2-1       | Processing payment: &{ false 0xc00011a950 0xc000116240}
+api2-1       | Sending payment to principal service: {"correlationId":"c251f6cc-fbdb-4a5e-9f17-fde4e0bd5560","amount":19.9,"requestedAt":"2025-07-20T22:56:36.705Z"}
+api1-1       | Processing payment: &{ false 0xc0000327a0 0xc000384698}
+api1-1       | Sending payment to principal service: {"correlationId":"f7044831-fdd7-4c21-914e-65488cd7cd9e","amount":19.9,"requestedAt":"2025-07-20T22:56:36.723Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4660 0xc000128b70}
+api1-1       | Sending payment to principal service: {"correlationId":"e6f58253-886d-46f6-ad6b-0d118fb517bd","amount":19.9,"requestedAt":"2025-07-20T22:56:36.741Z"}
+api2-1       | Processing payment: &{ false 0xc00011a9e0 0xc0001162b0}
+api2-1       | Sending payment to principal service: {"correlationId":"741bdeba-4f82-44f9-86df-476d700978ad","amount":19.9,"requestedAt":"2025-07-20T22:56:36.759Z"}
+api1-1       | Processing payment: &{ false 0xc000032840 0xc000384830}
+api1-1       | Sending payment to principal service: {"correlationId":"f6c95831-9bb6-457e-91a9-e88968e2cadb","amount":19.9,"requestedAt":"2025-07-20T22:56:36.776Z"}
+api2-1       | Processing payment: &{ false 0xc0003eac90 0xc000010760}
+api2-1       | Sending payment to principal service: {"correlationId":"9084752a-1fc8-44a2-af1a-b7420e103cfc","amount":19.9,"requestedAt":"2025-07-20T22:56:36.794Z"}
+api1-1       | Processing payment: &{ false 0xc0000328b0 0xc0003848d8}
+api1-1       | Sending payment to principal service: {"correlationId":"0e6092b4-820d-4736-b9f1-92123fbf6809","amount":19.9,"requestedAt":"2025-07-20T22:56:36.795Z"}
+api2-1       | Processing payment: &{ false 0xc00011abf0 0xc000116328}
+api2-1       | Sending payment to principal service: {"correlationId":"b8416147-4bcc-4366-b675-860466042c68","amount":19.9,"requestedAt":"2025-07-20T22:56:36.813Z"}
+api2-1       | Processing payment: &{ false 0xc0003eacf0 0xc0000108a0}
+api2-1       | Sending payment to principal service: {"correlationId":"db25234d-28ba-4e9f-9f85-14ced4917e9c","amount":19.9,"requestedAt":"2025-07-20T22:56:36.831Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4790 0xc000128bf8}
+api1-1       | Sending payment to principal service: {"correlationId":"fdba0803-e0f9-4b52-909f-a00de69c40c2","amount":19.9,"requestedAt":"2025-07-20T22:56:36.850Z"}
+api2-1       | Processing payment: &{ false 0xc0003ead30 0xc000010928}
+api2-1       | Sending payment to principal service: {"correlationId":"f08be846-6972-444d-883e-8cd797be3315","amount":19.9,"requestedAt":"2025-07-20T22:56:36.867Z"}
+api1-1       | Processing payment: &{ false 0xc0004b47e0 0xc000128c50}
+api1-1       | Sending payment to principal service: {"correlationId":"000d41d4-de2b-4070-96c7-aede65523822","amount":19.9,"requestedAt":"2025-07-20T22:56:36.885Z"}
+api2-1       | Processing payment: &{ false 0xc00011acd0 0xc000116378}
+api2-1       | Sending payment to principal service: {"correlationId":"df4c9614-1349-4c96-a19b-c11b5c06428f","amount":19.9,"requestedAt":"2025-07-20T22:56:36.903Z"}
+api1-1       | Processing payment: &{ false 0xc000365200 0xc000010308}
+api1-1       | Sending payment to principal service: {"correlationId":"b691e33a-8399-49eb-849a-696d7c4ab4c2","amount":19.9,"requestedAt":"2025-07-20T22:56:36.905Z"}
+api2-1       | Processing payment: &{ false 0xc0005bcaa0 0xc000290428}
+api2-1       | Sending payment to principal service: {"correlationId":"90fa708a-67d0-4b64-bb61-351df4df06f2","amount":19.9,"requestedAt":"2025-07-20T22:56:36.923Z"}
+api1-1       | Processing payment: &{ false 0xc000365260 0xc000010378}
+api1-1       | Sending payment to principal service: {"correlationId":"16bea944-fecd-4414-b24c-94e81e64909d","amount":19.9,"requestedAt":"2025-07-20T22:56:36.940Z"}
+api2-1       | Processing payment: &{ false 0xc0005bcbc0 0xc000290498}
+api2-1       | Sending payment to principal service: {"correlationId":"9f794790-ceb1-4ea7-b6c7-779215045c77","amount":19.9,"requestedAt":"2025-07-20T22:56:36.959Z"}
+api1-1       | Processing payment: &{ false 0xc0003652a0 0xc0000103d0}
+api1-1       | Sending payment to principal service: {"correlationId":"501bf4c2-1c67-4e82-b335-ab5884261f39","amount":19.9,"requestedAt":"2025-07-20T22:56:36.977Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4b40 0xc000128cf0}
+api1-1       | Sending payment to principal service: {"correlationId":"ce1bacd6-6531-4e99-a30e-201cb1b32462","amount":19.9,"requestedAt":"2025-07-20T22:56:36.996Z"}
+api2-1       | Processing payment: &{ false 0xc0003eadf0 0xc0000109a8}
+api2-1       | Sending payment to principal service: {"correlationId":"4f4b598a-991a-4934-a6b0-7ca812f1bbc6","amount":19.9,"requestedAt":"2025-07-20T22:56:37.014Z"}
+api1-1       | Processing payment: &{ false 0xc000032d90 0xc000384998}
+api1-1       | Sending payment to principal service: {"correlationId":"398fc463-da0d-46f6-86b5-9036b0e40051","amount":19.9,"requestedAt":"2025-07-20T22:56:37.015Z"}
+api2-1       | Processing payment: &{ false 0xc00011b170 0xc0001164e0}
+api2-1       | Sending payment to principal service: {"correlationId":"43b68528-18b4-425f-976f-b70a06fe83cd","amount":19.9,"requestedAt":"2025-07-20T22:56:37.033Z"}
+api1-1       | Processing payment: &{ false 0xc000365380 0xc000010468}
+api1-1       | Sending payment to principal service: {"correlationId":"39bc2407-faa5-4112-bacf-fd9b4275c2e3","amount":19.9,"requestedAt":"2025-07-20T22:56:37.051Z"}
+api2-1       | Processing payment: &{ false 0xc0003eae70 0xc000010ab8}
+api2-1       | Sending payment to principal service: {"correlationId":"5ad86957-3249-41dc-ba8e-19349a03f6ec","amount":19.9,"requestedAt":"2025-07-20T22:56:37.068Z"}
+api2-1       | Processing payment: &{ false 0xc0005bcd60 0xc000290570}
+api2-1       | Sending payment to principal service: {"correlationId":"01bb2520-fba5-49de-bf42-e3754a48d586","amount":19.9,"requestedAt":"2025-07-20T22:56:37.087Z"}
+api1-1       | Processing payment: &{ false 0xc000032e00 0xc000384a08}
+api1-1       | Sending payment to principal service: {"correlationId":"b6017758-4ace-4601-b973-9501322f6bf9","amount":19.9,"requestedAt":"2025-07-20T22:56:37.104Z"}
+api2-1       | Processing payment: &{ false 0xc0003eaeb0 0xc000010b10}
+api2-1       | Sending payment to principal service: {"correlationId":"821b7542-6b78-4f59-a3f7-d883b7faadd9","amount":19.9,"requestedAt":"2025-07-20T22:56:37.122Z"}
+api1-1       | Processing payment: &{ false 0xc0003654e0 0xc0000104e0}
+api1-1       | Sending payment to principal service: {"correlationId":"658df935-b9e8-4774-872a-b12ba2eadf81","amount":19.9,"requestedAt":"2025-07-20T22:56:37.123Z"}
+api2-1       | Processing payment: &{ false 0xc0003eaf10 0xc000010b80}
+api2-1       | Sending payment to principal service: {"correlationId":"169bb354-1541-4388-b27f-6c650b051d36","amount":19.9,"requestedAt":"2025-07-20T22:56:37.141Z"}
+api1-1       | Processing payment: &{ false 0xc0004b5200 0xc000128de8}
+api1-1       | Sending payment to principal service: {"correlationId":"5ddd0246-1d66-4414-b882-6266416dcc4e","amount":19.9,"requestedAt":"2025-07-20T22:56:37.161Z"}
+api2-1       | Processing payment: &{ false 0xc0005bd020 0xc000290618}
+api2-1       | Sending payment to principal service: {"correlationId":"39443fbd-ecb4-43fb-b611-2f6616163a7e","amount":19.9,"requestedAt":"2025-07-20T22:56:37.179Z"}
+api1-1       | Processing payment: &{ false 0xc000033090 0xc000384ac8}
+api1-1       | Sending payment to principal service: {"correlationId":"508b60fc-4ba1-4f2d-88e3-e288eb1136de","amount":19.9,"requestedAt":"2025-07-20T22:56:37.195Z"}
+api2-1       | Processing payment: &{ false 0xc0003eb0f0 0xc000010c10}
+api2-1       | Sending payment to principal service: {"correlationId":"08509bb0-e66e-4c9d-9732-de3a7f02e474","amount":19.9,"requestedAt":"2025-07-20T22:56:37.213Z"}
+api1-1       | Processing payment: &{ false 0xc0004b5380 0xc000128e78}
+api1-1       | Sending payment to principal service: {"correlationId":"f85b64f4-3df0-4005-a3c3-2fba0e6c9f44","amount":19.9,"requestedAt":"2025-07-20T22:56:37.232Z"}
+api1-1       | Processing payment: &{ false 0xc0004b53a0 0xc000128e98}
+api1-1       | Sending payment to principal service: {"correlationId":"d61ae3fd-b8f8-463b-8c98-a89d4daca353","amount":19.9,"requestedAt":"2025-07-20T22:56:37.233Z"}
+api2-1       | Processing payment: &{ false 0xc0005bd0c0 0xc000290678}
+api2-1       | Sending payment to principal service: {"correlationId":"00590fbd-b209-407b-88ed-7d799c8b3c25","amount":19.9,"requestedAt":"2025-07-20T22:56:37.251Z"}
+api1-1       | Processing payment: &{ false 0xc0000332d0 0xc000384d90}
+api1-1       | Sending payment to principal service: {"correlationId":"c614156b-92d3-4ada-808c-49b130d7a63b","amount":19.9,"requestedAt":"2025-07-20T22:56:37.269Z"}
+api2-1       | Processing payment: &{ false 0xc0004e86a0 0xc000194b00}
+api2-1       | Sending payment to principal service: {"correlationId":"ed72c2cd-f037-433c-be1a-a55a966bb7b7","amount":19.9,"requestedAt":"2025-07-20T22:56:37.287Z"}
+api1-1       | Processing payment: &{ false 0xc0004b55b0 0xc000128f88}
+api1-1       | Sending payment to principal service: {"correlationId":"613f0ca0-9de2-4a6a-8328-a15432aa4dbc","amount":19.9,"requestedAt":"2025-07-20T22:56:37.306Z"}
+api2-1       | Processing payment: &{ false 0xc0004e8700 0xc000194b60}
+api2-1       | Sending payment to principal service: {"correlationId":"e26aecea-be1c-40f9-a266-ddb57afcc37a","amount":19.9,"requestedAt":"2025-07-20T22:56:37.335Z"}
+api2-1       | Processing payment: &{ false 0xc00011ba80 0xc000116618}
+api2-1       | Sending payment to principal service: {"correlationId":"3f2ad1d3-886d-4594-84be-05c78565e329","amount":19.9,"requestedAt":"2025-07-20T22:56:37.340Z"}
+api1-1       | Processing payment: &{ false 0xc0004782f0 0xc000310178}
+api1-1       | Sending payment to principal service: {"correlationId":"20509881-feb0-4f11-8b82-405d0f82a534","amount":19.9,"requestedAt":"2025-07-20T22:56:37.341Z"}
+api2-1       | Processing payment: &{ false 0xc00011baf0 0xc000116650}
+api2-1       | Sending payment to principal service: {"correlationId":"7497b9b9-7523-4ba5-85c0-ef7f791e9428","amount":19.9,"requestedAt":"2025-07-20T22:56:37.360Z"}
+api1-1       | Processing payment: &{ false 0xc0004b5830 0xc000129010}
+api1-1       | Sending payment to principal service: {"correlationId":"401582a2-9e39-4840-bd5f-df6caedf0b76","amount":19.9,"requestedAt":"2025-07-20T22:56:37.362Z"}
+api1-1       | Processing payment: &{ false 0xc000478490 0xc000310300}
+api1-1       | Sending payment to principal service: {"correlationId":"4e124318-3f2b-4459-9d69-712bde0d9438","amount":19.9,"requestedAt":"2025-07-20T22:56:37.378Z"}
+api2-1       | Processing payment: &{ false 0xc0004e8820 0xc000194bd8}
+api2-1       | Sending payment to principal service: {"correlationId":"c54397a7-2193-48b5-b866-d5a57a8198fe","amount":19.9,"requestedAt":"2025-07-20T22:56:37.395Z"}
+api1-1       | Processing payment: &{ false 0xc0004b58f0 0xc000129080}
+api1-1       | Sending payment to principal service: {"correlationId":"49be460b-02b5-4db5-bb4e-79003006f7a2","amount":19.9,"requestedAt":"2025-07-20T22:56:37.414Z"}
+api2-1       | Processing payment: &{ false 0xc0005bd440 0xc000290758}
+api2-1       | Sending payment to principal service: {"correlationId":"0f2aaa77-63f4-4909-9390-bac99b7b9345","amount":19.9,"requestedAt":"2025-07-20T22:56:37.431Z"}
+api1-1       | Processing payment: &{ false 0xc000478590 0xc000310368}
+api1-1       | Sending payment to principal service: {"correlationId":"aaaffffc-0630-46c5-92bd-1dee921ffba9","amount":19.9,"requestedAt":"2025-07-20T22:56:37.449Z"}
+api2-1       | Processing payment: &{ false 0xc00011bda0 0xc000116710}
+api2-1       | Sending payment to principal service: {"correlationId":"0581b1a8-5cd8-4670-a0c2-43e61385ea42","amount":19.9,"requestedAt":"2025-07-20T22:56:37.451Z"}
+api1-1       | Processing payment: &{ false 0xc000478600 0xc0003103c0}
+api2-1       | Processing payment: &{ false 0xc0005bd520 0xc000290780}
+api2-1       | Sending payment to principal service: {"correlationId":"ec5eef04-06fc-4844-aee4-c5ef1fa0e6d7","amount":19.9,"requestedAt":"2025-07-20T22:56:37.468Z"}
+api1-1       | Sending payment to principal service: {"correlationId":"3fe0fead-0465-4702-9108-3b9cfc57413c","amount":19.9,"requestedAt":"2025-07-20T22:56:37.468Z"}
+api1-1       | Processing payment: &{ false 0xc0004b5b30 0xc000129130}
+api1-1       | Sending payment to principal service: {"correlationId":"6eced0ca-416d-405e-8a2e-65f4ecc079d7","amount":19.9,"requestedAt":"2025-07-20T22:56:37.488Z"}
+api2-1       | Processing payment: &{ false 0xc0004e8ba0 0xc000194d10}
+api2-1       | Sending payment to principal service: {"correlationId":"e4724597-076b-4458-98a6-3d53361d3289","amount":19.9,"requestedAt":"2025-07-20T22:56:37.506Z"}
+api1-1       | Processing payment: &{ false 0xc0004b5bb0 0xc0001291a0}
+api1-1       | Sending payment to principal service: {"correlationId":"47fa8760-9ecb-4426-97de-ac4dca770922","amount":19.9,"requestedAt":"2025-07-20T22:56:37.524Z"}
+api2-1       | Processing payment: &{ false 0xc000032120 0xc0001167a0}
+api2-1       | Sending payment to principal service: {"correlationId":"7afe2f38-7e0f-4539-aa91-c79c3fe06fe6","amount":19.9,"requestedAt":"2025-07-20T22:56:37.542Z"}
+api2-1       | Processing payment: &{ false 0xc0005bd720 0xc000290828}
+api2-1       | Sending payment to principal service: {"correlationId":"cc40770a-20be-4dec-9672-bbc8bed74310","amount":19.9,"requestedAt":"2025-07-20T22:56:37.560Z"}
+api1-1       | Processing payment: &{ false 0xc000033990 0xc000384ed0}
+api1-1       | Sending payment to principal service: {"correlationId":"772958a3-c772-4446-bf0a-dc26bb5c9cf3","amount":19.9,"requestedAt":"2025-07-20T22:56:37.560Z"}
+api1-1       | Processing payment: &{ false 0xc000033ad0 0xc000384f58}
+api1-1       | Sending payment to principal service: {"correlationId":"745fbaae-7499-43bd-a3e9-24d9c6d4bc49","amount":19.9,"requestedAt":"2025-07-20T22:56:37.578Z"}
+api2-1       | Processing payment: &{ false 0xc0005bd780 0xc000290860}
+api2-1       | Sending payment to principal service: {"correlationId":"feb8dfa2-1992-4331-8521-cfd728d3619d","amount":19.9,"requestedAt":"2025-07-20T22:56:37.578Z"}
+api1-1       | Processing payment: &{ false 0xc000033bb0 0xc000384fa8}
+api1-1       | Sending payment to principal service: {"correlationId":"5fcf515b-db70-4c31-add1-1204845e8161","amount":19.9,"requestedAt":"2025-07-20T22:56:37.613Z"}
+api2-1       | Processing payment: &{ false 0xc0000325c0 0xc000116888}
+api2-1       | Sending payment to principal service: {"correlationId":"8e2bebfd-a1cf-4f2f-82a1-721f77d055c2","amount":19.9,"requestedAt":"2025-07-20T22:56:37.630Z"}
+api1-1       | Processing payment: &{ false 0xc0004b5d10 0xc000129250}
+api1-1       | Sending payment to principal service: {"correlationId":"7b03b597-be53-4847-94f3-6a4748b41016","amount":19.9,"requestedAt":"2025-07-20T22:56:37.632Z"}
+api2-1       | Processing payment: &{ false 0xc0004e8dc0 0xc000194d90}
+api2-1       | Sending payment to principal service: {"correlationId":"b07dcddd-e6d4-4972-91d4-9f65f7530c0f","amount":19.9,"requestedAt":"2025-07-20T22:56:37.651Z"}
+api1-1       | Processing payment: &{ false 0xc0003657a0 0xc0000105f0}
+api1-1       | Sending payment to principal service: {"correlationId":"ea68d19e-a1b3-4f56-b963-99559a43eb84","amount":19.9,"requestedAt":"2025-07-20T22:56:37.668Z"}
+api2-1       | Processing payment: &{ false 0xc0003eb210 0xc000010c80}
+api2-1       | Sending payment to principal service: {"correlationId":"b4a3d74f-8f34-4620-9d98-534b948d36dc","amount":19.9,"requestedAt":"2025-07-20T22:56:37.670Z"}
+api1-1       | Processing payment: &{ false 0xc000033c50 0xc000385008}
+api1-1       | Sending payment to principal service: {"correlationId":"8e261878-34e8-4249-8c3e-0b15855e98bc","amount":19.9,"requestedAt":"2025-07-20T22:56:37.687Z"}
+api2-1       | Processing payment: &{ false 0xc0004e8e80 0xc000194e00}
+api2-1       | Sending payment to principal service: {"correlationId":"b55c0109-2618-4d79-bf7c-46518a0371a3","amount":19.9,"requestedAt":"2025-07-20T22:56:37.687Z"}
+api1-1       | Processing payment: &{ false 0xc000033dd0 0xc000385058}
+api1-1       | Sending payment to principal service: {"correlationId":"bd85a9e4-0725-4a3c-b688-ccbc8c400cac","amount":19.9,"requestedAt":"2025-07-20T22:56:37.706Z"}
+api1-1       | Processing payment: &{ false 0xc000033e30 0xc0003850f8}
+api1-1       | Sending payment to principal service: {"correlationId":"df6848b9-68a4-4ea8-833e-25a0ffd64662","amount":19.9,"requestedAt":"2025-07-20T22:56:37.724Z"}
+api1-1       | Processing payment: &{ false 0xc0003659e0 0xc0000106d0}
+api1-1       | Sending payment to principal service: {"correlationId":"33a6eb14-c469-4123-b797-e2f6a152081e","amount":19.9,"requestedAt":"2025-07-20T22:56:37.742Z"}
+api2-1       | Processing payment: &{ false 0xc0004e8f40 0xc000194e38}
+api2-1       | Sending payment to principal service: {"correlationId":"21b4b23f-42a8-495d-9aaf-b6e419422064","amount":19.9,"requestedAt":"2025-07-20T22:56:37.761Z"}
+api2-1       | Processing payment: &{ false 0xc0004e8fc0 0xc000194ea8}
+api2-1       | Sending payment to principal service: {"correlationId":"357ab7d1-1ab7-4ddb-b57c-989cd8e0ab19","amount":19.9,"requestedAt":"2025-07-20T22:56:37.778Z"}
+api1-1       | Processing payment: &{ false 0xc000382370 0xc000129328}
+api1-1       | Sending payment to principal service: {"correlationId":"ecfc5907-1baa-44f9-8056-17d3f35bc6d3","amount":19.9,"requestedAt":"2025-07-20T22:56:37.778Z"}
+api2-1       | Processing payment: &{ false 0xc0005bdb60 0xc000290960}
+api2-1       | Sending payment to principal service: {"correlationId":"be79c19e-8cbc-4dae-9e81-613fee91c531","amount":19.9,"requestedAt":"2025-07-20T22:56:37.795Z"}
+api2-1       | Processing payment: &{ false 0xc0004e91e0 0xc000194f20}
+api2-1       | Sending payment to principal service: {"correlationId":"78513f8e-a171-4721-a01e-ead6f9d04052","amount":19.9,"requestedAt":"2025-07-20T22:56:37.796Z"}
+api1-1       | Processing payment: &{ false 0xc000478a20 0xc000310470}
+api1-1       | Sending payment to principal service: {"correlationId":"03185878-e77b-4a64-8b2e-9936cb8bf920","amount":19.9,"requestedAt":"2025-07-20T22:56:37.814Z"}
+api2-1       | Processing payment: &{ false 0xc000032780 0xc000116928}
+api2-1       | Sending payment to principal service: {"correlationId":"b0ccad54-29b9-409b-b318-b51144224c9a","amount":19.9,"requestedAt":"2025-07-20T22:56:37.833Z"}
+api1-1       | Processing payment: &{ false 0xc000365a80 0xc000010730}
+api1-1       | Sending payment to principal service: {"correlationId":"ef1b0251-6e1c-45df-bbb3-6b8413e513c8","amount":19.9,"requestedAt":"2025-07-20T22:56:37.852Z"}
+api2-1       | Processing payment: &{ false 0xc000032900 0xc000116978}
+api2-1       | Sending payment to principal service: {"correlationId":"35abbaa0-5abd-4ba9-9963-27abe022e46e","amount":19.9,"requestedAt":"2025-07-20T22:56:37.869Z"}
+api1-1       | Processing payment: &{ false 0xc0003829f0 0xc0001293e8}
+api1-1       | Sending payment to principal service: {"correlationId":"f7be82a3-d0c8-41c6-93bd-36e545bb59ac","amount":19.9,"requestedAt":"2025-07-20T22:56:37.887Z"}
+api1-1       | Processing payment: &{ false 0xc000478af0 0xc0003104c0}
+api1-1       | Sending payment to principal service: {"correlationId":"babaac10-ce9c-492f-8a80-a3321981de96","amount":19.9,"requestedAt":"2025-07-20T22:56:37.888Z"}
+api2-1       | Processing payment: &{ false 0xc000032940 0xc000116a00}
+api2-1       | Sending payment to principal service: {"correlationId":"631c0319-1d1d-4ede-a9bd-bc502adfa7ce","amount":19.9,"requestedAt":"2025-07-20T22:56:37.904Z"}
+api2-1       | Processing payment: &{ false 0xc000032ad0 0xc000116a78}
+api2-1       | Sending payment to principal service: {"correlationId":"727a3eea-5081-462e-910b-a7e10a5c83ac","amount":19.9,"requestedAt":"2025-07-20T22:56:37.906Z"}
+api1-1       | Processing payment: &{ false 0xc000365be0 0xc0000107a8}
+api1-1       | Sending payment to principal service: {"correlationId":"dbdea697-606f-4187-89de-79b58582eb33","amount":19.9,"requestedAt":"2025-07-20T22:56:37.924Z"}
+api1-1       | Processing payment: &{ false 0xc000382b20 0xc000129448}
+api1-1       | Sending payment to principal service: {"correlationId":"277906cc-ee01-4894-a946-b436cf86614f","amount":19.9,"requestedAt":"2025-07-20T22:56:37.941Z"}
+api2-1       | Processing payment: &{ false 0xc0003eb670 0xc000010d90}
+api2-1       | Sending payment to principal service: {"correlationId":"d74db253-f158-485c-b4a9-1c019c0ce376","amount":19.9,"requestedAt":"2025-07-20T22:56:37.960Z"}
+api2-1       | Processing payment: &{ false 0xc0003eb6d0 0xc000010e00}
+api2-1       | Sending payment to principal service: {"correlationId":"13bd0837-9d3b-4d52-81f7-03643d231717","amount":19.9,"requestedAt":"2025-07-20T22:56:37.978Z"}
+api1-1       | Processing payment: &{ false 0xc000478e70 0xc000310638}
+api1-1       | Sending payment to principal service: {"correlationId":"673c2ecf-95a5-4c26-9bcc-1814f46bf5f7","amount":19.9,"requestedAt":"2025-07-20T22:56:37.997Z"}
+api2-1       | Processing payment: &{ false 0xc0003eb710 0xc000010e58}
+api2-1       | Sending payment to principal service: {"correlationId":"010eee3a-e11b-4ae1-a8aa-20dd901bb020","amount":19.9,"requestedAt":"2025-07-20T22:56:37.998Z"}
+api2-1       | Processing payment: &{ false 0xc0004e9a80 0xc000195048}
+api2-1       | Sending payment to principal service: {"correlationId":"83661871-3fc8-42b7-a3db-8ad45ca87417","amount":19.9,"requestedAt":"2025-07-20T22:56:38.016Z"}
+api1-1       | Processing payment: &{ false 0xc000382c30 0xc0001294c8}
+api1-1       | Sending payment to principal service: {"correlationId":"b32accd7-05d1-4ce2-b2ee-4940a9dbfa59","amount":19.9,"requestedAt":"2025-07-20T22:56:38.016Z"}
+api1-1       | Processing payment: &{ false 0xc000478f10 0xc000310688}
+api1-1       | Sending payment to principal service: {"correlationId":"41eb8607-952d-4004-adf2-662f4c69400b","amount":19.9,"requestedAt":"2025-07-20T22:56:38.034Z"}
+api1-1       | Processing payment: &{ false 0xc00012e9d0 0xc000385238}
+api1-1       | Sending payment to principal service: {"correlationId":"ad75f9f7-60b7-4026-bee3-c8293c0547d3","amount":19.9,"requestedAt":"2025-07-20T22:56:38.053Z"}
+api2-1       | Processing payment: &{ false 0xc0003eb790 0xc000010ee8}
+api2-1       | Sending payment to principal service: {"correlationId":"1eeb41b1-79cc-4ad3-b1f0-bfb7b1a1cf11","amount":19.9,"requestedAt":"2025-07-20T22:56:38.070Z"}
+api1-1       | Processing payment: &{ false 0xc000479030 0xc0003106f8}
+api1-1       | Sending payment to principal service: {"correlationId":"cbcb13d6-10b2-4b2f-84c6-656e793b78c5","amount":19.9,"requestedAt":"2025-07-20T22:56:38.088Z"}
+api2-1       | Processing payment: &{ false 0xc000032eb0 0xc000116b68}
+api2-1       | Sending payment to principal service: {"correlationId":"4bece014-2b12-4699-9811-ffacbb6b6fab","amount":19.9,"requestedAt":"2025-07-20T22:56:38.105Z"}
+api1-1       | Processing payment: &{ false 0xc000365c20 0xc000010808}
+api1-1       | Sending payment to principal service: {"correlationId":"cbbd20c2-bc11-4be2-bc9d-7e0e720fc212","amount":19.9,"requestedAt":"2025-07-20T22:56:38.107Z"}
+api2-1       | Processing payment: &{ false 0xc000032f30 0xc000116bd8}
+api2-1       | Sending payment to principal service: {"correlationId":"015a6604-945b-409b-be4f-12068c522f7f","amount":19.9,"requestedAt":"2025-07-20T22:56:38.124Z"}
+api2-1       | Processing payment: &{ false 0xc000032f70 0xc000116bf8}
+api2-1       | Sending payment to principal service: {"correlationId":"cece31fd-9b8d-4764-8e49-8f7c972a73f5","amount":19.9,"requestedAt":"2025-07-20T22:56:38.124Z"}
+api1-1       | Processing payment: &{ false 0xc00012ed80 0xc0003852f8}
+api1-1       | Sending payment to principal service: {"correlationId":"6a0c7867-56a2-4729-9050-5bdb23656289","amount":19.9,"requestedAt":"2025-07-20T22:56:38.143Z"}
+api1-1       | Processing payment: &{ false 0xc000365c80 0xc000010878}
+api1-1       | Sending payment to principal service: {"correlationId":"01537e7e-e25a-464a-bca8-9eb9615a7957","amount":19.9,"requestedAt":"2025-07-20T22:56:38.162Z"}
+api2-1       | Processing payment: &{ false 0xc0003ebc50 0xc000010fa8}
+api2-1       | Sending payment to principal service: {"correlationId":"9bbf39fd-faaa-4d60-a8e0-d6099c872c33","amount":19.9,"requestedAt":"2025-07-20T22:56:38.180Z"}
+api2-1       | Processing payment: &{ false 0xc0004e9d00 0xc000195128}
+api2-1       | Sending payment to principal service: {"correlationId":"ddc99270-3e21-456f-9089-c2cecfc19b69","amount":19.9,"requestedAt":"2025-07-20T22:56:38.196Z"}
+api1-1       | Processing payment: &{ false 0xc00012ef00 0xc000385390}
+api1-1       | Sending payment to principal service: {"correlationId":"bd300749-971d-493f-99b8-0dab688a1886","amount":19.9,"requestedAt":"2025-07-20T22:56:38.215Z"}
+api1-1       | Processing payment: &{ false 0xc000479350 0xc000310760}
+api1-1       | Sending payment to principal service: {"correlationId":"9ad33d05-4047-445c-9080-280616e89da6","amount":19.9,"requestedAt":"2025-07-20T22:56:38.216Z"}
+api2-1       | Processing payment: &{ false 0xc0005bde00 0xc000290a50}
+api2-1       | Sending payment to principal service: {"correlationId":"f3f4b2e2-f296-4245-b961-b51c3c56cc34","amount":19.9,"requestedAt":"2025-07-20T22:56:38.234Z"}
+api2-1       | Processing payment: &{ false 0xc0004e9d20 0xc000195148}
+api2-1       | Sending payment to principal service: {"correlationId":"bdd6744e-8d10-4f25-ab00-a0af9bc9a81e","amount":19.9,"requestedAt":"2025-07-20T22:56:38.234Z"}
+api1-1       | Processing payment: &{ false 0xc000382f20 0xc000129530}
+api1-1       | Sending payment to principal service: {"correlationId":"19b6b1ac-23e1-4f2a-a2d3-61b27b8677e9","amount":19.9,"requestedAt":"2025-07-20T22:56:38.252Z"}
+api1-1       | Processing payment: &{ false 0xc0003830a0 0xc000129588}
+api1-1       | Sending payment to principal service: {"correlationId":"a9d3904e-1f30-4e2f-bbfe-3c8427445185","amount":19.9,"requestedAt":"2025-07-20T22:56:38.270Z"}
+api2-1       | Processing payment: &{ false 0xc0000331f0 0xc000116c58}
+api2-1       | Sending payment to principal service: {"correlationId":"3c40e676-cb06-4e96-9832-89140de9959a","amount":19.9,"requestedAt":"2025-07-20T22:56:38.289Z"}
+api2-1       | Processing payment: &{ false 0xc0005bdf00 0xc000290b00}
+api2-1       | Sending payment to principal service: {"correlationId":"98c45621-ae30-49b2-a180-9abf08ed39dd","amount":19.9,"requestedAt":"2025-07-20T22:56:38.308Z"}
+api1-1       | Processing payment: &{ false 0xc000479490 0xc0003107d8}
+api1-1       | Sending payment to principal service: {"correlationId":"ee58d2e8-2827-4f7a-88c3-e2af32c4622a","amount":19.9,"requestedAt":"2025-07-20T22:56:38.325Z"}
+api1-1       | Processing payment: &{ false 0xc0003834b0 0xc000129620}
+api1-1       | Sending payment to principal service: {"correlationId":"120f7b09-3f52-43ae-a432-f7db6fd6a760","amount":19.9,"requestedAt":"2025-07-20T22:56:38.337Z"}
+api2-1       | Processing payment: &{ false 0xc0005bdf60 0xc000290b70}
+api2-1       | Sending payment to principal service: {"correlationId":"ae7f60f9-f554-44e8-894a-03f2e4ed95f7","amount":19.9,"requestedAt":"2025-07-20T22:56:38.342Z"}
+api2-1       | Processing payment: &{ false 0xc00019a420 0xc000011038}
+api2-1       | Sending payment to principal service: {"correlationId":"0e237ace-9f4a-43e2-8121-890c17130ec5","amount":19.9,"requestedAt":"2025-07-20T22:56:38.342Z"}
+api1-1       | Processing payment: &{ false 0xc00030e2d0 0xc000010a18}
+api1-1       | Sending payment to principal service: {"correlationId":"92b1f456-49ea-42a3-8975-2920fef70c28","amount":19.9,"requestedAt":"2025-07-20T22:56:38.362Z"}
+api2-1       | Processing payment: &{ false 0xc000284060 0xc000290bf0}
+api2-1       | Sending payment to principal service: {"correlationId":"fbcf1658-41f7-4cfe-8591-838d51817884","amount":19.9,"requestedAt":"2025-07-20T22:56:38.363Z"}
+api1-1       | Processing payment: &{ false 0xc00030e3d0 0xc000010a88}
+api1-1       | Sending payment to principal service: {"correlationId":"3c8f4ea4-8e82-4811-af81-00abc1b63665","amount":19.9,"requestedAt":"2025-07-20T22:56:38.380Z"}
+api2-1       | Processing payment: &{ false 0xc0004e9ec0 0xc0001951e0}
+api2-1       | Sending payment to principal service: {"correlationId":"0450c3a1-78bb-4859-a2b9-59f5945209cc","amount":19.9,"requestedAt":"2025-07-20T22:56:38.397Z"}
+api2-1       | Processing payment: &{ false 0xc0004e9f00 0xc000195238}
+api2-1       | Sending payment to principal service: {"correlationId":"56ef6224-97a1-4a7c-b29d-da6f024ab15a","amount":19.9,"requestedAt":"2025-07-20T22:56:38.416Z"}
+api1-1       | Processing payment: &{ false 0xc0004794f0 0xc000310848}
+api1-1       | Sending payment to principal service: {"correlationId":"8afc286d-f676-431d-be0f-ec5d42c8f354","amount":19.9,"requestedAt":"2025-07-20T22:56:38.432Z"}
+api1-1       | Processing payment: &{ false 0xc0003839d0 0xc0001296e0}
+api1-1       | Sending payment to principal service: {"correlationId":"f775f7c9-71e3-4cf1-b076-d09effb819b2","amount":19.9,"requestedAt":"2025-07-20T22:56:38.434Z"}
+api2-1       | Processing payment: &{ false 0xc0000338e0 0xc000116d30}
+api2-1       | Sending payment to principal service: {"correlationId":"eab84c51-8bb5-4e1c-9b9b-181616548fb6","amount":19.9,"requestedAt":"2025-07-20T22:56:38.451Z"}
+api1-1       | Processing payment: &{ false 0xc000479530 0xc0003108a0}
+api1-1       | Sending payment to principal service: {"correlationId":"bbcf397d-12df-4472-8089-4d72aa971b9c","amount":19.9,"requestedAt":"2025-07-20T22:56:38.452Z"}
+api1-1       | Processing payment: &{ false 0xc00030e860 0xc000010b40}
+api1-1       | Sending payment to principal service: {"correlationId":"8a4fcdca-7e52-4df0-9039-b4bcab4c58b2","amount":19.9,"requestedAt":"2025-07-20T22:56:38.470Z"}
+api2-1       | Processing payment: &{ false 0xc000033a00 0xc000116d60}
+api2-1       | Sending payment to principal service: {"correlationId":"14706fbe-70ee-4ee2-9572-f1bd0e42891b","amount":19.9,"requestedAt":"2025-07-20T22:56:38.470Z"}
+api1-1       | Processing payment: &{ false 0xc000383bc0 0xc000129740}
+api1-1       | Sending payment to principal service: {"correlationId":"a6a3136f-b93a-461d-a5e5-8bf68081a75c","amount":19.9,"requestedAt":"2025-07-20T22:56:38.489Z"}
+api2-1       | Processing payment: &{ false 0xc000284470 0xc000290ce0}
+api2-1       | Sending payment to principal service: {"correlationId":"d0f49d13-40a7-4cb8-9918-461ee5cd9900","amount":19.9,"requestedAt":"2025-07-20T22:56:38.508Z"}
+api2-1       | Processing payment: &{ false 0xc0002845e0 0xc000290d50}
+api2-1       | Sending payment to principal service: {"correlationId":"2e29a736-b4f5-4be5-b408-2405d1a63714","amount":19.9,"requestedAt":"2025-07-20T22:56:38.526Z"}
+api1-1       | Processing payment: &{ false 0xc00012f190 0xc000385458}
+api1-1       | Sending payment to principal service: {"correlationId":"7990029a-1eed-498a-ace0-7c62fb7e4a5a","amount":19.9,"requestedAt":"2025-07-20T22:56:38.544Z"}
+api1-1       | Processing payment: &{ false 0xc00030ea10 0xc000010b90}
+api1-1       | Sending payment to principal service: {"correlationId":"2f1b602d-7b6b-4bec-8c3b-8650d0cc67de","amount":19.9,"requestedAt":"2025-07-20T22:56:38.544Z"}
+api1-1       | Processing payment: &{ false 0xc00030eb80 0xc000010bd8}
+api1-1       | Sending payment to principal service: {"correlationId":"4a014779-9017-433c-abd3-338a34728eed","amount":19.9,"requestedAt":"2025-07-20T22:56:38.561Z"}
+api2-1       | Processing payment: &{ false 0xc000033c10 0xc000116dd8}
+api2-1       | Sending payment to principal service: {"correlationId":"9b64bd97-5b18-4286-acef-c75397ef792d","amount":19.9,"requestedAt":"2025-07-20T22:56:38.561Z"}
+api2-1       | Processing payment: &{ false 0xc00019ab10 0xc000011108}
+api2-1       | Sending payment to principal service: {"correlationId":"caf87eb9-976d-4613-ac99-793c90dea153","amount":19.9,"requestedAt":"2025-07-20T22:56:38.580Z"}
+api2-1       | Processing payment: &{ false 0xc000033c50 0xc000116e20}
+api2-1       | Sending payment to principal service: {"correlationId":"6686caf8-119f-4619-a5b6-4f46d05e058a","amount":19.9,"requestedAt":"2025-07-20T22:56:38.580Z"}
+api1-1       | Processing payment: &{ false 0xc000383cf0 0xc0001297b8}
+api1-1       | Sending payment to principal service: {"correlationId":"5c94c540-6ac4-4218-ad1a-333b932b0e41","amount":19.9,"requestedAt":"2025-07-20T22:56:38.615Z"}
+api2-1       | Processing payment: &{ false 0xc00019adc0 0xc000011180}
+api2-1       | Sending payment to principal service: {"correlationId":"1b6a2b47-b17f-4a97-80ea-d669c97ff247","amount":19.9,"requestedAt":"2025-07-20T22:56:38.632Z"}
+api2-1       | Processing payment: &{ false 0xc000284a90 0xc000290e40}
+api2-1       | Sending payment to principal service: {"correlationId":"835e4ce2-068b-4e47-8e60-82d80298d7a6","amount":19.9,"requestedAt":"2025-07-20T22:56:38.635Z"}
+api1-1       | Processing payment: &{ false 0xc0004798d0 0xc000310978}
+api1-1       | Sending payment to principal service: {"correlationId":"259bdd82-7061-457a-89ca-50c5e237784b","amount":19.9,"requestedAt":"2025-07-20T22:56:38.653Z"}
+api1-1       | Processing payment: &{ false 0xc0004798f0 0xc000310998}
+api1-1       | Sending payment to principal service: {"correlationId":"062b6f68-07b1-4808-89f2-7999cd66839c","amount":19.9,"requestedAt":"2025-07-20T22:56:38.653Z"}
+api2-1       | Processing payment: &{ false 0xc00081e260 0xc000195318}
+api2-1       | Sending payment to principal service: {"correlationId":"ed9f913b-883e-4241-98fb-b4720a84fc92","amount":19.9,"requestedAt":"2025-07-20T22:56:38.670Z"}
+api1-1       | Processing payment: &{ false 0xc00012f220 0xc0003854b8}
+api1-1       | Sending payment to principal service: {"correlationId":"d3459b4c-c297-4b3c-8a4c-4e656c072a7e","amount":19.9,"requestedAt":"2025-07-20T22:56:38.671Z"}
+api2-1       | Processing payment: &{ false 0xc000033e70 0xc000116e70}
+api2-1       | Sending payment to principal service: {"correlationId":"e47ce8f5-3943-4a2e-b265-de708c7afd98","amount":19.9,"requestedAt":"2025-07-20T22:56:38.688Z"}
+api1-1       | Processing payment: &{ false 0xc000479990 0xc000310a58}
+api1-1       | Sending payment to principal service: {"correlationId":"0651822e-3e02-4187-bfb7-2b4191201aa4","amount":19.9,"requestedAt":"2025-07-20T22:56:38.688Z"}
+api2-1       | Processing payment: &{ false 0xc00081e340 0xc000195358}
+api2-1       | Sending payment to principal service: {"correlationId":"3220c0cf-b46f-499c-8de7-6f2f31a91c1b","amount":19.9,"requestedAt":"2025-07-20T22:56:38.707Z"}
+api1-1       | Processing payment: &{ false 0xc00030f2b0 0xc000010cd8}
+api1-1       | Sending payment to principal service: {"correlationId":"6e55ce38-be9b-4b19-a73e-e986d3364b31","amount":19.9,"requestedAt":"2025-07-20T22:56:38.726Z"}
+api2-1       | Processing payment: &{ false 0xc00081e3c0 0xc0001953c8}
+api2-1       | Sending payment to principal service: {"correlationId":"bb67739e-da4c-4c94-9eb4-db6b88576e79","amount":19.9,"requestedAt":"2025-07-20T22:56:38.744Z"}
+api1-1       | Processing payment: &{ false 0xc00012f5f0 0xc000385578}
+api1-1       | Sending payment to principal service: {"correlationId":"d498f3d9-652f-4846-a567-31f20eadcdf1","amount":19.9,"requestedAt":"2025-07-20T22:56:38.762Z"}
+api1-1       | Processing payment: &{ false 0xc00012f610 0xc000385598}
+api1-1       | Sending payment to principal service: {"correlationId":"81aa6c76-4e43-45a0-afd3-6c18ab4e7ea4","amount":19.9,"requestedAt":"2025-07-20T22:56:38.763Z"}
+api1-1       | Processing payment: &{ false 0xc00030f310 0xc000010d38}
+api1-1       | Sending payment to principal service: {"correlationId":"55a410f5-8220-4c2a-999d-558225962d2e","amount":19.9,"requestedAt":"2025-07-20T22:56:38.780Z"}
+api2-1       | Processing payment: &{ false 0xc00081e400 0xc000195420}
+api2-1       | Sending payment to principal service: {"correlationId":"8417a677-9792-4c7c-be5f-4b1751ac3833","amount":19.9,"requestedAt":"2025-07-20T22:56:38.780Z"}
+api1-1       | Processing payment: &{ false 0xc00030f4e0 0xc000010d88}
+api1-1       | Sending payment to principal service: {"correlationId":"a447a8c1-0c6d-4d09-91a3-8c1d1ace90f5","amount":19.9,"requestedAt":"2025-07-20T22:56:38.797Z"}
+api2-1       | Processing payment: &{ false 0xc000758180 0xc000116f28}
+api2-1       | Sending payment to principal service: {"correlationId":"64db091d-dd8b-4578-81b8-d4b74c8ed247","amount":19.9,"requestedAt":"2025-07-20T22:56:38.797Z"}
+api2-1       | Processing payment: &{ false 0xc00081e5c0 0xc0001954d8}
+api2-1       | Sending payment to principal service: {"correlationId":"b07aafe9-0a53-49fe-b8f7-3af75ac9d9f1","amount":19.9,"requestedAt":"2025-07-20T22:56:38.816Z"}
+api2-1       | Processing payment: &{ false 0xc000284b00 0xc000290eb0}
+api2-1       | Sending payment to principal service: {"correlationId":"8440297e-e05c-4a24-9a35-d9082bf163fb","amount":19.9,"requestedAt":"2025-07-20T22:56:38.834Z"}
+api2-1       | Processing payment: &{ false 0xc000284b60 0xc000290f20}
+api2-1       | Sending payment to principal service: {"correlationId":"e4881513-e1c1-49b5-867b-2cb276fb0d30","amount":19.9,"requestedAt":"2025-07-20T22:56:38.853Z"}
+api1-1       | Processing payment: &{ false 0xc000479c30 0xc000310ad8}
+api1-1       | Sending payment to principal service: {"correlationId":"f2ad1e8e-1635-4164-b854-3c22179f3034","amount":19.9,"requestedAt":"2025-07-20T22:56:38.870Z"}
+api1-1       | Processing payment: &{ false 0xc000856160 0xc000129858}
+api1-1       | Sending payment to principal service: {"correlationId":"fb3971fb-c90b-43f4-b385-28b8e27a4103","amount":19.9,"requestedAt":"2025-07-20T22:56:38.872Z"}
+api2-1       | Processing payment: &{ false 0xc000758540 0xc000116fe0}
+api2-1       | Sending payment to principal service: {"correlationId":"5515fa7e-594e-4aed-8afd-3af05d8c6d8f","amount":19.9,"requestedAt":"2025-07-20T22:56:38.889Z"}
+api2-1       | Processing payment: &{ false 0xc000284b90 0xc000290f40}
+api2-1       | Sending payment to principal service: {"correlationId":"4265c782-c5ab-4795-a9d1-b3982d87ae80","amount":19.9,"requestedAt":"2025-07-20T22:56:38.889Z"}
+api1-1       | Processing payment: &{ false 0xc00030f850 0xc000010e48}
+api1-1       | Sending payment to principal service: {"correlationId":"12c35bc1-3d83-40e8-9815-d42b387286fd","amount":19.9,"requestedAt":"2025-07-20T22:56:38.905Z"}
+api1-1       | Processing payment: &{ false 0xc00012f750 0xc0003855e8}
+api1-1       | Sending payment to principal service: {"correlationId":"e4aeec6a-da33-487f-81f8-890a2ab4d7b2","amount":19.9,"requestedAt":"2025-07-20T22:56:38.907Z"}
+api2-1       | Processing payment: &{ false 0xc000284020 0xc000290018}
+api2-1       | Sending payment to principal service: {"correlationId":"14d35f25-ca0b-4ae8-bcf7-c54d759cf0cb","amount":19.9,"requestedAt":"2025-07-20T22:56:38.925Z"}
+api1-1       | Processing payment: &{ false 0xc00012e2a0 0xc000384100}
+api1-1       | Sending payment to principal service: {"correlationId":"12c42084-d55a-4010-ba26-dae5c0760672","amount":19.9,"requestedAt":"2025-07-20T22:56:38.942Z"}
+api2-1       | Processing payment: &{ false 0xc0007580e0 0xc000116048}
+api2-1       | Sending payment to principal service: {"correlationId":"efde0d48-2a39-4cba-aa83-d4348072efef","amount":19.9,"requestedAt":"2025-07-20T22:56:38.962Z"}
+api1-1       | Processing payment: &{ false 0xc00012e5c0 0xc000384250}
+api1-1       | Sending payment to principal service: {"correlationId":"73c7d47b-2f64-4fac-8950-8429fcc86472","amount":19.9,"requestedAt":"2025-07-20T22:56:38.979Z"}
+api2-1       | Processing payment: &{ false 0xc000758130 0xc0001160a0}
+api2-1       | Sending payment to principal service: {"correlationId":"a7b10e81-9f20-4a2f-84b7-9e06317cc056","amount":19.9,"requestedAt":"2025-07-20T22:56:38.981Z"}
+api1-1       | Processing payment: &{ false 0xc00030e360 0xc000010100}
+api1-1       | Sending payment to principal service: {"correlationId":"e82d74f9-a08e-49c8-9ae4-3835d189e12c","amount":19.9,"requestedAt":"2025-07-20T22:56:38.999Z"}
+api2-1       | Processing payment: &{ false 0xc000758200 0xc0001160d8}
+api2-1       | Sending payment to principal service: {"correlationId":"d2f7d711-f093-4e14-9b3a-3af3fb112788","amount":19.9,"requestedAt":"2025-07-20T22:56:38.999Z"}
+api1-1       | Processing payment: &{ false 0xc0004782f0 0xc000310108}
+api1-1       | Processing payment: &{ false 0xc00012e6f0 0xc0003842d8}
+api1-1       | Sending payment to principal service: {"correlationId":"2733c8ad-9b5d-4039-8601-494f128b8e0a","amount":19.9,"requestedAt":"2025-07-20T22:56:39.017Z"}
+api1-1       | Sending payment to principal service: {"correlationId":"63b53a1b-3f29-410b-a47c-aa9618c27b77","amount":19.9,"requestedAt":"2025-07-20T22:56:39.017Z"}
+api2-1       | Processing payment: &{ false 0xc000758450 0xc000116158}
+api2-1       | Sending payment to principal service: {"correlationId":"1700f68b-bdfe-4a49-8571-234763049524","amount":19.9,"requestedAt":"2025-07-20T22:56:39.036Z"}
+api1-1       | Processing payment: &{ false 0xc000478460 0xc0003101d8}
+api1-1       | Sending payment to principal service: {"correlationId":"b7fb7e1a-9253-42d5-9900-5424bf84a2cc","amount":19.9,"requestedAt":"2025-07-20T22:56:39.055Z"}
+api2-1       | Processing payment: &{ false 0xc0007584a0 0xc0001161b0}
+api2-1       | Sending payment to principal service: {"correlationId":"8a951b1e-8aef-4856-b200-ce554c905b1e","amount":19.9,"requestedAt":"2025-07-20T22:56:39.071Z"}
+api2-1       | Processing payment: &{ false 0xc0002843a0 0xc0002902c8}
+api2-1       | Sending payment to principal service: {"correlationId":"2a2ad27b-2431-40e3-a34f-ad72986d9fd7","amount":19.9,"requestedAt":"2025-07-20T22:56:39.089Z"}
+api2-1       | Processing payment: &{ false 0xc000758550 0xc0001161e8}
+api2-1       | Sending payment to principal service: {"correlationId":"4492906d-b284-4b7b-a177-02113ea6168c","amount":19.9,"requestedAt":"2025-07-20T22:56:39.090Z"}
+api1-1       | Processing payment: &{ false 0xc000478590 0xc000310308}
+api1-1       | Sending payment to principal service: {"correlationId":"f5832518-6495-4fe3-8d20-2f212991d983","amount":19.9,"requestedAt":"2025-07-20T22:56:39.107Z"}
+api2-1       | Processing payment: &{ false 0xc000284520 0xc000290350}
+api2-1       | Sending payment to principal service: {"correlationId":"ca8bf1e3-0d7f-49a4-ae70-c43249b165e0","amount":19.9,"requestedAt":"2025-07-20T22:56:39.108Z"}
+api1-1       | Processing payment: &{ false 0xc0004786a0 0xc000310348}
+api1-1       | Sending payment to principal service: {"correlationId":"b803f6af-1617-449c-ac40-4cbeba298790","amount":19.9,"requestedAt":"2025-07-20T22:56:39.126Z"}
+api1-1       | Processing payment: &{ false 0xc00012e9b0 0xc000384690}
+api1-1       | Sending payment to principal service: {"correlationId":"f60f19ac-bf32-40e2-8c5d-2335b4acd1b5","amount":19.9,"requestedAt":"2025-07-20T22:56:39.126Z"}
+api2-1       | Processing payment: &{ false 0xc00081e190 0xc000194428}
+api2-1       | Sending payment to principal service: {"correlationId":"06821f6a-6f8b-4618-aa72-f92504849fa5","amount":19.9,"requestedAt":"2025-07-20T22:56:39.144Z"}
+api1-1       | Processing payment: &{ false 0xc00030ece0 0xc000010230}
+api1-1       | Sending payment to principal service: {"correlationId":"74904cdd-f29f-4504-909c-7749c89dcd17","amount":19.9,"requestedAt":"2025-07-20T22:56:39.164Z"}
+api2-1       | Processing payment: &{ false 0xc00019b1a0 0xc000010390}
+api2-1       | Sending payment to principal service: {"correlationId":"53caae0f-7f91-42e0-837f-dd1b84590f1b","amount":19.9,"requestedAt":"2025-07-20T22:56:39.182Z"}
+api1-1       | Processing payment: &{ false 0xc00030ee10 0xc000010298}
+api1-1       | Sending payment to principal service: {"correlationId":"bdbd2a07-b8b8-4b89-8788-041c9a83a0cb","amount":19.9,"requestedAt":"2025-07-20T22:56:39.198Z"}
+api2-1       | Processing payment: &{ false 0xc00019b220 0xc000010410}
+api2-1       | Sending payment to principal service: {"correlationId":"30243b33-ea8f-46f8-a19b-da1b0d3e0f0f","amount":19.9,"requestedAt":"2025-07-20T22:56:39.200Z"}
+api1-1       | Processing payment: &{ false 0xc00030eeb0 0xc000010328}
+api1-1       | Sending payment to principal service: {"correlationId":"e78e7234-1253-429e-9e21-12722180dc88","amount":19.9,"requestedAt":"2025-07-20T22:56:39.217Z"}
+api2-1       | Processing payment: &{ false 0xc00019b290 0xc000010478}
+api2-1       | Sending payment to principal service: {"correlationId":"f56e2245-33d1-4db3-bbba-80a913433e8d","amount":19.9,"requestedAt":"2025-07-20T22:56:39.217Z"}
+api1-1       | Processing payment: &{ false 0xc000478b10 0xc000310420}
+api1-1       | Sending payment to principal service: {"correlationId":"fb36232f-d426-41e5-bac8-7584b084e52c","amount":19.9,"requestedAt":"2025-07-20T22:56:39.235Z"}
+api2-1       | Processing payment: &{ false 0xc000284a10 0xc000290418}
+api2-1       | Sending payment to principal service: {"correlationId":"040f4380-8362-4efe-9f96-84e738c32c31","amount":19.9,"requestedAt":"2025-07-20T22:56:39.235Z"}
+api2-1       | Processing payment: &{ false 0xc00081e3d0 0xc000194800}
+api2-1       | Sending payment to principal service: {"correlationId":"108bbefc-d8f7-44cc-be37-bc7bbb3b697b","amount":19.9,"requestedAt":"2025-07-20T22:56:39.254Z"}
+api1-1       | Processing payment: &{ false 0xc00012eda0 0xc000384840}
+api1-1       | Sending payment to principal service: {"correlationId":"625d15c6-ec26-4e80-872d-7e34a7be4f2a","amount":19.9,"requestedAt":"2025-07-20T22:56:39.272Z"}
+api2-1       | Processing payment: &{ false 0xc00081e470 0xc000194a10}
+api2-1       | Sending payment to principal service: {"correlationId":"e2c68dd9-2091-47fd-9673-f1405a795c6d","amount":19.9,"requestedAt":"2025-07-20T22:56:39.291Z"}
+api1-1       | Processing payment: &{ false 0xc000478b90 0xc000310478}
+api1-1       | Sending payment to principal service: {"correlationId":"c8116d87-40a2-4ecf-a6f8-3b7ec7efa31b","amount":19.9,"requestedAt":"2025-07-20T22:56:39.309Z"}
+api1-1       | Processing payment: &{ false 0xc00030f2f0 0xc000010410}
+api1-1       | Sending payment to principal service: {"correlationId":"0a4f35e0-9970-4f37-ba28-075cb93e2a6e","amount":19.9,"requestedAt":"2025-07-20T22:56:39.326Z"}
+api1-1       | Processing payment: &{ false 0xc00030f310 0xc000010430}
+api1-1       | Sending payment to principal service: {"correlationId":"f437955b-09e0-48d3-af28-333b9f4984f4","amount":19.9,"requestedAt":"2025-07-20T22:56:39.326Z"}
+api2-1       | Processing payment: &{ false 0xc00019b900 0xc0000106d8}
+api2-1       | Sending payment to principal service: {"correlationId":"8d3f3d75-2b3c-4620-8a07-51a05e5300b2","amount":19.9,"requestedAt":"2025-07-20T22:56:39.339Z"}
+api2-1       | Processing payment: &{ false 0xc00081e4f0 0xc000194a80}
+api2-1       | Sending payment to principal service: {"correlationId":"4f76627d-3fcf-410d-816c-87afc3166553","amount":19.9,"requestedAt":"2025-07-20T22:56:39.344Z"}
+api1-1       | Processing payment: &{ false 0xc000856250 0xc000128478}
+api1-1       | Sending payment to principal service: {"correlationId":"fe6556e9-f69c-4693-acd2-010b93588f47","amount":19.9,"requestedAt":"2025-07-20T22:56:39.344Z"}
+api2-1       | Processing payment: &{ false 0xc00019bb10 0xc000010780}
+api2-1       | Sending payment to principal service: {"correlationId":"09c3ea90-f239-4afb-a536-b57a6cc7038c","amount":19.9,"requestedAt":"2025-07-20T22:56:39.363Z"}
+api1-1       | Processing payment: &{ false 0xc000478f80 0xc0003105b8}
+api1-1       | Sending payment to principal service: {"correlationId":"99622a7b-3a9a-453a-a6f4-98da38c2203d","amount":19.9,"requestedAt":"2025-07-20T22:56:39.365Z"}
+api2-1       | Processing payment: &{ false 0xc000284e10 0xc0002904c8}
+api2-1       | Sending payment to principal service: {"correlationId":"29619e0d-2783-4acc-8eab-0b3a07f87c0c","amount":19.9,"requestedAt":"2025-07-20T22:56:39.381Z"}
+api1-1       | Processing payment: &{ false 0xc000478ff0 0xc000310648}
+api1-1       | Sending payment to principal service: {"correlationId":"4942d272-597e-4764-9f44-02e1e123f90e","amount":19.9,"requestedAt":"2025-07-20T22:56:39.398Z"}
+api1-1       | Processing payment: &{ false 0xc0004790c0 0xc000310688}
+api1-1       | Sending payment to principal service: {"correlationId":"f9424cb1-8975-4335-a1a7-30f1b9d26796","amount":19.9,"requestedAt":"2025-07-20T22:56:39.418Z"}
+api2-1       | Processing payment: &{ false 0xc00081e830 0xc000194b48}
+api2-1       | Sending payment to principal service: {"correlationId":"7c6defb4-5a72-4fcf-b705-3fadcee52aa4","amount":19.9,"requestedAt":"2025-07-20T22:56:39.418Z"}
+api1-1       | Processing payment: &{ false 0xc00012f6e0 0xc0003849e8}
+api1-1       | Sending payment to principal service: {"correlationId":"25b3f542-2f17-45e3-9b32-56caec8b985d","amount":19.9,"requestedAt":"2025-07-20T22:56:39.434Z"}
+api1-1       | Processing payment: &{ false 0xc0004792c0 0xc0003106d8}
+api1-1       | Sending payment to principal service: {"correlationId":"1569eed4-6061-4e93-a08a-731fd926d73b","amount":19.9,"requestedAt":"2025-07-20T22:56:39.436Z"}
+api2-1       | Processing payment: &{ false 0xc000758890 0xc000116270}
+api2-1       | Sending payment to principal service: {"correlationId":"0dcd1d9f-aed3-4874-bdff-e09edf0df39b","amount":19.9,"requestedAt":"2025-07-20T22:56:39.452Z"}
+api1-1       | Processing payment: &{ false 0xc00012f960 0xc000384a58}
+api1-1       | Sending payment to principal service: {"correlationId":"6a994e56-0dd4-41c7-9359-5adf3a6d8a59","amount":19.9,"requestedAt":"2025-07-20T22:56:39.453Z"}
+api2-1       | Processing payment: &{ false 0xc00019bce0 0xc000010920}
+api2-1       | Processing payment: &{ false 0xc0007589d0 0xc0001162e8}
+api2-1       | Sending payment to principal service: {"correlationId":"94e80e90-df79-46ee-a88c-6c44932ecfdb","amount":19.9,"requestedAt":"2025-07-20T22:56:39.471Z"}
+api2-1       | Sending payment to principal service: {"correlationId":"eda9931e-cba5-497a-bb98-78ac7d815a5e","amount":19.9,"requestedAt":"2025-07-20T22:56:39.471Z"}
+api2-1       | Processing payment: &{ false 0xc000758ab0 0xc000116360}
+api2-1       | Sending payment to principal service: {"correlationId":"b8c5c33d-69e4-4fd4-8eab-c5ea6bf160df","amount":19.9,"requestedAt":"2025-07-20T22:56:39.491Z"}
+api1-1       | Processing payment: &{ false 0xc0004793f0 0xc000310768}
+api1-1       | Sending payment to principal service: {"correlationId":"a67d1c50-d069-4d1a-8dd9-ca5de8a49dee","amount":19.9,"requestedAt":"2025-07-20T22:56:39.509Z"}
+api2-1       | Processing payment: &{ false 0xc00011a010 0xc0000109c0}
+api2-1       | Sending payment to principal service: {"correlationId":"3e68dba3-8cc5-454f-b1e5-a2147688966d","amount":19.9,"requestedAt":"2025-07-20T22:56:39.528Z"}
+api1-1       | Processing payment: &{ false 0xc00012fc40 0xc000384af0}
+api1-1       | Sending payment to principal service: {"correlationId":"e8c4add1-e25c-4886-bd08-3fed94d7622e","amount":19.9,"requestedAt":"2025-07-20T22:56:39.528Z"}
+api1-1       | Processing payment: &{ false 0xc00030f490 0xc0000104a0}
+api1-1       | Sending payment to principal service: {"correlationId":"3ace439a-f97a-4250-8ab7-2da3839f68cf","amount":19.9,"requestedAt":"2025-07-20T22:56:39.546Z"}
+api2-1       | Processing payment: &{ false 0xc00011a270 0xc000010ad8}
+api2-1       | Sending payment to principal service: {"correlationId":"66a59ee4-3aa7-4112-9121-16a4707a8ab7","amount":19.9,"requestedAt":"2025-07-20T22:56:39.546Z"}
+api2-1       | Processing payment: &{ false 0xc00081ea90 0xc000194c10}
+api2-1       | Sending payment to principal service: {"correlationId":"711c34f0-90d5-4872-8ae3-b47fb6e72571","amount":19.9,"requestedAt":"2025-07-20T22:56:39.563Z"}
+api1-1       | Processing payment: &{ false 0xc00030f4f0 0xc000010510}
+api1-1       | Sending payment to principal service: {"correlationId":"a7285fd7-af86-419d-8e49-b13b10bbe950","amount":19.9,"requestedAt":"2025-07-20T22:56:39.563Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4120 0xc000384cb0}
+api1-1       | Sending payment to principal service: {"correlationId":"4e4557a4-8e67-443a-ab19-4b6c9884d06f","amount":19.9,"requestedAt":"2025-07-20T22:56:39.582Z"}
+api2-1       | Processing payment: &{ false 0xc000758c50 0xc0001164b8}
+api2-1       | Sending payment to principal service: {"correlationId":"36184859-97c8-4660-acb6-da7c979d6139","amount":19.9,"requestedAt":"2025-07-20T22:56:39.582Z"}
+api2-1       | Processing payment: &{ false 0xc00011a5b0 0xc000010b48}
+api2-1       | Sending payment to principal service: {"correlationId":"ce82d2a4-a6d6-4b5d-859f-ecd408c26caa","amount":19.9,"requestedAt":"2025-07-20T22:56:39.617Z"}
+api1-1       | Processing payment: &{ false 0xc0004b41a0 0xc000384db0}
+api1-1       | Sending payment to principal service: {"correlationId":"faee575e-9cc2-4604-a79c-b1bd60291e82","amount":19.9,"requestedAt":"2025-07-20T22:56:39.633Z"}
+api1-1       | Processing payment: &{ false 0xc000479950 0xc000310830}
+api1-1       | Sending payment to principal service: {"correlationId":"b528c1fd-9009-4078-a2b4-ae891394e02a","amount":19.9,"requestedAt":"2025-07-20T22:56:39.636Z"}
+api2-1       | Processing payment: &{ false 0xc000285060 0xc000290580}
+api2-1       | Sending payment to principal service: {"correlationId":"db259394-9f26-406a-8e62-5eda832c4c55","amount":19.9,"requestedAt":"2025-07-20T22:56:39.637Z"}
+api2-1       | Processing payment: &{ false 0xc000285240 0xc0002905e8}
+api2-1       | Sending payment to principal service: {"correlationId":"f4349ab6-e987-4ef6-bf03-d0781d3ba0ee","amount":19.9,"requestedAt":"2025-07-20T22:56:39.655Z"}
+api1-1       | Processing payment: &{ false 0xc000856510 0xc000128970}
+api1-1       | Sending payment to principal service: {"correlationId":"67e38746-aad4-4844-abfa-c460b7659ef5","amount":19.9,"requestedAt":"2025-07-20T22:56:39.655Z"}
+api2-1       | Processing payment: &{ false 0xc00081ebf0 0xc000194cb8}
+api2-1       | Sending payment to principal service: {"correlationId":"b266ad2a-aa61-4cc3-9cbc-ff1a087c5f95","amount":19.9,"requestedAt":"2025-07-20T22:56:39.671Z"}
+api1-1       | Processing payment: &{ false 0xc0004b4510 0xc000384e20}
+api1-1       | Sending payment to principal service: {"correlationId":"f6e24a39-541f-4ee4-8f45-7b052961a2f0","amount":19.9,"requestedAt":"2025-07-20T22:56:39.673Z"}
+api2-1       | Processing payment: &{ false 0xc00011acf0 0xc000010c28}
+api2-1       | Sending payment to principal service: {"correlationId":"9f2d9081-1148-4be1-b830-e5688bf817ef","amount":19.9,"requestedAt":"2025-07-20T22:56:39.690Z"}
+api2-1       | Processing payment: &{ false 0xc00081ec30 0xc000194d00}
+api2-1       | Sending payment to principal service: {"correlationId":"57803425-b03d-4cf5-9911-d0b446322da8","amount":19.9,"requestedAt":"2025-07-20T22:56:39.690Z"}
+log truncated at line 1000

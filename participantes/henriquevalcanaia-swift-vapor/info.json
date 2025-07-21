@@ -1,0 +1,15 @@
+{
+  "name": "Henrique Valcanaia",
+  "social": [
+    "https://x.com/henriquev93",
+    "https://www.linkedin.com/in/henriquevalcanaia/",
+    "https://www.youtube.com/@HenriqueValcanaia",
+    "https://www.instagram.com/henriquevalcanaia"
+  ],
+  "source-code-repo": "https://github.com/hvsw/rinha-2025-swift",
+  "langs": ["swift"],
+  "storages": ["redis"],
+  "messaging": [],
+  "load-balancers": ["nginx"],
+  "other-technologies": ["vapor", "swift-nio", "docker", "bash", "Vibe Coding"]
+} 

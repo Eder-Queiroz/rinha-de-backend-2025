@@ -1,0 +1,340 @@
+
+ haproxy Pulling 
+ postgres Pulling 
+ app1 Pulling 
+ app2 Pulling 
+ 9824c27679d3 Already exists 
+ 4f4fb700ef54 Already exists 
+ d968f0f3343c Pulling fs layer 
+ 9824c27679d3 Already exists 
+ 4f4fb700ef54 Already exists 
+ d968f0f3343c Pulling fs layer 
+ 3da95a905ed5 Already exists 
+ 13b464475f94 Pulling fs layer 
+ 289435f7bd12 Pulling fs layer 
+ 7b84f25f909b Pulling fs layer 
+ 024505732d6c Pulling fs layer 
+ 4f4fb700ef54 Pulling fs layer 
+ 7b84f25f909b Waiting 
+ 024505732d6c Waiting 
+ 4f4fb700ef54 Waiting 
+ 9824c27679d3 Already exists 
+ 2d24f7d1d290 Pulling fs layer 
+ 608e634a9332 Pulling fs layer 
+ ec7962788232 Pulling fs layer 
+ 299375ace78d Pulling fs layer 
+ 5b57d5761443 Pulling fs layer 
+ d0aede649ee3 Pulling fs layer 
+ 4477580949b1 Pulling fs layer 
+ 7c314e1269bc Pulling fs layer 
+ d71e886fe3be Pulling fs layer 
+ 9d240404d8bc Pulling fs layer 
+ d0aede649ee3 Waiting 
+ 4477580949b1 Waiting 
+ ec7962788232 Waiting 
+ 7c314e1269bc Waiting 
+ d71e886fe3be Waiting 
+ 299375ace78d Waiting 
+ 9d240404d8bc Waiting 
+ 5b57d5761443 Waiting 
+ 608e634a9332 Waiting 
+ 289435f7bd12 Downloading [=============================================>     ]  1.049kB/1.162kB
+ 289435f7bd12 Download complete 
+ 13b464475f94 Downloading [>                                                  ]  35.09kB/3.507MB
+ 13b464475f94 Verifying Checksum 
+ 13b464475f94 Download complete 
+ 13b464475f94 Extracting [>                                                  ]  65.54kB/3.507MB
+ 13b464475f94 Extracting [======================================>            ]  2.687MB/3.507MB
+ 13b464475f94 Extracting [==================================================>]  3.507MB/3.507MB
+ 13b464475f94 Pull complete 
+ 289435f7bd12 Extracting [==================================================>]  1.162kB/1.162kB
+ 289435f7bd12 Extracting [==================================================>]  1.162kB/1.162kB
+ 024505732d6c Download complete 
+ 289435f7bd12 Pull complete 
+ 7b84f25f909b Downloading [>                                                  ]    111kB/10.86MB
+ d968f0f3343c Downloading [>                                                  ]  64.05kB/6.272MB
+ d968f0f3343c Downloading [>                                                  ]  64.05kB/6.272MB
+ 7b84f25f909b Downloading [====================================>              ]  7.909MB/10.86MB
+ 7b84f25f909b Verifying Checksum 
+ 7b84f25f909b Download complete 
+ 7b84f25f909b Extracting [>                                                  ]  131.1kB/10.86MB
+ d968f0f3343c Downloading [===========================================>       ]  5.415MB/6.272MB
+ d968f0f3343c Downloading [===========================================>       ]  5.415MB/6.272MB
+ d968f0f3343c Verifying Checksum 
+ d968f0f3343c Download complete 
+ d968f0f3343c Download complete 
+ d968f0f3343c Extracting [>                                                  ]  65.54kB/6.272MB
+ d968f0f3343c Extracting [>                                                  ]  65.54kB/6.272MB
+ 7b84f25f909b Extracting [======================>                            ]  4.981MB/10.86MB
+ d968f0f3343c Extracting [=================================================> ]  6.226MB/6.272MB
+ d968f0f3343c Extracting [=================================================> ]  6.226MB/6.272MB
+ d968f0f3343c Extracting [==================================================>]  6.272MB/6.272MB
+ d968f0f3343c Extracting [==================================================>]  6.272MB/6.272MB
+ d968f0f3343c Pull complete 
+ d968f0f3343c Pull complete 
+ 7b84f25f909b Extracting [==================================================>]  10.86MB/10.86MB
+ 7b84f25f909b Extracting [==================================================>]  10.86MB/10.86MB
+ 4f4fb700ef54 Downloading [==================================================>]      32B/32B
+ 4f4fb700ef54 Verifying Checksum 
+ 4f4fb700ef54 Download complete 
+ app2 Pulled 
+ app1 Pulled 
+ 7b84f25f909b Pull complete 
+ 608e634a9332 Downloading [>                                                  ]  11.74kB/1.116MB
+ 024505732d6c Extracting [==================================================>]     449B/449B
+ 024505732d6c Extracting [==================================================>]     449B/449B
+ 608e634a9332 Verifying Checksum 
+ 608e634a9332 Download complete 
+ 2d24f7d1d290 Downloading [==================================================>]     969B/969B
+ 2d24f7d1d290 Verifying Checksum 
+ 2d24f7d1d290 Download complete 
+ 2d24f7d1d290 Extracting [==================================================>]     969B/969B
+ 2d24f7d1d290 Extracting [==================================================>]     969B/969B
+ 024505732d6c Pull complete 
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 4f4fb700ef54 Extracting [==================================================>]      32B/32B
+ 2d24f7d1d290 Pull complete 
+ 608e634a9332 Extracting [=>                                                 ]  32.77kB/1.116MB
+ 4f4fb700ef54 Pull complete 
+ 608e634a9332 Extracting [==================================================>]  1.116MB/1.116MB
+ 608e634a9332 Pull complete 
+ haproxy Pulled 
+ ec7962788232 Downloading [==================================================>]     172B/172B
+ ec7962788232 Verifying Checksum 
+ ec7962788232 Download complete 
+ ec7962788232 Extracting [==================================================>]     172B/172B
+ ec7962788232 Extracting [==================================================>]     172B/172B
+ 299375ace78d Downloading [==================================================>]     116B/116B
+ 299375ace78d Verifying Checksum 
+ 299375ace78d Download complete 
+ ec7962788232 Pull complete 
+ 299375ace78d Extracting [==================================================>]     116B/116B
+ 299375ace78d Extracting [==================================================>]     116B/116B
+ 299375ace78d Pull complete 
+ 5b57d5761443 Downloading [>                                                  ]  532.5kB/103.9MB
+ 5b57d5761443 Downloading [====>                                              ]  10.17MB/103.9MB
+ 5b57d5761443 Downloading [==========>                                        ]   21.4MB/103.9MB
+ 4477580949b1 Downloading [==================================================>]     128B/128B
+ 4477580949b1 Verifying Checksum 
+ 4477580949b1 Download complete 
+ d0aede649ee3 Downloading [=====>                                             ]  1.049kB/9.447kB
+ d0aede649ee3 Downloading [==================================================>]  9.447kB/9.447kB
+ d0aede649ee3 Verifying Checksum 
+ d0aede649ee3 Download complete 
+ 5b57d5761443 Downloading [===============>                                   ]  31.59MB/103.9MB
+ 5b57d5761443 Downloading [=====================>                             ]  44.42MB/103.9MB
+ 5b57d5761443 Downloading [==========================>                        ]  55.65MB/103.9MB
+ 5b57d5761443 Downloading [================================>                  ]  67.42MB/103.9MB
+ 7c314e1269bc Download complete 
+ 5b57d5761443 Downloading [=====================================>             ]  78.69MB/103.9MB
+ 5b57d5761443 Downloading [============================================>      ]  91.53MB/103.9MB
+ d71e886fe3be Downloading [===========>                                       ]  1.369kB/5.928kB
+ d71e886fe3be Downloading [==================================================>]  5.928kB/5.928kB
+ d71e886fe3be Verifying Checksum 
+ d71e886fe3be Download complete 
+ 5b57d5761443 Downloading [=================================================> ]  102.8MB/103.9MB
+ 5b57d5761443 Verifying Checksum 
+ 5b57d5761443 Download complete 
+ 5b57d5761443 Extracting [>                                                  ]  557.1kB/103.9MB
+ 5b57d5761443 Extracting [==>                                                ]  5.014MB/103.9MB
+ 9d240404d8bc Downloading [==================================================>]     185B/185B
+ 9d240404d8bc Verifying Checksum 
+ 9d240404d8bc Download complete 
+ 5b57d5761443 Extracting [======>                                            ]  13.93MB/103.9MB
+ 5b57d5761443 Extracting [==========>                                        ]  22.84MB/103.9MB
+ 5b57d5761443 Extracting [===============>                                   ]   31.2MB/103.9MB
+ 5b57d5761443 Extracting [===================>                               ]  39.55MB/103.9MB
+ 5b57d5761443 Extracting [=======================>                           ]  47.91MB/103.9MB
+ 5b57d5761443 Extracting [========================>                          ]  51.25MB/103.9MB
+ 5b57d5761443 Extracting [==========================>                        ]  55.15MB/103.9MB
+ 5b57d5761443 Extracting [=============================>                     ]  61.28MB/103.9MB
+ 5b57d5761443 Extracting [================================>                  ]  68.52MB/103.9MB
+ 5b57d5761443 Extracting [===================================>               ]  74.65MB/103.9MB
+ 5b57d5761443 Extracting [====================================>              ]  75.76MB/103.9MB
+ 5b57d5761443 Extracting [=====================================>             ]  78.54MB/103.9MB
+ 5b57d5761443 Extracting [=======================================>           ]     83MB/103.9MB
+ 5b57d5761443 Extracting [=========================================>         ]   86.9MB/103.9MB
+ 5b57d5761443 Extracting [===========================================>       ]   90.8MB/103.9MB
+ 5b57d5761443 Extracting [===============================================>   ]  99.16MB/103.9MB
+ 5b57d5761443 Extracting [==================================================>]  103.9MB/103.9MB
+ 5b57d5761443 Pull complete 
+ d0aede649ee3 Extracting [==================================================>]  9.447kB/9.447kB
+ d0aede649ee3 Extracting [==================================================>]  9.447kB/9.447kB
+ d0aede649ee3 Pull complete 
+ 4477580949b1 Extracting [==================================================>]     128B/128B
+ 4477580949b1 Extracting [==================================================>]     128B/128B
+ 4477580949b1 Pull complete 
+ 7c314e1269bc Extracting [==================================================>]     168B/168B
+ 7c314e1269bc Extracting [==================================================>]     168B/168B
+ 7c314e1269bc Pull complete 
+ d71e886fe3be Extracting [==================================================>]  5.928kB/5.928kB
+ d71e886fe3be Extracting [==================================================>]  5.928kB/5.928kB
+ d71e886fe3be Pull complete 
+ 9d240404d8bc Extracting [==================================================>]     185B/185B
+ 9d240404d8bc Extracting [==================================================>]     185B/185B
+ 9d240404d8bc Pull complete 
+ postgres Pulled 
+ Network rodrigo-schonardt-go_app-network  Creating
+ Network rodrigo-schonardt-go_app-network  Created
+ Volume "rodrigo-schonardt-go_postgres_data"  Creating
+ Volume "rodrigo-schonardt-go_postgres_data"  Created
+ Container rodrigo-schonardt-go-redis-1  Creating
+ Container rodrigo-schonardt-go-postgres-1  Creating
+ Container rodrigo-schonardt-go-postgres-1  Created
+ Container rodrigo-schonardt-go-redis-1  Created
+ Container rodrigo-schonardt-go-app2-1  Creating
+ Container rodrigo-schonardt-go-app1-1  Creating
+ Container rodrigo-schonardt-go-app2-1  Created
+ Container rodrigo-schonardt-go-app1-1  Created
+ Container rodrigo-schonardt-go-haproxy-1  Creating
+ Container rodrigo-schonardt-go-haproxy-1  Created
+Attaching to app1-1, app2-1, haproxy-1, postgres-1, redis-1
+postgres-1  | The files belonging to this database system will be owned by user "postgres".
+postgres-1  | This user must also own the server process.
+postgres-1  | 
+postgres-1  | The database cluster will be initialized with locale "en_US.utf8".
+postgres-1  | The default database encoding has accordingly been set to "UTF8".
+postgres-1  | The default text search configuration will be set to "english".
+postgres-1  | 
+postgres-1  | Data page checksums are disabled.
+postgres-1  | 
+postgres-1  | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+postgres-1  | creating subdirectories ... ok
+postgres-1  | selecting dynamic shared memory implementation ... posix
+postgres-1  | selecting default max_connections ... 100
+redis-1     | Starting Redis Server
+redis-1     | 1:C 20 Jul 2025 23:11:12.499 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1     | 1:C 20 Jul 2025 23:11:12.499 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1     | 1:C 20 Jul 2025 23:11:12.499 * Redis version=8.0.3, bits=64, commit=00000000, modified=1, pid=1, just started
+redis-1     | 1:C 20 Jul 2025 23:11:12.499 * Configuration loaded
+redis-1     | 1:M 20 Jul 2025 23:11:12.500 * monotonic clock: POSIX clock_gettime
+postgres-1  | selecting default shared_buffers ... 128MB
+redis-1     | 1:M 20 Jul 2025 23:11:12.500 * Running mode=standalone, port=6379.
+redis-1     | 1:M 20 Jul 2025 23:11:12.501 * <bf> RedisBloom version 8.0.1 (Git=unknown)
+redis-1     | 1:M 20 Jul 2025 23:11:12.501 * <bf> Registering configuration options: [
+redis-1     | 1:M 20 Jul 2025 23:11:12.501 * <bf> 	{ bf-error-rate       :      0.01 }
+redis-1     | 1:M 20 Jul 2025 23:11:12.501 * <bf> 	{ bf-initial-size     :       100 }
+redis-1     | 1:M 20 Jul 2025 23:11:12.501 * <bf> 	{ bf-expansion-factor :         2 }
+redis-1     | 1:M 20 Jul 2025 23:11:12.501 * <bf> 	{ cf-bucket-size      :         2 }
+redis-1     | 1:M 20 Jul 2025 23:11:12.501 * <bf> 	{ cf-initial-size     :      1024 }
+redis-1     | 1:M 20 Jul 2025 23:11:12.501 * <bf> 	{ cf-max-iterations   :        20 }
+redis-1     | 1:M 20 Jul 2025 23:11:12.501 * <bf> 	{ cf-expansion-factor :         1 }
+redis-1     | 1:M 20 Jul 2025 23:11:12.501 * <bf> 	{ cf-max-expansions   :        32 }
+redis-1     | 1:M 20 Jul 2025 23:11:12.501 * <bf> ]
+redis-1     | 1:M 20 Jul 2025 23:11:12.501 * Module 'bf' loaded from /usr/local/lib/redis/modules//redisbloom.so
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <search> Redis version found by RedisSearch : 8.0.3 - oss
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <search> RediSearch version 8.0.1 (Git=5688fcc)
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <search> Low level api version 1 initialized successfully
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <search> gc: ON, prefix min length: 2, min word length to stem: 4, prefix max expansions: 200, query timeout (ms): 500, timeout policy: return, cursor read size: 1000, cursor max idle (ms): 300000, max doctable size: 1000000, max number of search results:  1000000, 
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <search> Initialized thread pools!
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <search> Disabled workers threadpool of size 0
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <search> Subscribe to config changes
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <search> Enabled role change notification
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <search> Cluster configuration: AUTO partitions, type: 0, coordinator timeout: 0ms
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <search> Register write commands
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * Module 'search' loaded from /usr/local/lib/redis/modules//redisearch.so
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <timeseries> RedisTimeSeries version 80001, git_sha=577bfa8b5909e7ee572f0b651399be8303dc6641
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <timeseries> Redis version found by RedisTimeSeries : 8.0.3 - oss
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <timeseries> Registering configuration options: [
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <timeseries> 	{ ts-compaction-policy   :              }
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <timeseries> 	{ ts-num-threads         :            3 }
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <timeseries> 	{ ts-retention-policy    :            0 }
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <timeseries> 	{ ts-duplicate-policy    :        block }
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <timeseries> 	{ ts-chunk-size-bytes    :         4096 }
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <timeseries> 	{ ts-encoding            :   compressed }
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <timeseries> 	{ ts-ignore-max-time-diff:            0 }
+redis-1     | 1:M 20 Jul 2025 23:11:12.583 * <timeseries> 	{ ts-ignore-max-val-diff :     0.000000 }
+redis-1     | 1:M 20 Jul 2025 23:11:12.584 * <timeseries> ]
+redis-1     | 1:M 20 Jul 2025 23:11:12.584 * <timeseries> Detected redis oss
+redis-1     | 1:M 20 Jul 2025 23:11:12.584 * Module 'timeseries' loaded from /usr/local/lib/redis/modules//redistimeseries.so
+redis-1     | 1:M 20 Jul 2025 23:11:12.584 * <ReJSON> Created new data type 'ReJSON-RL'
+redis-1     | 1:M 20 Jul 2025 23:11:12.584 * <ReJSON> version: 80001 git sha: unknown branch: unknown
+redis-1     | 1:M 20 Jul 2025 23:11:12.584 * <ReJSON> Exported RedisJSON_V1 API
+redis-1     | 1:M 20 Jul 2025 23:11:12.584 * <ReJSON> Exported RedisJSON_V2 API
+redis-1     | 1:M 20 Jul 2025 23:11:12.584 * <ReJSON> Exported RedisJSON_V3 API
+redis-1     | 1:M 20 Jul 2025 23:11:12.584 * <ReJSON> Exported RedisJSON_V4 API
+redis-1     | 1:M 20 Jul 2025 23:11:12.584 * <ReJSON> Exported RedisJSON_V5 API
+redis-1     | 1:M 20 Jul 2025 23:11:12.584 * <ReJSON> Enabled diskless replication
+redis-1     | 1:M 20 Jul 2025 23:11:12.584 * <ReJSON> Initialized shared string cache, thread safe: false.
+redis-1     | 1:M 20 Jul 2025 23:11:12.584 * Module 'ReJSON' loaded from /usr/local/lib/redis/modules//rejson.so
+redis-1     | 1:M 20 Jul 2025 23:11:12.584 * <search> Acquired RedisJSON_V5 API
+redis-1     | 1:M 20 Jul 2025 23:11:12.585 * Server initialized
+redis-1     | 1:M 20 Jul 2025 23:11:12.585 * Ready to accept connections tcp
+postgres-1  | selecting default time zone ... UTC
+postgres-1  | creating configuration files ... ok
+postgres-1  | running bootstrap script ... ok
+postgres-1  | sh: locale: not found
+postgres-1  | 2025-07-20 23:11:14.083 UTC [35] WARNING:  no usable system locales were found
+postgres-1  | performing post-bootstrap initialization ... ok
+postgres-1  | initdb: warning: enabling "trust" authentication for local connections
+postgres-1  | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+postgres-1  | syncing data to disk ... ok
+postgres-1  | 
+postgres-1  | 
+postgres-1  | Success. You can now start the database server using:
+postgres-1  | 
+postgres-1  |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+postgres-1  | 
+postgres-1  | waiting for server to start....2025-07-20 23:11:16.021 UTC [41] LOG:  starting PostgreSQL 15.13 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+postgres-1  | 2025-07-20 23:11:16.087 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2025-07-20 23:11:16.107 UTC [44] LOG:  database system was shut down at 2025-07-20 23:11:15 UTC
+postgres-1  | 2025-07-20 23:11:16.116 UTC [41] LOG:  database system is ready to accept connections
+postgres-1  |  done
+postgres-1  | server started
+postgres-1  | CREATE DATABASE
+postgres-1  | 
+postgres-1  | 
+postgres-1  | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+postgres-1  | 
+postgres-1  | waiting for server to shut down...2025-07-20 23:11:16.423 UTC [41] LOG:  received fast shutdown request
+postgres-1  | .2025-07-20 23:11:16.430 UTC [41] LOG:  aborting any active transactions
+postgres-1  | 2025-07-20 23:11:16.433 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+postgres-1  | 2025-07-20 23:11:16.482 UTC [42] LOG:  shutting down
+postgres-1  | 2025-07-20 23:11:16.489 UTC [42] LOG:  checkpoint starting: shutdown immediate
+postgres-1  | 2025-07-20 23:11:16.606 UTC [42] LOG:  checkpoint complete: wrote 921 buffers (5.6%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.023 s, sync=0.067 s, total=0.124 s; sync files=301, longest=0.042 s, average=0.001 s; distance=4239 kB, estimate=4239 kB
+postgres-1  | 2025-07-20 23:11:16.614 UTC [41] LOG:  database system is shut down
+postgres-1  |  done
+postgres-1  | server stopped
+postgres-1  | 
+postgres-1  | PostgreSQL init process complete; ready for start up.
+postgres-1  | 
+postgres-1  | 2025-07-20 23:11:16.657 UTC [1] LOG:  starting PostgreSQL 15.13 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+postgres-1  | 2025-07-20 23:11:16.657 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres-1  | 2025-07-20 23:11:16.657 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres-1  | 2025-07-20 23:11:16.667 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2025-07-20 23:11:16.690 UTC [57] LOG:  database system was shut down at 2025-07-20 23:11:16 UTC
+postgres-1  | 2025-07-20 23:11:16.700 UTC [1] LOG:  database system is ready to accept connections
+haproxy-1   | [NOTICE]   (1) : Initializing new worker (8)
+haproxy-1   | [NOTICE]   (1) : Loading success.
+haproxy-1   | [ALERT]    (8) : sendmsg()/writev() failed in logger #1: No such file or directory (errno=2)
+redis-1     | 1:M 20 Jul 2025 23:12:13.051 * 10000 changes in 60 seconds. Saving...
+redis-1     | 1:M 20 Jul 2025 23:12:13.052 * Background saving started by pid 31
+redis-1     | 31:C 20 Jul 2025 23:12:13.073 * DB saved on disk
+redis-1     | 31:C 20 Jul 2025 23:12:13.074 * Fork CoW for RDB: current 0 MB, peak 0 MB, average 0 MB
+redis-1     | 1:M 20 Jul 2025 23:12:13.153 * Background saving terminated with success
+haproxy-1   | [NOTICE]   (1) : haproxy version is 3.2.3-1844da7
+haproxy-1   | [NOTICE]   (1) : path to executable is /usr/local/sbin/haproxy
+haproxy-1   | [WARNING]  (1) : Exiting Master process...
+haproxy-1   | [WARNING]  (8) : Proxy http_front stopped (cumulated conns: FE: 553, BE: 0).
+haproxy-1   | [WARNING]  (8) : Proxy app_backend stopped (cumulated conns: FE: 0, BE: 16749).
+haproxy-1   | [WARNING]  (1) : Current worker (8) exited with code 0 (Exit)
+haproxy-1   | [WARNING]  (1) : All workers exited. Exiting... (0)
+[Khaproxy-1 exited with code 0
+postgres-1  | 2025-07-20 23:12:29.128 UTC [68] LOG:  could not receive data from client: Connection reset by peer
+[Kapp1-1 exited with code 2
+[Kapp2-1 exited with code 2
+postgres-1  | 2025-07-20 23:12:29.760 UTC [1] LOG:  received fast shutdown request
+redis-1     | 1:signal-handler (1753053149) Received SIGTERM scheduling shutdown...
+postgres-1  | 2025-07-20 23:12:29.767 UTC [1] LOG:  aborting any active transactions
+postgres-1  | 2025-07-20 23:12:29.770 UTC [1] LOG:  background worker "logical replication launcher" (PID 60) exited with exit code 1
+postgres-1  | 2025-07-20 23:12:29.773 UTC [55] LOG:  shutting down
+postgres-1  | 2025-07-20 23:12:29.780 UTC [55] LOG:  checkpoint starting: shutdown immediate
+redis-1     | 1:M 20 Jul 2025 23:12:29.792 * User requested shutdown...
+redis-1     | 1:M 20 Jul 2025 23:12:29.792 * Saving the final RDB snapshot before exiting.
+redis-1     | 1:M 20 Jul 2025 23:12:29.825 * DB saved on disk
+redis-1     | 1:M 20 Jul 2025 23:12:29.825 # Redis is now ready to exit, bye bye...
+postgres-1  | 2025-07-20 23:12:29.884 UTC [55] LOG:  checkpoint complete: wrote 149 buffers (0.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.042 s, sync=0.032 s, total=0.112 s; sync files=42, longest=0.023 s, average=0.001 s; distance=1664 kB, estimate=1664 kB
+postgres-1  | 2025-07-20 23:12:29.891 UTC [1] LOG:  database system is shut down
+[Kredis-1 exited with code 0
+[Kpostgres-1 exited with code 0
+log truncated at line 1000

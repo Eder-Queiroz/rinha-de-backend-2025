@@ -1,0 +1,1001 @@
+
+time="2025-07-20T19:57:40-03:00" level=warning msg="a network with name payment-processor exists but was not created for project \"mxlange-fasthttp\".\nSet `external: true` to use an existing network"
+ Container mxlange-fasthttp-db-1  Creating
+ Container mxlange-fasthttp-locker-1  Creating
+ Container mxlange-fasthttp-locker-1  Created
+ Container mxlange-fasthttp-db-1  Created
+ Container mxlange-fasthttp-api2-1  Creating
+ Container mxlange-fasthttp-api1-1  Creating
+ Container mxlange-fasthttp-api2-1  Created
+ Container mxlange-fasthttp-api1-1  Created
+ Container rinha-nginx  Creating
+ Container rinha-nginx  Created
+Attaching to api1-1, api2-1, db-1, locker-1, rinha-nginx
+locker-1     | Locker server started on :8080
+db-1         | The files belonging to this database system will be owned by user "postgres".
+db-1         | This user must also own the server process.
+db-1         | 
+db-1         | The database cluster will be initialized with locale "en_US.utf8".
+db-1         | The default database encoding has accordingly been set to "UTF8".
+db-1         | The default text search configuration will be set to "english".
+db-1         | 
+db-1         | Data page checksums are disabled.
+db-1         | 
+db-1         | fixing permissions on existing directory /var/lib/postgresql/data ... ok
+db-1         | creating subdirectories ... ok
+db-1         | selecting dynamic shared memory implementation ... posix
+db-1         | selecting default "max_connections" ... 100
+db-1         | selecting default "shared_buffers" ... 128MB
+db-1         | selecting default time zone ... UTC
+db-1         | creating configuration files ... ok
+db-1         | running bootstrap script ... ok
+db-1         | sh: locale: not found
+db-1         | 2025-07-20 22:57:42.590 UTC [35] WARNING:  no usable system locales were found
+db-1         | performing post-bootstrap initialization ... ok
+db-1         | initdb: warning: enabling "trust" authentication for local connections
+db-1         | initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+db-1         | syncing data to disk ... ok
+db-1         | 
+db-1         | 
+db-1         | Success. You can now start the database server using:
+db-1         | 
+db-1         |     pg_ctl -D /var/lib/postgresql/data -l logfile start
+db-1         | 
+db-1         | waiting for server to start....2025-07-20 22:57:43.734 UTC [41] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+db-1         | 2025-07-20 22:57:43.734 UTC [41] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1         | 2025-07-20 22:57:43.736 UTC [44] LOG:  database system was shut down at 2025-07-20 22:57:43 UTC
+db-1         | 2025-07-20 22:57:43.784 UTC [41] LOG:  database system is ready to accept connections
+db-1         |  done
+db-1         | server started
+db-1         | 
+db-1         | /usr/local/bin/docker-entrypoint.sh: ignoring /docker-entrypoint-initdb.d/*
+db-1         | 
+db-1         | waiting for server to shut down....2025-07-20 22:57:43.837 UTC [41] LOG:  received fast shutdown request
+db-1         | 2025-07-20 22:57:43.837 UTC [41] LOG:  aborting any active transactions
+db-1         | 2025-07-20 22:57:43.840 UTC [41] LOG:  background worker "logical replication launcher" (PID 47) exited with exit code 1
+db-1         | 2025-07-20 22:57:43.842 UTC [42] LOG:  shutting down
+db-1         | 2025-07-20 22:57:43.842 UTC [42] LOG:  checkpoint starting: shutdown immediate
+db-1         | 2025-07-20 22:57:43.843 UTC [42] LOG:  checkpoint complete: wrote 3 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.001 s, sync=0.001 s, total=0.001 s; sync files=0, longest=0.000 s, average=0.000 s; distance=0 kB, estimate=0 kB; lsn=0/14ED2B8, redo lsn=0/14ED2B8
+db-1         | 2025-07-20 22:57:43.849 UTC [41] LOG:  database system is shut down
+db-1         |  done
+db-1         | server stopped
+db-1         | 
+db-1         | PostgreSQL init process complete; ready for start up.
+db-1         | 
+db-1         | 2025-07-20 22:57:43.959 UTC [1] LOG:  starting PostgreSQL 17.5 on x86_64-pc-linux-musl, compiled by gcc (Alpine 14.2.0) 14.2.0, 64-bit
+db-1         | 2025-07-20 22:57:43.959 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db-1         | 2025-07-20 22:57:43.959 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db-1         | 2025-07-20 22:57:43.960 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db-1         | 2025-07-20 22:57:43.961 UTC [55] LOG:  database system was shut down at 2025-07-20 22:57:43 UTC
+db-1         | 2025-07-20 22:57:43.965 UTC [1] LOG:  database system is ready to accept connections
+api1-1       | Connecting to database with connection string: postgresql://postgres:postgres@db:5432/postgres?sslmode=disable
+api1-1       | Connecting to database with connection string: postgresql://postgres:postgres@db:5432/postgres?sslmode=disable
+api1-1       | Worker started with 100 concurrent workers
+api1-1       | Handler created
+api2-1       | Connecting to database with connection string: postgresql://postgres:postgres@db:5432/postgres?sslmode=disable
+api2-1       | Connecting to database with connection string: postgresql://postgres:postgres@db:5432/postgres?sslmode=disable
+api2-1       | Worker started with 100 concurrent workers
+api2-1       | Handler created
+rinha-nginx  | /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+rinha-nginx  | /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+rinha-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+rinha-nginx  | 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+rinha-nginx  | 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+rinha-nginx  | /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+rinha-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+rinha-nginx  | /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+rinha-nginx  | /docker-entrypoint.sh: Configuration complete; ready for start up
+api1-1       | Processing payment: 38b77fad-7909-4cf0-8b66-dadc10e2f790
+api1-1       | Sending payment to principal service: 38b77fad-7909-4cf0-8b66-dadc10e2f790
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 38b77fad-7909-4cf0-8b66-dadc10e2f790
+api1-1       | Payment saved successfully: 38b77fad-7909-4cf0-8b66-dadc10e2f790
+api1-1       | Finished processing payment: 38b77fad-7909-4cf0-8b66-dadc10e2f790
+api2-1       | Processing payment: 272c1ad4-447f-4409-a8d0-8f54aadb59a7
+api2-1       | Sending payment to principal service: 272c1ad4-447f-4409-a8d0-8f54aadb59a7
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 272c1ad4-447f-4409-a8d0-8f54aadb59a7
+api2-1       | Payment saved successfully: 272c1ad4-447f-4409-a8d0-8f54aadb59a7
+api2-1       | Finished processing payment: 272c1ad4-447f-4409-a8d0-8f54aadb59a7
+api1-1       | Processing payment: 3a6cf2f3-8476-4961-beaf-fd28ba2d27d3
+api1-1       | Sending payment to principal service: 3a6cf2f3-8476-4961-beaf-fd28ba2d27d3
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 3a6cf2f3-8476-4961-beaf-fd28ba2d27d3
+api1-1       | Payment saved successfully: 3a6cf2f3-8476-4961-beaf-fd28ba2d27d3
+api1-1       | Finished processing payment: 3a6cf2f3-8476-4961-beaf-fd28ba2d27d3
+api2-1       | Processing payment: 0e0e5da3-2dd3-4de0-aa8a-4305a4653f0e
+api2-1       | Sending payment to principal service: 0e0e5da3-2dd3-4de0-aa8a-4305a4653f0e
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 0e0e5da3-2dd3-4de0-aa8a-4305a4653f0e
+api2-1       | Payment saved successfully: 0e0e5da3-2dd3-4de0-aa8a-4305a4653f0e
+api2-1       | Finished processing payment: 0e0e5da3-2dd3-4de0-aa8a-4305a4653f0e
+api1-1       | Processing payment: 021f2a54-ac15-42f3-9d71-4307b014fce6
+api1-1       | Sending payment to principal service: 021f2a54-ac15-42f3-9d71-4307b014fce6
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 021f2a54-ac15-42f3-9d71-4307b014fce6
+api1-1       | Payment saved successfully: 021f2a54-ac15-42f3-9d71-4307b014fce6
+api1-1       | Finished processing payment: 021f2a54-ac15-42f3-9d71-4307b014fce6
+api2-1       | Processing payment: 26af70de-3ce5-47c9-8ae2-3af75fb70afc
+api2-1       | Sending payment to principal service: 26af70de-3ce5-47c9-8ae2-3af75fb70afc
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 26af70de-3ce5-47c9-8ae2-3af75fb70afc
+api2-1       | Payment saved successfully: 26af70de-3ce5-47c9-8ae2-3af75fb70afc
+api2-1       | Finished processing payment: 26af70de-3ce5-47c9-8ae2-3af75fb70afc
+api1-1       | Processing payment: 778c830d-2132-47ad-b20d-429271a8b4a8
+api1-1       | Sending payment to principal service: 778c830d-2132-47ad-b20d-429271a8b4a8
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 778c830d-2132-47ad-b20d-429271a8b4a8
+api1-1       | Payment saved successfully: 778c830d-2132-47ad-b20d-429271a8b4a8
+api1-1       | Finished processing payment: 778c830d-2132-47ad-b20d-429271a8b4a8
+api2-1       | Processing payment: 7885f5df-aac9-4356-a527-f75a33b4103c
+api2-1       | Sending payment to principal service: 7885f5df-aac9-4356-a527-f75a33b4103c
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 7885f5df-aac9-4356-a527-f75a33b4103c
+api2-1       | Payment saved successfully: 7885f5df-aac9-4356-a527-f75a33b4103c
+api2-1       | Finished processing payment: 7885f5df-aac9-4356-a527-f75a33b4103c
+api1-1       | Processing payment: c712d9c5-9921-4811-a86e-3424b0760240
+api1-1       | Sending payment to principal service: c712d9c5-9921-4811-a86e-3424b0760240
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: c712d9c5-9921-4811-a86e-3424b0760240
+api1-1       | Payment saved successfully: c712d9c5-9921-4811-a86e-3424b0760240
+api1-1       | Finished processing payment: c712d9c5-9921-4811-a86e-3424b0760240
+api2-1       | Processing payment: e237b7b2-385b-47c4-a758-e7c7fba32024
+api2-1       | Sending payment to principal service: e237b7b2-385b-47c4-a758-e7c7fba32024
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: e237b7b2-385b-47c4-a758-e7c7fba32024
+api2-1       | Payment saved successfully: e237b7b2-385b-47c4-a758-e7c7fba32024
+api2-1       | Finished processing payment: e237b7b2-385b-47c4-a758-e7c7fba32024
+api2-1       | Processing payment: d64c45eb-c29b-455a-8d09-5d094daab4b4
+api2-1       | Sending payment to principal service: d64c45eb-c29b-455a-8d09-5d094daab4b4
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: d64c45eb-c29b-455a-8d09-5d094daab4b4
+api2-1       | Payment saved successfully: d64c45eb-c29b-455a-8d09-5d094daab4b4
+api2-1       | Finished processing payment: d64c45eb-c29b-455a-8d09-5d094daab4b4
+api1-1       | Processing payment: acd0d5a6-4727-4746-b298-fca4ca4bb4b7
+api1-1       | Sending payment to principal service: acd0d5a6-4727-4746-b298-fca4ca4bb4b7
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: acd0d5a6-4727-4746-b298-fca4ca4bb4b7
+api1-1       | Payment saved successfully: acd0d5a6-4727-4746-b298-fca4ca4bb4b7
+api1-1       | Finished processing payment: acd0d5a6-4727-4746-b298-fca4ca4bb4b7
+api2-1       | Processing payment: f8663059-a866-4f88-9b55-8c8d476b12ee
+api2-1       | Sending payment to principal service: f8663059-a866-4f88-9b55-8c8d476b12ee
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: f8663059-a866-4f88-9b55-8c8d476b12ee
+api2-1       | Payment saved successfully: f8663059-a866-4f88-9b55-8c8d476b12ee
+api2-1       | Finished processing payment: f8663059-a866-4f88-9b55-8c8d476b12ee
+api1-1       | Processing payment: eeca8279-6b4a-450b-9123-b8e6b84c0e1a
+api1-1       | Sending payment to principal service: eeca8279-6b4a-450b-9123-b8e6b84c0e1a
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: eeca8279-6b4a-450b-9123-b8e6b84c0e1a
+api1-1       | Payment saved successfully: eeca8279-6b4a-450b-9123-b8e6b84c0e1a
+api1-1       | Finished processing payment: eeca8279-6b4a-450b-9123-b8e6b84c0e1a
+api2-1       | Processing payment: 8c5958ff-2619-4330-b2ed-2ca22a5b75ac
+api2-1       | Sending payment to principal service: 8c5958ff-2619-4330-b2ed-2ca22a5b75ac
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 8c5958ff-2619-4330-b2ed-2ca22a5b75ac
+api2-1       | Payment saved successfully: 8c5958ff-2619-4330-b2ed-2ca22a5b75ac
+api2-1       | Finished processing payment: 8c5958ff-2619-4330-b2ed-2ca22a5b75ac
+api1-1       | Processing payment: 8e630292-4366-4ad8-ba2b-33d2df27d40d
+api1-1       | Sending payment to principal service: 8e630292-4366-4ad8-ba2b-33d2df27d40d
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 8e630292-4366-4ad8-ba2b-33d2df27d40d
+api1-1       | Payment saved successfully: 8e630292-4366-4ad8-ba2b-33d2df27d40d
+api1-1       | Finished processing payment: 8e630292-4366-4ad8-ba2b-33d2df27d40d
+api2-1       | Processing payment: 331ad27e-4f4f-4398-b13c-9a70f09bac6e
+api2-1       | Sending payment to principal service: 331ad27e-4f4f-4398-b13c-9a70f09bac6e
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 331ad27e-4f4f-4398-b13c-9a70f09bac6e
+api2-1       | Payment saved successfully: 331ad27e-4f4f-4398-b13c-9a70f09bac6e
+api2-1       | Finished processing payment: 331ad27e-4f4f-4398-b13c-9a70f09bac6e
+api1-1       | Processing payment: 09c2660a-7aef-44b2-b602-f2ca6e77b45f
+api1-1       | Sending payment to principal service: 09c2660a-7aef-44b2-b602-f2ca6e77b45f
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 09c2660a-7aef-44b2-b602-f2ca6e77b45f
+api1-1       | Payment saved successfully: 09c2660a-7aef-44b2-b602-f2ca6e77b45f
+api1-1       | Finished processing payment: 09c2660a-7aef-44b2-b602-f2ca6e77b45f
+api2-1       | Processing payment: 19782c51-aa47-44c8-9967-a5d6be10e016
+api2-1       | Sending payment to principal service: 19782c51-aa47-44c8-9967-a5d6be10e016
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 19782c51-aa47-44c8-9967-a5d6be10e016
+api2-1       | Payment saved successfully: 19782c51-aa47-44c8-9967-a5d6be10e016
+api2-1       | Finished processing payment: 19782c51-aa47-44c8-9967-a5d6be10e016
+api1-1       | Processing payment: e9b7dc84-b1d7-476e-9300-bc3234ad6f62
+api1-1       | Sending payment to principal service: e9b7dc84-b1d7-476e-9300-bc3234ad6f62
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: e9b7dc84-b1d7-476e-9300-bc3234ad6f62
+api1-1       | Payment saved successfully: e9b7dc84-b1d7-476e-9300-bc3234ad6f62
+api1-1       | Finished processing payment: e9b7dc84-b1d7-476e-9300-bc3234ad6f62
+api2-1       | Processing payment: 883e6f1f-1ccd-4c9e-9eb2-4007f0b41a5d
+api2-1       | Sending payment to principal service: 883e6f1f-1ccd-4c9e-9eb2-4007f0b41a5d
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 883e6f1f-1ccd-4c9e-9eb2-4007f0b41a5d
+api2-1       | Payment saved successfully: 883e6f1f-1ccd-4c9e-9eb2-4007f0b41a5d
+api2-1       | Finished processing payment: 883e6f1f-1ccd-4c9e-9eb2-4007f0b41a5d
+api1-1       | Processing payment: d783cc09-d298-4aa0-a291-d26617f3b294
+api1-1       | Sending payment to principal service: d783cc09-d298-4aa0-a291-d26617f3b294
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: d783cc09-d298-4aa0-a291-d26617f3b294
+api1-1       | Payment saved successfully: d783cc09-d298-4aa0-a291-d26617f3b294
+api1-1       | Finished processing payment: d783cc09-d298-4aa0-a291-d26617f3b294
+api2-1       | Processing payment: 2874dd77-3fcf-44ea-983b-0c82c891ab4a
+api2-1       | Sending payment to principal service: 2874dd77-3fcf-44ea-983b-0c82c891ab4a
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 2874dd77-3fcf-44ea-983b-0c82c891ab4a
+api2-1       | Payment saved successfully: 2874dd77-3fcf-44ea-983b-0c82c891ab4a
+api2-1       | Finished processing payment: 2874dd77-3fcf-44ea-983b-0c82c891ab4a
+api1-1       | Processing payment: e59aad60-0281-4aac-b733-ad8449404f05
+api1-1       | Sending payment to principal service: e59aad60-0281-4aac-b733-ad8449404f05
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: e59aad60-0281-4aac-b733-ad8449404f05
+api1-1       | Payment saved successfully: e59aad60-0281-4aac-b733-ad8449404f05
+api1-1       | Finished processing payment: e59aad60-0281-4aac-b733-ad8449404f05
+api2-1       | Processing payment: 71ee8f46-9c7d-4fe0-afca-bda22f67d682
+api2-1       | Sending payment to principal service: 71ee8f46-9c7d-4fe0-afca-bda22f67d682
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 71ee8f46-9c7d-4fe0-afca-bda22f67d682
+api2-1       | Payment saved successfully: 71ee8f46-9c7d-4fe0-afca-bda22f67d682
+api2-1       | Finished processing payment: 71ee8f46-9c7d-4fe0-afca-bda22f67d682
+api2-1       | Processing payment: ee814bf5-7c59-4cbf-9ef4-d04f3c26adf6
+api2-1       | Sending payment to principal service: ee814bf5-7c59-4cbf-9ef4-d04f3c26adf6
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: ee814bf5-7c59-4cbf-9ef4-d04f3c26adf6
+api2-1       | Payment saved successfully: ee814bf5-7c59-4cbf-9ef4-d04f3c26adf6
+api2-1       | Finished processing payment: ee814bf5-7c59-4cbf-9ef4-d04f3c26adf6
+api1-1       | Processing payment: 0b7367f7-e5ed-4cd9-a34f-40f6b02d6324
+api1-1       | Sending payment to principal service: 0b7367f7-e5ed-4cd9-a34f-40f6b02d6324
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 0b7367f7-e5ed-4cd9-a34f-40f6b02d6324
+api1-1       | Payment saved successfully: 0b7367f7-e5ed-4cd9-a34f-40f6b02d6324
+api1-1       | Finished processing payment: 0b7367f7-e5ed-4cd9-a34f-40f6b02d6324
+api2-1       | Processing payment: a901c66e-11a1-4661-9ed7-f97dbaecd6ab
+api2-1       | Sending payment to principal service: a901c66e-11a1-4661-9ed7-f97dbaecd6ab
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Processing payment: 09ae4f50-f3d5-4df3-b601-d69b800e5244
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: a901c66e-11a1-4661-9ed7-f97dbaecd6ab
+api1-1       | Sending payment to principal service: 09ae4f50-f3d5-4df3-b601-d69b800e5244
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Payment saved successfully: a901c66e-11a1-4661-9ed7-f97dbaecd6ab
+api2-1       | Finished processing payment: a901c66e-11a1-4661-9ed7-f97dbaecd6ab
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 09ae4f50-f3d5-4df3-b601-d69b800e5244
+api1-1       | Payment saved successfully: 09ae4f50-f3d5-4df3-b601-d69b800e5244
+api1-1       | Finished processing payment: 09ae4f50-f3d5-4df3-b601-d69b800e5244
+api1-1       | Processing payment: d9d244ec-5fab-468b-8976-7d962b0e0007
+api1-1       | Sending payment to principal service: d9d244ec-5fab-468b-8976-7d962b0e0007
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: d9d244ec-5fab-468b-8976-7d962b0e0007
+api1-1       | Payment saved successfully: d9d244ec-5fab-468b-8976-7d962b0e0007
+api1-1       | Finished processing payment: d9d244ec-5fab-468b-8976-7d962b0e0007
+api2-1       | Processing payment: 4174cac6-72b1-4f86-891e-3ff2bcb7438d
+api2-1       | Sending payment to principal service: 4174cac6-72b1-4f86-891e-3ff2bcb7438d
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 4174cac6-72b1-4f86-891e-3ff2bcb7438d
+api2-1       | Payment saved successfully: 4174cac6-72b1-4f86-891e-3ff2bcb7438d
+api2-1       | Finished processing payment: 4174cac6-72b1-4f86-891e-3ff2bcb7438d
+api1-1       | Processing payment: 7a57fce7-73a1-41b3-a826-79f3b2506ccd
+api1-1       | Sending payment to principal service: 7a57fce7-73a1-41b3-a826-79f3b2506ccd
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 7a57fce7-73a1-41b3-a826-79f3b2506ccd
+api1-1       | Payment saved successfully: 7a57fce7-73a1-41b3-a826-79f3b2506ccd
+api1-1       | Finished processing payment: 7a57fce7-73a1-41b3-a826-79f3b2506ccd
+api2-1       | Processing payment: 8b3dea32-06a9-4317-af50-41660a4292ab
+api2-1       | Sending payment to principal service: 8b3dea32-06a9-4317-af50-41660a4292ab
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 8b3dea32-06a9-4317-af50-41660a4292ab
+api2-1       | Payment saved successfully: 8b3dea32-06a9-4317-af50-41660a4292ab
+api2-1       | Finished processing payment: 8b3dea32-06a9-4317-af50-41660a4292ab
+api1-1       | Processing payment: 643a6c4b-57b6-41b2-9ecc-69b1314a4d15
+api1-1       | Sending payment to principal service: 643a6c4b-57b6-41b2-9ecc-69b1314a4d15
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 643a6c4b-57b6-41b2-9ecc-69b1314a4d15
+api1-1       | Payment saved successfully: 643a6c4b-57b6-41b2-9ecc-69b1314a4d15
+api1-1       | Finished processing payment: 643a6c4b-57b6-41b2-9ecc-69b1314a4d15
+api1-1       | Processing payment: cb78f311-550f-4dc8-b054-5191efd9524c
+api1-1       | Sending payment to principal service: cb78f311-550f-4dc8-b054-5191efd9524c
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: cb78f311-550f-4dc8-b054-5191efd9524c
+api1-1       | Payment saved successfully: cb78f311-550f-4dc8-b054-5191efd9524c
+api1-1       | Finished processing payment: cb78f311-550f-4dc8-b054-5191efd9524c
+api2-1       | Processing payment: e4ac190c-21a9-4210-9d52-9c1a9479037e
+api2-1       | Sending payment to principal service: e4ac190c-21a9-4210-9d52-9c1a9479037e
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: e4ac190c-21a9-4210-9d52-9c1a9479037e
+api2-1       | Payment saved successfully: e4ac190c-21a9-4210-9d52-9c1a9479037e
+api2-1       | Finished processing payment: e4ac190c-21a9-4210-9d52-9c1a9479037e
+api2-1       | Processing payment: b4f6139e-e58e-4694-a582-80ef3c60616c
+api2-1       | Sending payment to principal service: b4f6139e-e58e-4694-a582-80ef3c60616c
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: b4f6139e-e58e-4694-a582-80ef3c60616c
+api2-1       | Payment saved successfully: b4f6139e-e58e-4694-a582-80ef3c60616c
+api2-1       | Finished processing payment: b4f6139e-e58e-4694-a582-80ef3c60616c
+api1-1       | Processing payment: 5bb2a119-08d3-4691-a567-138cbce993e7
+api1-1       | Sending payment to principal service: 5bb2a119-08d3-4691-a567-138cbce993e7
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 5bb2a119-08d3-4691-a567-138cbce993e7
+api1-1       | Payment saved successfully: 5bb2a119-08d3-4691-a567-138cbce993e7
+api1-1       | Finished processing payment: 5bb2a119-08d3-4691-a567-138cbce993e7
+api2-1       | Processing payment: 50e3f650-416a-40c7-8d5a-64609a5011b5
+api2-1       | Sending payment to principal service: 50e3f650-416a-40c7-8d5a-64609a5011b5
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 50e3f650-416a-40c7-8d5a-64609a5011b5
+api2-1       | Payment saved successfully: 50e3f650-416a-40c7-8d5a-64609a5011b5
+api2-1       | Finished processing payment: 50e3f650-416a-40c7-8d5a-64609a5011b5
+api1-1       | Processing payment: 6aedb507-b1e1-4da5-b7ac-53e42d641a12
+api1-1       | Sending payment to principal service: 6aedb507-b1e1-4da5-b7ac-53e42d641a12
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 6aedb507-b1e1-4da5-b7ac-53e42d641a12
+api1-1       | Payment saved successfully: 6aedb507-b1e1-4da5-b7ac-53e42d641a12
+api1-1       | Finished processing payment: 6aedb507-b1e1-4da5-b7ac-53e42d641a12
+api1-1       | Processing payment: c1f9ce1f-2723-46c1-9063-8b2a94bf2f65
+api1-1       | Sending payment to principal service: c1f9ce1f-2723-46c1-9063-8b2a94bf2f65
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: c1f9ce1f-2723-46c1-9063-8b2a94bf2f65
+api1-1       | Payment saved successfully: c1f9ce1f-2723-46c1-9063-8b2a94bf2f65
+api1-1       | Finished processing payment: c1f9ce1f-2723-46c1-9063-8b2a94bf2f65
+api2-1       | Processing payment: 8e86dc11-12ef-4674-9228-2d281dc34f36
+api2-1       | Sending payment to principal service: 8e86dc11-12ef-4674-9228-2d281dc34f36
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 8e86dc11-12ef-4674-9228-2d281dc34f36
+api2-1       | Payment saved successfully: 8e86dc11-12ef-4674-9228-2d281dc34f36
+api2-1       | Finished processing payment: 8e86dc11-12ef-4674-9228-2d281dc34f36
+api2-1       | Processing payment: 3452aa3a-d5b0-4256-b6d6-c48fccf2fa56
+api2-1       | Sending payment to principal service: 3452aa3a-d5b0-4256-b6d6-c48fccf2fa56
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 3452aa3a-d5b0-4256-b6d6-c48fccf2fa56
+api2-1       | Payment saved successfully: 3452aa3a-d5b0-4256-b6d6-c48fccf2fa56
+api2-1       | Finished processing payment: 3452aa3a-d5b0-4256-b6d6-c48fccf2fa56
+api1-1       | Processing payment: 6fe4f127-c1c3-42b9-bae8-3922142a5c80
+api1-1       | Sending payment to principal service: 6fe4f127-c1c3-42b9-bae8-3922142a5c80
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 6fe4f127-c1c3-42b9-bae8-3922142a5c80
+api1-1       | Payment saved successfully: 6fe4f127-c1c3-42b9-bae8-3922142a5c80
+api1-1       | Finished processing payment: 6fe4f127-c1c3-42b9-bae8-3922142a5c80
+api2-1       | Processing payment: 01bb9ef9-ca20-4e7d-9638-6ce349716d4b
+api2-1       | Sending payment to principal service: 01bb9ef9-ca20-4e7d-9638-6ce349716d4b
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 01bb9ef9-ca20-4e7d-9638-6ce349716d4b
+api2-1       | Payment saved successfully: 01bb9ef9-ca20-4e7d-9638-6ce349716d4b
+api2-1       | Finished processing payment: 01bb9ef9-ca20-4e7d-9638-6ce349716d4b
+api1-1       | Processing payment: bdccfcb6-72ad-4eb4-9671-b5c40a6abbd1
+api1-1       | Sending payment to principal service: bdccfcb6-72ad-4eb4-9671-b5c40a6abbd1
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: bdccfcb6-72ad-4eb4-9671-b5c40a6abbd1
+api1-1       | Payment saved successfully: bdccfcb6-72ad-4eb4-9671-b5c40a6abbd1
+api1-1       | Finished processing payment: bdccfcb6-72ad-4eb4-9671-b5c40a6abbd1
+api1-1       | Processing payment: ce10d4db-82a7-446b-ab9c-22476695501c
+api1-1       | Sending payment to principal service: ce10d4db-82a7-446b-ab9c-22476695501c
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: ce10d4db-82a7-446b-ab9c-22476695501c
+api1-1       | Payment saved successfully: ce10d4db-82a7-446b-ab9c-22476695501c
+api1-1       | Finished processing payment: ce10d4db-82a7-446b-ab9c-22476695501c
+api2-1       | Processing payment: 2248ad26-e5a9-4ef1-9748-34ad980d432a
+api2-1       | Sending payment to principal service: 2248ad26-e5a9-4ef1-9748-34ad980d432a
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 2248ad26-e5a9-4ef1-9748-34ad980d432a
+api2-1       | Payment saved successfully: 2248ad26-e5a9-4ef1-9748-34ad980d432a
+api2-1       | Finished processing payment: 2248ad26-e5a9-4ef1-9748-34ad980d432a
+api2-1       | Processing payment: 52dd6e08-de6c-46fd-b66f-fab407a3e663
+api2-1       | Sending payment to principal service: 52dd6e08-de6c-46fd-b66f-fab407a3e663
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 52dd6e08-de6c-46fd-b66f-fab407a3e663
+api2-1       | Payment saved successfully: 52dd6e08-de6c-46fd-b66f-fab407a3e663
+api2-1       | Finished processing payment: 52dd6e08-de6c-46fd-b66f-fab407a3e663
+api1-1       | Processing payment: e6699bed-76d6-41f2-95a3-45876ec37b22
+api1-1       | Sending payment to principal service: e6699bed-76d6-41f2-95a3-45876ec37b22
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: e6699bed-76d6-41f2-95a3-45876ec37b22
+api1-1       | Payment saved successfully: e6699bed-76d6-41f2-95a3-45876ec37b22
+api1-1       | Finished processing payment: e6699bed-76d6-41f2-95a3-45876ec37b22
+api2-1       | Processing payment: c11558c6-1c83-4662-b19e-11697ad4ae29
+api2-1       | Sending payment to principal service: c11558c6-1c83-4662-b19e-11697ad4ae29
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: c11558c6-1c83-4662-b19e-11697ad4ae29
+api2-1       | Payment saved successfully: c11558c6-1c83-4662-b19e-11697ad4ae29
+api2-1       | Finished processing payment: c11558c6-1c83-4662-b19e-11697ad4ae29
+api1-1       | Processing payment: eda16427-7728-4f47-9532-d3c68d9436a5
+api1-1       | Sending payment to principal service: eda16427-7728-4f47-9532-d3c68d9436a5
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: eda16427-7728-4f47-9532-d3c68d9436a5
+api1-1       | Payment saved successfully: eda16427-7728-4f47-9532-d3c68d9436a5
+api1-1       | Finished processing payment: eda16427-7728-4f47-9532-d3c68d9436a5
+api2-1       | Processing payment: 41791efc-7026-43e1-842d-420773fb4557
+api2-1       | Sending payment to principal service: 41791efc-7026-43e1-842d-420773fb4557
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 41791efc-7026-43e1-842d-420773fb4557
+api2-1       | Payment saved successfully: 41791efc-7026-43e1-842d-420773fb4557
+api2-1       | Finished processing payment: 41791efc-7026-43e1-842d-420773fb4557
+api1-1       | Processing payment: 760fb936-26c4-4e4e-809c-b04e816020a4
+api1-1       | Sending payment to principal service: 760fb936-26c4-4e4e-809c-b04e816020a4
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 760fb936-26c4-4e4e-809c-b04e816020a4
+api1-1       | Payment saved successfully: 760fb936-26c4-4e4e-809c-b04e816020a4
+api1-1       | Finished processing payment: 760fb936-26c4-4e4e-809c-b04e816020a4
+api1-1       | Processing payment: 626a71c3-5e4f-40e8-8b1f-0ff956151822
+api1-1       | Sending payment to principal service: 626a71c3-5e4f-40e8-8b1f-0ff956151822
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 626a71c3-5e4f-40e8-8b1f-0ff956151822
+api1-1       | Payment saved successfully: 626a71c3-5e4f-40e8-8b1f-0ff956151822
+api1-1       | Finished processing payment: 626a71c3-5e4f-40e8-8b1f-0ff956151822
+api2-1       | Processing payment: a15c4753-8a33-45ce-9a0d-69548d46de3e
+api2-1       | Sending payment to principal service: a15c4753-8a33-45ce-9a0d-69548d46de3e
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Processing payment: 53402ab5-688d-47b9-aeb4-907dcc0ae80d
+api2-1       | Sending payment to principal service: 53402ab5-688d-47b9-aeb4-907dcc0ae80d
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: a15c4753-8a33-45ce-9a0d-69548d46de3e
+api2-1       | Payment saved successfully: a15c4753-8a33-45ce-9a0d-69548d46de3e
+api2-1       | Finished processing payment: a15c4753-8a33-45ce-9a0d-69548d46de3e
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 53402ab5-688d-47b9-aeb4-907dcc0ae80d
+api2-1       | Payment saved successfully: 53402ab5-688d-47b9-aeb4-907dcc0ae80d
+api2-1       | Finished processing payment: 53402ab5-688d-47b9-aeb4-907dcc0ae80d
+api2-1       | Processing payment: 36f5c68a-f8f0-4bc8-96b2-2f2175db6731
+api2-1       | Sending payment to principal service: 36f5c68a-f8f0-4bc8-96b2-2f2175db6731
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 36f5c68a-f8f0-4bc8-96b2-2f2175db6731
+api2-1       | Payment saved successfully: 36f5c68a-f8f0-4bc8-96b2-2f2175db6731
+api2-1       | Finished processing payment: 36f5c68a-f8f0-4bc8-96b2-2f2175db6731
+api1-1       | Processing payment: e3b0a63a-992f-441d-82c4-8c918f2dbd77
+api1-1       | Sending payment to principal service: e3b0a63a-992f-441d-82c4-8c918f2dbd77
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: e3b0a63a-992f-441d-82c4-8c918f2dbd77
+api1-1       | Payment saved successfully: e3b0a63a-992f-441d-82c4-8c918f2dbd77
+api1-1       | Finished processing payment: e3b0a63a-992f-441d-82c4-8c918f2dbd77
+api2-1       | Processing payment: c567e2b4-9878-430e-8a65-feb9e01a8021
+api2-1       | Sending payment to principal service: c567e2b4-9878-430e-8a65-feb9e01a8021
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: c567e2b4-9878-430e-8a65-feb9e01a8021
+api2-1       | Payment saved successfully: c567e2b4-9878-430e-8a65-feb9e01a8021
+api2-1       | Finished processing payment: c567e2b4-9878-430e-8a65-feb9e01a8021
+api1-1       | Processing payment: 2906c6fd-57e1-4812-84db-23472cf4f827
+api1-1       | Sending payment to principal service: 2906c6fd-57e1-4812-84db-23472cf4f827
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 2906c6fd-57e1-4812-84db-23472cf4f827
+api1-1       | Payment saved successfully: 2906c6fd-57e1-4812-84db-23472cf4f827
+api1-1       | Finished processing payment: 2906c6fd-57e1-4812-84db-23472cf4f827
+api2-1       | Processing payment: 2d5f5a96-e85b-4e5f-95da-122c802230ac
+api2-1       | Sending payment to principal service: 2d5f5a96-e85b-4e5f-95da-122c802230ac
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 2d5f5a96-e85b-4e5f-95da-122c802230ac
+api2-1       | Payment saved successfully: 2d5f5a96-e85b-4e5f-95da-122c802230ac
+api2-1       | Finished processing payment: 2d5f5a96-e85b-4e5f-95da-122c802230ac
+api1-1       | Processing payment: cd1bc15a-f48b-4b53-8077-80da7f65dee2
+api1-1       | Sending payment to principal service: cd1bc15a-f48b-4b53-8077-80da7f65dee2
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: cd1bc15a-f48b-4b53-8077-80da7f65dee2
+api1-1       | Payment saved successfully: cd1bc15a-f48b-4b53-8077-80da7f65dee2
+api1-1       | Finished processing payment: cd1bc15a-f48b-4b53-8077-80da7f65dee2
+api2-1       | Processing payment: d981c95e-bc06-47f2-aa9f-ccc4d4af5fa0
+api2-1       | Sending payment to principal service: d981c95e-bc06-47f2-aa9f-ccc4d4af5fa0
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: d981c95e-bc06-47f2-aa9f-ccc4d4af5fa0
+api2-1       | Payment saved successfully: d981c95e-bc06-47f2-aa9f-ccc4d4af5fa0
+api2-1       | Finished processing payment: d981c95e-bc06-47f2-aa9f-ccc4d4af5fa0
+api1-1       | Processing payment: 47221f67-f80a-4fb7-b810-b9277a5dddb5
+api1-1       | Sending payment to principal service: 47221f67-f80a-4fb7-b810-b9277a5dddb5
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 47221f67-f80a-4fb7-b810-b9277a5dddb5
+api1-1       | Payment saved successfully: 47221f67-f80a-4fb7-b810-b9277a5dddb5
+api1-1       | Finished processing payment: 47221f67-f80a-4fb7-b810-b9277a5dddb5
+api2-1       | Processing payment: 57d24325-96ec-486a-a130-2e441caacd1c
+api2-1       | Sending payment to principal service: 57d24325-96ec-486a-a130-2e441caacd1c
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 57d24325-96ec-486a-a130-2e441caacd1c
+api2-1       | Payment saved successfully: 57d24325-96ec-486a-a130-2e441caacd1c
+api2-1       | Finished processing payment: 57d24325-96ec-486a-a130-2e441caacd1c
+api1-1       | Processing payment: d40cae24-0817-4cc1-9be9-981607fabcfb
+api1-1       | Sending payment to principal service: d40cae24-0817-4cc1-9be9-981607fabcfb
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: d40cae24-0817-4cc1-9be9-981607fabcfb
+api1-1       | Payment saved successfully: d40cae24-0817-4cc1-9be9-981607fabcfb
+api1-1       | Finished processing payment: d40cae24-0817-4cc1-9be9-981607fabcfb
+api2-1       | Processing payment: e9ef3b23-ae25-4060-a12c-6f9427b712a0
+api2-1       | Sending payment to principal service: e9ef3b23-ae25-4060-a12c-6f9427b712a0
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: e9ef3b23-ae25-4060-a12c-6f9427b712a0
+api2-1       | Payment saved successfully: e9ef3b23-ae25-4060-a12c-6f9427b712a0
+api2-1       | Finished processing payment: e9ef3b23-ae25-4060-a12c-6f9427b712a0
+api1-1       | Processing payment: f65b8d01-705f-4798-8be4-51030137e4e2
+api1-1       | Sending payment to principal service: f65b8d01-705f-4798-8be4-51030137e4e2
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: f65b8d01-705f-4798-8be4-51030137e4e2
+api1-1       | Payment saved successfully: f65b8d01-705f-4798-8be4-51030137e4e2
+api1-1       | Finished processing payment: f65b8d01-705f-4798-8be4-51030137e4e2
+api2-1       | Processing payment: 18526262-f8b7-4281-803a-2c98c8ef79c5
+api2-1       | Sending payment to principal service: 18526262-f8b7-4281-803a-2c98c8ef79c5
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 18526262-f8b7-4281-803a-2c98c8ef79c5
+api2-1       | Payment saved successfully: 18526262-f8b7-4281-803a-2c98c8ef79c5
+api2-1       | Finished processing payment: 18526262-f8b7-4281-803a-2c98c8ef79c5
+api1-1       | Processing payment: 591b66e2-fa0c-4762-abe9-cc230e9cc2ad
+api1-1       | Sending payment to principal service: 591b66e2-fa0c-4762-abe9-cc230e9cc2ad
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 591b66e2-fa0c-4762-abe9-cc230e9cc2ad
+api1-1       | Payment saved successfully: 591b66e2-fa0c-4762-abe9-cc230e9cc2ad
+api1-1       | Finished processing payment: 591b66e2-fa0c-4762-abe9-cc230e9cc2ad
+api2-1       | Processing payment: 393fc177-f5cc-4510-8889-65a34712e794
+api2-1       | Sending payment to principal service: 393fc177-f5cc-4510-8889-65a34712e794
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 393fc177-f5cc-4510-8889-65a34712e794
+api2-1       | Payment saved successfully: 393fc177-f5cc-4510-8889-65a34712e794
+api2-1       | Finished processing payment: 393fc177-f5cc-4510-8889-65a34712e794
+api1-1       | Processing payment: 65466f6c-e119-4e27-a3bc-b515a9bd0def
+api1-1       | Sending payment to principal service: 65466f6c-e119-4e27-a3bc-b515a9bd0def
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 65466f6c-e119-4e27-a3bc-b515a9bd0def
+api1-1       | Payment saved successfully: 65466f6c-e119-4e27-a3bc-b515a9bd0def
+api1-1       | Finished processing payment: 65466f6c-e119-4e27-a3bc-b515a9bd0def
+api2-1       | Processing payment: 17d2cb5b-31c6-46c9-bc4c-c2448d8a3517
+api2-1       | Sending payment to principal service: 17d2cb5b-31c6-46c9-bc4c-c2448d8a3517
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 17d2cb5b-31c6-46c9-bc4c-c2448d8a3517
+api2-1       | Payment saved successfully: 17d2cb5b-31c6-46c9-bc4c-c2448d8a3517
+api2-1       | Finished processing payment: 17d2cb5b-31c6-46c9-bc4c-c2448d8a3517
+api1-1       | Processing payment: 7374009e-1e50-41f9-9acd-224f5b6eccd2
+api1-1       | Sending payment to principal service: 7374009e-1e50-41f9-9acd-224f5b6eccd2
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 7374009e-1e50-41f9-9acd-224f5b6eccd2
+api1-1       | Payment saved successfully: 7374009e-1e50-41f9-9acd-224f5b6eccd2
+api1-1       | Finished processing payment: 7374009e-1e50-41f9-9acd-224f5b6eccd2
+api2-1       | Processing payment: 18694c81-bf43-4a7b-be19-2c98e29d893e
+api2-1       | Sending payment to principal service: 18694c81-bf43-4a7b-be19-2c98e29d893e
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 18694c81-bf43-4a7b-be19-2c98e29d893e
+api2-1       | Payment saved successfully: 18694c81-bf43-4a7b-be19-2c98e29d893e
+api2-1       | Finished processing payment: 18694c81-bf43-4a7b-be19-2c98e29d893e
+api1-1       | Processing payment: 9939dcae-d674-4ad6-8125-daeae3c498c9
+api1-1       | Sending payment to principal service: 9939dcae-d674-4ad6-8125-daeae3c498c9
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 9939dcae-d674-4ad6-8125-daeae3c498c9
+api1-1       | Payment saved successfully: 9939dcae-d674-4ad6-8125-daeae3c498c9
+api1-1       | Finished processing payment: 9939dcae-d674-4ad6-8125-daeae3c498c9
+api2-1       | Processing payment: 0df632e1-4f18-443d-beee-a19d1f79fc69
+api2-1       | Sending payment to principal service: 0df632e1-4f18-443d-beee-a19d1f79fc69
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 0df632e1-4f18-443d-beee-a19d1f79fc69
+api2-1       | Payment saved successfully: 0df632e1-4f18-443d-beee-a19d1f79fc69
+api2-1       | Finished processing payment: 0df632e1-4f18-443d-beee-a19d1f79fc69
+api2-1       | Processing payment: 62c391d6-486d-4112-b267-0d04d71302d0
+api2-1       | Sending payment to principal service: 62c391d6-486d-4112-b267-0d04d71302d0
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 62c391d6-486d-4112-b267-0d04d71302d0
+api2-1       | Payment saved successfully: 62c391d6-486d-4112-b267-0d04d71302d0
+api2-1       | Finished processing payment: 62c391d6-486d-4112-b267-0d04d71302d0
+api1-1       | Processing payment: 0ec1f46a-b94a-4eaa-9618-f6f75b0cc92f
+api1-1       | Sending payment to principal service: 0ec1f46a-b94a-4eaa-9618-f6f75b0cc92f
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 0ec1f46a-b94a-4eaa-9618-f6f75b0cc92f
+api1-1       | Payment saved successfully: 0ec1f46a-b94a-4eaa-9618-f6f75b0cc92f
+api1-1       | Finished processing payment: 0ec1f46a-b94a-4eaa-9618-f6f75b0cc92f
+api1-1       | Processing payment: 1faa1848-7ae2-4bb9-82c4-377bc59e4b18
+api1-1       | Sending payment to principal service: 1faa1848-7ae2-4bb9-82c4-377bc59e4b18
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 1faa1848-7ae2-4bb9-82c4-377bc59e4b18
+api1-1       | Payment saved successfully: 1faa1848-7ae2-4bb9-82c4-377bc59e4b18
+api1-1       | Finished processing payment: 1faa1848-7ae2-4bb9-82c4-377bc59e4b18
+api2-1       | Processing payment: 2a7fd7b3-bb76-4f11-99e6-67476611700b
+api2-1       | Sending payment to principal service: 2a7fd7b3-bb76-4f11-99e6-67476611700b
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 2a7fd7b3-bb76-4f11-99e6-67476611700b
+api2-1       | Payment saved successfully: 2a7fd7b3-bb76-4f11-99e6-67476611700b
+api2-1       | Finished processing payment: 2a7fd7b3-bb76-4f11-99e6-67476611700b
+api1-1       | Processing payment: b70bcec0-af94-42bf-80fc-1e973ec5e0b4
+api1-1       | Sending payment to principal service: b70bcec0-af94-42bf-80fc-1e973ec5e0b4
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: b70bcec0-af94-42bf-80fc-1e973ec5e0b4
+api1-1       | Payment saved successfully: b70bcec0-af94-42bf-80fc-1e973ec5e0b4
+api1-1       | Finished processing payment: b70bcec0-af94-42bf-80fc-1e973ec5e0b4
+api2-1       | Processing payment: b342fccd-4ccc-4415-a582-1f1848d47981
+api2-1       | Sending payment to principal service: b342fccd-4ccc-4415-a582-1f1848d47981
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: b342fccd-4ccc-4415-a582-1f1848d47981
+api2-1       | Payment saved successfully: b342fccd-4ccc-4415-a582-1f1848d47981
+api2-1       | Finished processing payment: b342fccd-4ccc-4415-a582-1f1848d47981
+api1-1       | Processing payment: 908d96cd-5904-4d72-bffe-3152c517f21e
+api1-1       | Sending payment to principal service: 908d96cd-5904-4d72-bffe-3152c517f21e
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 908d96cd-5904-4d72-bffe-3152c517f21e
+api1-1       | Payment saved successfully: 908d96cd-5904-4d72-bffe-3152c517f21e
+api1-1       | Finished processing payment: 908d96cd-5904-4d72-bffe-3152c517f21e
+api2-1       | Processing payment: 69ae2e94-ce24-4630-ac46-45490d35083e
+api2-1       | Sending payment to principal service: 69ae2e94-ce24-4630-ac46-45490d35083e
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 69ae2e94-ce24-4630-ac46-45490d35083e
+api2-1       | Payment saved successfully: 69ae2e94-ce24-4630-ac46-45490d35083e
+api2-1       | Finished processing payment: 69ae2e94-ce24-4630-ac46-45490d35083e
+api2-1       | Processing payment: eccad304-8c9b-45be-a56c-7d1429fcdacf
+api2-1       | Sending payment to principal service: eccad304-8c9b-45be-a56c-7d1429fcdacf
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: eccad304-8c9b-45be-a56c-7d1429fcdacf
+api2-1       | Payment saved successfully: eccad304-8c9b-45be-a56c-7d1429fcdacf
+api2-1       | Finished processing payment: eccad304-8c9b-45be-a56c-7d1429fcdacf
+api1-1       | Processing payment: cb7f2f50-2750-4366-a306-5e7ae58fe68f
+api1-1       | Sending payment to principal service: cb7f2f50-2750-4366-a306-5e7ae58fe68f
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: cb7f2f50-2750-4366-a306-5e7ae58fe68f
+api1-1       | Payment saved successfully: cb7f2f50-2750-4366-a306-5e7ae58fe68f
+api1-1       | Finished processing payment: cb7f2f50-2750-4366-a306-5e7ae58fe68f
+api2-1       | Processing payment: 70c87c4f-0c6b-4bc6-b22a-bbbc8dd87b3f
+api2-1       | Sending payment to principal service: 70c87c4f-0c6b-4bc6-b22a-bbbc8dd87b3f
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 70c87c4f-0c6b-4bc6-b22a-bbbc8dd87b3f
+api2-1       | Payment saved successfully: 70c87c4f-0c6b-4bc6-b22a-bbbc8dd87b3f
+api2-1       | Finished processing payment: 70c87c4f-0c6b-4bc6-b22a-bbbc8dd87b3f
+api1-1       | Processing payment: 005ff30d-3fb3-43d4-9e43-0111c1745909
+api1-1       | Sending payment to principal service: 005ff30d-3fb3-43d4-9e43-0111c1745909
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 005ff30d-3fb3-43d4-9e43-0111c1745909
+api1-1       | Payment saved successfully: 005ff30d-3fb3-43d4-9e43-0111c1745909
+api1-1       | Finished processing payment: 005ff30d-3fb3-43d4-9e43-0111c1745909
+api1-1       | Processing payment: c3b4baa5-d31f-458c-89eb-1ea4d51c5149
+api1-1       | Sending payment to principal service: c3b4baa5-d31f-458c-89eb-1ea4d51c5149
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: c3b4baa5-d31f-458c-89eb-1ea4d51c5149
+api1-1       | Payment saved successfully: c3b4baa5-d31f-458c-89eb-1ea4d51c5149
+api1-1       | Finished processing payment: c3b4baa5-d31f-458c-89eb-1ea4d51c5149
+api1-1       | Processing payment: d0b2cd05-d318-4564-8662-f5bf1591e774
+api1-1       | Sending payment to principal service: d0b2cd05-d318-4564-8662-f5bf1591e774
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: d0b2cd05-d318-4564-8662-f5bf1591e774
+api1-1       | Payment saved successfully: d0b2cd05-d318-4564-8662-f5bf1591e774
+api1-1       | Finished processing payment: d0b2cd05-d318-4564-8662-f5bf1591e774
+api2-1       | Processing payment: d64b3918-e84f-4fd0-9bda-0bc76d59d197
+api2-1       | Sending payment to principal service: d64b3918-e84f-4fd0-9bda-0bc76d59d197
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Processing payment: 8b71edc6-489c-4bba-8728-970a9f782e4c
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: d64b3918-e84f-4fd0-9bda-0bc76d59d197
+api2-1       | Sending payment to principal service: 8b71edc6-489c-4bba-8728-970a9f782e4c
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 8b71edc6-489c-4bba-8728-970a9f782e4c
+api2-1       | Payment saved successfully: 8b71edc6-489c-4bba-8728-970a9f782e4c
+api2-1       | Finished processing payment: 8b71edc6-489c-4bba-8728-970a9f782e4c
+api2-1       | Payment saved successfully: d64b3918-e84f-4fd0-9bda-0bc76d59d197
+api2-1       | Finished processing payment: d64b3918-e84f-4fd0-9bda-0bc76d59d197
+api1-1       | Processing payment: 39470a83-9f95-4363-9f85-fdb74647186a
+api1-1       | Sending payment to principal service: 39470a83-9f95-4363-9f85-fdb74647186a
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 39470a83-9f95-4363-9f85-fdb74647186a
+api1-1       | Payment saved successfully: 39470a83-9f95-4363-9f85-fdb74647186a
+api1-1       | Finished processing payment: 39470a83-9f95-4363-9f85-fdb74647186a
+api2-1       | Processing payment: 02d24cc9-2638-4de1-b668-202cb9557c3f
+api2-1       | Sending payment to principal service: 02d24cc9-2638-4de1-b668-202cb9557c3f
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 02d24cc9-2638-4de1-b668-202cb9557c3f
+api2-1       | Payment saved successfully: 02d24cc9-2638-4de1-b668-202cb9557c3f
+api2-1       | Finished processing payment: 02d24cc9-2638-4de1-b668-202cb9557c3f
+api1-1       | Processing payment: 7112f042-e334-4cd8-8bb6-083946cb44e2
+api1-1       | Sending payment to principal service: 7112f042-e334-4cd8-8bb6-083946cb44e2
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 7112f042-e334-4cd8-8bb6-083946cb44e2
+api1-1       | Payment saved successfully: 7112f042-e334-4cd8-8bb6-083946cb44e2
+api1-1       | Finished processing payment: 7112f042-e334-4cd8-8bb6-083946cb44e2
+api2-1       | Processing payment: c4e53e97-30ef-4af6-87e6-c1b570b9c6b2
+api2-1       | Sending payment to principal service: c4e53e97-30ef-4af6-87e6-c1b570b9c6b2
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: c4e53e97-30ef-4af6-87e6-c1b570b9c6b2
+api2-1       | Payment saved successfully: c4e53e97-30ef-4af6-87e6-c1b570b9c6b2
+api2-1       | Finished processing payment: c4e53e97-30ef-4af6-87e6-c1b570b9c6b2
+api1-1       | Processing payment: 918b7d5c-3517-4649-87e2-d269f05ac189
+api1-1       | Sending payment to principal service: 918b7d5c-3517-4649-87e2-d269f05ac189
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 918b7d5c-3517-4649-87e2-d269f05ac189
+api1-1       | Payment saved successfully: 918b7d5c-3517-4649-87e2-d269f05ac189
+api1-1       | Finished processing payment: 918b7d5c-3517-4649-87e2-d269f05ac189
+api2-1       | Processing payment: 754b3a0c-726d-4bcc-971e-cace28f34445
+api2-1       | Sending payment to principal service: 754b3a0c-726d-4bcc-971e-cace28f34445
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 754b3a0c-726d-4bcc-971e-cace28f34445
+api2-1       | Payment saved successfully: 754b3a0c-726d-4bcc-971e-cace28f34445
+api2-1       | Finished processing payment: 754b3a0c-726d-4bcc-971e-cace28f34445
+api1-1       | Processing payment: dd43f28a-542a-4b2d-b1f3-f61f4dd28e0d
+api1-1       | Sending payment to principal service: dd43f28a-542a-4b2d-b1f3-f61f4dd28e0d
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: dd43f28a-542a-4b2d-b1f3-f61f4dd28e0d
+api1-1       | Payment saved successfully: dd43f28a-542a-4b2d-b1f3-f61f4dd28e0d
+api1-1       | Finished processing payment: dd43f28a-542a-4b2d-b1f3-f61f4dd28e0d
+api1-1       | Processing payment: 322061b9-a763-4607-bb98-9ed4b8361a19
+api1-1       | Sending payment to principal service: 322061b9-a763-4607-bb98-9ed4b8361a19
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 322061b9-a763-4607-bb98-9ed4b8361a19
+api1-1       | Payment saved successfully: 322061b9-a763-4607-bb98-9ed4b8361a19
+api1-1       | Finished processing payment: 322061b9-a763-4607-bb98-9ed4b8361a19
+api2-1       | Processing payment: 1ceb1ec2-c7e8-49a6-96fc-b6d995df93a4
+api2-1       | Sending payment to principal service: 1ceb1ec2-c7e8-49a6-96fc-b6d995df93a4
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 1ceb1ec2-c7e8-49a6-96fc-b6d995df93a4
+api2-1       | Payment saved successfully: 1ceb1ec2-c7e8-49a6-96fc-b6d995df93a4
+api2-1       | Finished processing payment: 1ceb1ec2-c7e8-49a6-96fc-b6d995df93a4
+api1-1       | Processing payment: 443e715e-5de5-4aa5-97bd-13aca7595d98
+api1-1       | Sending payment to principal service: 443e715e-5de5-4aa5-97bd-13aca7595d98
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 443e715e-5de5-4aa5-97bd-13aca7595d98
+api1-1       | Payment saved successfully: 443e715e-5de5-4aa5-97bd-13aca7595d98
+api1-1       | Finished processing payment: 443e715e-5de5-4aa5-97bd-13aca7595d98
+api2-1       | Processing payment: b16a5a41-2b3c-41a9-88fc-94b4ab3e4ccd
+api2-1       | Sending payment to principal service: b16a5a41-2b3c-41a9-88fc-94b4ab3e4ccd
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: b16a5a41-2b3c-41a9-88fc-94b4ab3e4ccd
+api2-1       | Payment saved successfully: b16a5a41-2b3c-41a9-88fc-94b4ab3e4ccd
+api2-1       | Finished processing payment: b16a5a41-2b3c-41a9-88fc-94b4ab3e4ccd
+api2-1       | Processing payment: 8351b7a9-bff4-48aa-8686-c69fd4efa1e8
+api1-1       | Processing payment: 9cc76d7c-fdf5-47c0-9ca4-319189cb8f99
+api2-1       | Sending payment to principal service: 8351b7a9-bff4-48aa-8686-c69fd4efa1e8
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Sending payment to principal service: 9cc76d7c-fdf5-47c0-9ca4-319189cb8f99
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 8351b7a9-bff4-48aa-8686-c69fd4efa1e8
+api2-1       | Payment saved successfully: 8351b7a9-bff4-48aa-8686-c69fd4efa1e8
+api2-1       | Finished processing payment: 8351b7a9-bff4-48aa-8686-c69fd4efa1e8
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 9cc76d7c-fdf5-47c0-9ca4-319189cb8f99
+api1-1       | Payment saved successfully: 9cc76d7c-fdf5-47c0-9ca4-319189cb8f99
+api1-1       | Finished processing payment: 9cc76d7c-fdf5-47c0-9ca4-319189cb8f99
+api2-1       | Processing payment: ce5e1cba-266e-4ff7-b874-47b969bc3fa4
+api2-1       | Sending payment to principal service: ce5e1cba-266e-4ff7-b874-47b969bc3fa4
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: ce5e1cba-266e-4ff7-b874-47b969bc3fa4
+api2-1       | Payment saved successfully: ce5e1cba-266e-4ff7-b874-47b969bc3fa4
+api2-1       | Finished processing payment: ce5e1cba-266e-4ff7-b874-47b969bc3fa4
+api1-1       | Processing payment: c08919ef-4864-4732-b9b3-a3db4a82d63f
+api1-1       | Sending payment to principal service: c08919ef-4864-4732-b9b3-a3db4a82d63f
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: c08919ef-4864-4732-b9b3-a3db4a82d63f
+api1-1       | Payment saved successfully: c08919ef-4864-4732-b9b3-a3db4a82d63f
+api1-1       | Finished processing payment: c08919ef-4864-4732-b9b3-a3db4a82d63f
+api2-1       | Processing payment: fde5e1c3-33e6-4651-80bc-b43a5132b8b5
+api2-1       | Sending payment to principal service: fde5e1c3-33e6-4651-80bc-b43a5132b8b5
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: fde5e1c3-33e6-4651-80bc-b43a5132b8b5
+api2-1       | Payment saved successfully: fde5e1c3-33e6-4651-80bc-b43a5132b8b5
+api2-1       | Finished processing payment: fde5e1c3-33e6-4651-80bc-b43a5132b8b5
+api1-1       | Processing payment: e36f9286-36c1-4e3f-882d-c9e79af4213b
+api1-1       | Sending payment to principal service: e36f9286-36c1-4e3f-882d-c9e79af4213b
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: e36f9286-36c1-4e3f-882d-c9e79af4213b
+api1-1       | Payment saved successfully: e36f9286-36c1-4e3f-882d-c9e79af4213b
+api1-1       | Finished processing payment: e36f9286-36c1-4e3f-882d-c9e79af4213b
+api1-1       | Processing payment: 84073e38-209d-463d-9c2d-b52ff084cdca
+api1-1       | Sending payment to principal service: 84073e38-209d-463d-9c2d-b52ff084cdca
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 84073e38-209d-463d-9c2d-b52ff084cdca
+api1-1       | Payment saved successfully: 84073e38-209d-463d-9c2d-b52ff084cdca
+api1-1       | Finished processing payment: 84073e38-209d-463d-9c2d-b52ff084cdca
+api2-1       | Processing payment: d41a2b59-3059-476e-bc31-88e97605818b
+api2-1       | Sending payment to principal service: d41a2b59-3059-476e-bc31-88e97605818b
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: d41a2b59-3059-476e-bc31-88e97605818b
+api2-1       | Payment saved successfully: d41a2b59-3059-476e-bc31-88e97605818b
+api2-1       | Finished processing payment: d41a2b59-3059-476e-bc31-88e97605818b
+api1-1       | Processing payment: b8838436-33f4-4f9e-8aa6-828bc1af6f3a
+api1-1       | Sending payment to principal service: b8838436-33f4-4f9e-8aa6-828bc1af6f3a
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: b8838436-33f4-4f9e-8aa6-828bc1af6f3a
+api1-1       | Payment saved successfully: b8838436-33f4-4f9e-8aa6-828bc1af6f3a
+api1-1       | Finished processing payment: b8838436-33f4-4f9e-8aa6-828bc1af6f3a
+api2-1       | Processing payment: bf1519e6-714a-4725-a998-1e3be8448bf7
+api2-1       | Sending payment to principal service: bf1519e6-714a-4725-a998-1e3be8448bf7
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: bf1519e6-714a-4725-a998-1e3be8448bf7
+api2-1       | Payment saved successfully: bf1519e6-714a-4725-a998-1e3be8448bf7
+api2-1       | Finished processing payment: bf1519e6-714a-4725-a998-1e3be8448bf7
+api2-1       | Processing payment: 9ceb1ea7-3986-4d9d-bf54-634e302ebc4e
+api2-1       | Sending payment to principal service: 9ceb1ea7-3986-4d9d-bf54-634e302ebc4e
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: 9ceb1ea7-3986-4d9d-bf54-634e302ebc4e
+api2-1       | Payment saved successfully: 9ceb1ea7-3986-4d9d-bf54-634e302ebc4e
+api2-1       | Finished processing payment: 9ceb1ea7-3986-4d9d-bf54-634e302ebc4e
+api1-1       | Processing payment: 9fc3286a-44f7-4fee-990b-524d8b2bc599
+api1-1       | Sending payment to principal service: 9fc3286a-44f7-4fee-990b-524d8b2bc599
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 9fc3286a-44f7-4fee-990b-524d8b2bc599
+api1-1       | Payment saved successfully: 9fc3286a-44f7-4fee-990b-524d8b2bc599
+api1-1       | Finished processing payment: 9fc3286a-44f7-4fee-990b-524d8b2bc599
+api2-1       | Processing payment: cc5f6a1e-34e7-4ae9-80db-1ddd908e686c
+api2-1       | Sending payment to principal service: cc5f6a1e-34e7-4ae9-80db-1ddd908e686c
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: cc5f6a1e-34e7-4ae9-80db-1ddd908e686c
+api2-1       | Payment saved successfully: cc5f6a1e-34e7-4ae9-80db-1ddd908e686c
+api2-1       | Finished processing payment: cc5f6a1e-34e7-4ae9-80db-1ddd908e686c
+api1-1       | Processing payment: 3eae1e7f-413e-440f-8731-b06f7d1b93c1
+api1-1       | Sending payment to principal service: 3eae1e7f-413e-440f-8731-b06f7d1b93c1
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 3eae1e7f-413e-440f-8731-b06f7d1b93c1
+api1-1       | Payment saved successfully: 3eae1e7f-413e-440f-8731-b06f7d1b93c1
+api1-1       | Finished processing payment: 3eae1e7f-413e-440f-8731-b06f7d1b93c1
+api2-1       | Processing payment: b24475e9-6d00-4710-9755-722d5e4b470f
+api2-1       | Sending payment to principal service: b24475e9-6d00-4710-9755-722d5e4b470f
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: b24475e9-6d00-4710-9755-722d5e4b470f
+api2-1       | Payment saved successfully: b24475e9-6d00-4710-9755-722d5e4b470f
+api2-1       | Finished processing payment: b24475e9-6d00-4710-9755-722d5e4b470f
+api1-1       | Processing payment: f825349c-9d23-4a28-b0b1-8a0f28a5f9d5
+api1-1       | Sending payment to principal service: f825349c-9d23-4a28-b0b1-8a0f28a5f9d5
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: f825349c-9d23-4a28-b0b1-8a0f28a5f9d5
+api1-1       | Payment saved successfully: f825349c-9d23-4a28-b0b1-8a0f28a5f9d5
+api1-1       | Finished processing payment: f825349c-9d23-4a28-b0b1-8a0f28a5f9d5
+api2-1       | Processing payment: b863e271-1431-4ad7-b7c1-e157f64e1aa3
+api2-1       | Sending payment to principal service: b863e271-1431-4ad7-b7c1-e157f64e1aa3
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: b863e271-1431-4ad7-b7c1-e157f64e1aa3
+api2-1       | Payment saved successfully: b863e271-1431-4ad7-b7c1-e157f64e1aa3
+api2-1       | Finished processing payment: b863e271-1431-4ad7-b7c1-e157f64e1aa3
+api1-1       | Processing payment: 381a6fb3-020e-4a55-9e5d-dccedd602180
+api1-1       | Sending payment to principal service: 381a6fb3-020e-4a55-9e5d-dccedd602180
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 381a6fb3-020e-4a55-9e5d-dccedd602180
+api1-1       | Payment saved successfully: 381a6fb3-020e-4a55-9e5d-dccedd602180
+api1-1       | Finished processing payment: 381a6fb3-020e-4a55-9e5d-dccedd602180
+api1-1       | Processing payment: e428741e-07bc-4c9a-9ac2-6203047ef9c2
+api1-1       | Sending payment to principal service: e428741e-07bc-4c9a-9ac2-6203047ef9c2
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: e428741e-07bc-4c9a-9ac2-6203047ef9c2
+api1-1       | Payment saved successfully: e428741e-07bc-4c9a-9ac2-6203047ef9c2
+api1-1       | Finished processing payment: e428741e-07bc-4c9a-9ac2-6203047ef9c2
+api2-1       | Processing payment: cb897fbd-ed96-4ab7-826e-03a6ffe51052
+api2-1       | Sending payment to principal service: cb897fbd-ed96-4ab7-826e-03a6ffe51052
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: cb897fbd-ed96-4ab7-826e-03a6ffe51052
+api2-1       | Payment saved successfully: cb897fbd-ed96-4ab7-826e-03a6ffe51052
+api2-1       | Finished processing payment: cb897fbd-ed96-4ab7-826e-03a6ffe51052
+api1-1       | Processing payment: 40275cbd-b3c4-4b3b-9185-5983e1802692
+api1-1       | Sending payment to principal service: 40275cbd-b3c4-4b3b-9185-5983e1802692
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: 40275cbd-b3c4-4b3b-9185-5983e1802692
+api1-1       | Payment saved successfully: 40275cbd-b3c4-4b3b-9185-5983e1802692
+api1-1       | Finished processing payment: 40275cbd-b3c4-4b3b-9185-5983e1802692
+api2-1       | Processing payment: a196c6c2-4403-4037-a118-0e178c0a7857
+api2-1       | Sending payment to principal service: a196c6c2-4403-4037-a118-0e178c0a7857
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: a196c6c2-4403-4037-a118-0e178c0a7857
+api2-1       | Payment saved successfully: a196c6c2-4403-4037-a118-0e178c0a7857
+api2-1       | Finished processing payment: a196c6c2-4403-4037-a118-0e178c0a7857
+api2-1       | Processing payment: ae9d3709-193c-4ed4-b17d-ff1a556d5305
+api2-1       | Sending payment to principal service: ae9d3709-193c-4ed4-b17d-ff1a556d5305
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: ae9d3709-193c-4ed4-b17d-ff1a556d5305
+api2-1       | Payment saved successfully: ae9d3709-193c-4ed4-b17d-ff1a556d5305
+api2-1       | Finished processing payment: ae9d3709-193c-4ed4-b17d-ff1a556d5305
+api1-1       | Processing payment: ba1f818e-5a9b-4311-a74d-f3189c49ef25
+api1-1       | Sending payment to principal service: ba1f818e-5a9b-4311-a74d-f3189c49ef25
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+api1-1       | Response status code: 200
+api1-1       | Saving payment to database: ba1f818e-5a9b-4311-a74d-f3189c49ef25
+api1-1       | Payment saved successfully: ba1f818e-5a9b-4311-a74d-f3189c49ef25
+api1-1       | Finished processing payment: ba1f818e-5a9b-4311-a74d-f3189c49ef25
+api2-1       | Processing payment: ad16a6df-8b00-48d0-b043-551531282d74
+api2-1       | Sending payment to principal service: ad16a6df-8b00-48d0-b043-551531282d74
+api2-1       | Sending payment to: http://payment-processor-default:8080/payments
+api2-1       | Response status code: 200
+api2-1       | Saving payment to database: ad16a6df-8b00-48d0-b043-551531282d74
+api2-1       | Payment saved successfully: ad16a6df-8b00-48d0-b043-551531282d74
+api2-1       | Finished processing payment: ad16a6df-8b00-48d0-b043-551531282d74
+api1-1       | Processing payment: 7ebe8f90-fc4f-4777-a733-eb509beadf66
+api1-1       | Sending payment to principal service: 7ebe8f90-fc4f-4777-a733-eb509beadf66
+api1-1       | Sending payment to: http://payment-processor-default:8080/payments
+log truncated at line 1000
