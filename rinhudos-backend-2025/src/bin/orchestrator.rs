@@ -119,7 +119,7 @@ async fn main() -> Result<(), Box<dyn std::error::Error>> {
 
     let mut handles = vec![];
 
-    for task_id in 0..4 {
+    for task_id in 0..10 {
         let health_check_cache_clone = Arc::clone(&health_check_cache);
         let mut conn_clone = conn.clone();
 

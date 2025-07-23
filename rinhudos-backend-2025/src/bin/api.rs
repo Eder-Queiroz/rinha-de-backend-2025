@@ -88,7 +88,8 @@ where
     }
 }
 
-#[derive(Serialize)]
+#[derive(Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
 struct Summary {
     total_requests: u64,
     total_amount: f64,
